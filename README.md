@@ -1,12 +1,12 @@
-# grupo_14_TripleG-Vineria
+# Vineria "Triple G"
 
-Descripción la idea del proyecto:
+## Descripción la idea del proyecto:
 
 Nuestra idea del proyecto consiste en brindar una plataforma de e-commerce que permita la interacción entre productores de vinos y consumidores. 
 Los usuarios de nuestra plataforma serán de tipo Bodegas y Compradores. 
 Las bodegas podrán publicar sus productos con su ficha técnica, promociones y cualquier otro detalle relevante del producto y los compradores podrán seleccionar entre los distintos productos ofrecidos y agregarlos al carrito de compras. 
 
-Integrantes del equipo: 
+## Integrantes del equipo: 
 
 Guido Gualtieri:
 Desarrollador SAP ABAP, Electricista matriculado, estudiante de TSP en la Universidad Tecnológica Nacional.
@@ -19,3 +19,15 @@ Linkedin: linkedin.com/in/matias-gracia-9a9584210
 Guillermo Esquivel
 Security Engineer hace 8 años, estudiante de Ingeniería en Sistemas, 27 años, interesado en el mundo crypto. 
 Linkedin: https://www.linkedin.com/in/guillermoesq/ 
+
+## Referentes del negocio: 
+
+https://www.mercadolibre.com.ar/ -> E-commerce referente del mercado. Utilizaremos el sitio de ML como referencia dada la importancia de dicha web y la cantidad de funcionalidades proporcionadas. 
+
+https://blackwine.com.ar/ -> Sitio de ventas de Vinos y otras bebidas. Se utilizará este sitio de referencia dada la similitud con nuestro proyecto y por su apariencia. 
+
+https://shop.norton.com.ar/ ->Sitio de ventas de Vinos. Utilizaremos este sitio de referencia para basarnos en el detalle de los productos ofrecidos. 
+
+https://www.espaciovino.com.ar/ ->Sitio de ventas de Vinos. Utilizaremos este sitio de referencia para basarnos en la separación y visualización de Bodegas. 
+
+https://www.bodegasbianchi.com.ar/ -> Sitio de ventas de Vinos. Utilizaremos este sitio de referencia para basarnos en su paleta de colores.
