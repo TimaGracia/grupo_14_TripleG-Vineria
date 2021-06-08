@@ -9,7 +9,7 @@ Las bodegas podrán publicar sus productos con su ficha técnica, promociones y 
 ## Integrantes del equipo: 
 
 Guido Gualtieri:
-Desarrollador SAP ABAP, Electricista matriculado, estudiante de TSP en la Universidad Tecnológica Nacional.
+Consultor SAP ABAP, Electricista matriculado, estudiante de TSP en la Universidad Tecnológica Nacional.
 Linkedin:https://www.linkedin.com/in/guidogualtieri/
 
 Matias Gracia: 
