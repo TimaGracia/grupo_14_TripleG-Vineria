@@ -22,7 +22,7 @@ Matias Gracia:
 Estudiante secundario, 17 años, gran interés en las matemáticas, futuro estudiante de Ingeniería Mecatrónica. 
 Linkedin: linkedin.com/in/matias-gracia-9a9584210
 
-Guillermo Esquivel
+Guillermo Esquivel:
 Security Engineer hace 8 años, estudiante de Ingeniería en Sistemas, 27 años, interesado en el mundo crypto. 
 Linkedin: https://www.linkedin.com/in/guillermoesq/ 
 
