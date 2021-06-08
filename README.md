@@ -6,6 +6,12 @@ Nuestra idea del proyecto consiste en brindar una plataforma de e-commerce que p
 Los usuarios de nuestra plataforma serán de tipo Bodegas y Compradores. 
 Las bodegas podrán publicar sus productos con su ficha técnica, promociones y cualquier otro detalle relevante del producto y los compradores podrán seleccionar entre los distintos productos ofrecidos y agregarlos al carrito de compras. 
 
+## Logo
+
+<p align="center">
+  <img src="logo_blanco.jpeg" width="350">
+</p>
+
 ## Integrantes del equipo: 
 
 Guido Gualtieri:
