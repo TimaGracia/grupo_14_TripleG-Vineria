@@ -31,3 +31,17 @@ https://shop.norton.com.ar/ ->Sitio de ventas de Vinos. Utilizaremos este sitio 
 https://www.espaciovino.com.ar/ ->Sitio de ventas de Vinos. Utilizaremos este sitio de referencia para basarnos en la separación y visualización de Bodegas. 
 
 https://www.bodegasbianchi.com.ar/ -> Sitio de ventas de Vinos. Utilizaremos este sitio de referencia para basarnos en su paleta de colores.
+
+## WireFrame:
+
+Home:
+ https://www.figma.com/file/SQs5pcvgRRB933oz4KdDPi/Guille?node-id=21%3A45 
+
+Detalle del producto y carrito:
+https://www.figma.com/file/nzArIA90ZhYlhkHnrQsTXS/Untitled?node-id=2%3A3
+
+Inicio de sesión y registro:
+https://www.figma.com/file/SZl5nNbW9PqLSYB8ZqmGHu/Mati?node-id=0%3A1
+
+
+
