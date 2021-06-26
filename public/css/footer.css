@@ -1,1 +1,8 @@
-body{}
+footer {
+    width: 100vw;
+    height: 15vh;
+    background-color: #4A4A4A;
+    color: white;
+    position: absolute;
+    bottom: 0;
+}
