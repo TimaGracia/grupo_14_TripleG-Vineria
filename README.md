@@ -9,7 +9,7 @@ Las bodegas podrán publicar sus productos con su ficha técnica, promociones y 
 ## Logo
 
 <p align="center">
-  <img src="logo_blanco.jpeg" width="350">
+  <img src="\img\logo.png" width="350">
 </p>
 
 ## Integrantes del equipo: 
