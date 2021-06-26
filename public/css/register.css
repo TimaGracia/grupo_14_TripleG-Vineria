@@ -1,5 +1,9 @@
 body{background-color: #E5E5E5;font-family: poppins, sans-serif;}
 .formu{background-color: #C4C4C4;
-width: 55em;
-;}
+width: 50vw; height: 75vh;margin-left: 25vw;margin-right: 25vw;display:flex;flex-wrap: wrap;}
 input{background-color: #C4C4C4;}
+.formu div{ display:block;
+width: 25vw;text-align: left;}
+h1{margin-left: 25vw;margin-bottom: 1vw;}
+form{display: flex;flex-wrap: wrap;}
+button{background-color: #c2755e;color:white; text-align: right;}
