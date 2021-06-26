@@ -5,31 +5,33 @@
     <title>Register</title>
     <link rel="stylesheet" href="/css/register.css">
     <link rel="stylesheet" href="https://use.typekit.net/jdf5hnp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
     <h1 class="completa">Completa tus datos</h1>
     <div class="formu">
         <form action="/registro" method="POST">
         <div>
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre">
+            <div><label for="nombre">Nombre</label></div>
+            <div><input type="text" name="nombre" id="nombre"></div>
         </div>
         <div action="apellido">
-            <label for="">Apellido</label>
-            <input type="text" name="apellido" id="apellido">
+            <div><label for="">Apellido</label></div>
+            <div><input type="text" name="apellido" id="apellido"></div>
         </div>
         <div>
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email">
+            <div><label for="email">E-mail</label></div>
+            <div><input type="email" name="email" id="email"></div>
         </div>
         <div>
-            <label for="fecha">Fecha de nacimiento</label>
-            <input type="date" name="fecha" id="fecha">
+            <div><label for="fecha">Fecha de nacimiento</label></div>
+            <div><input type="date" name="fecha" id="fecha"></div>
         </div>
         <div>
-            <label for="contraseña">Contraseña</label>
-            <input type="password" name="contraseña" id="contraseña">
+            <div><label for="contraseña">Contraseña</label></div>
+            <div><input type="password" name="contraseña" id="contraseña"></div>
         </div>
+        <div></div>
         <div>
             <label for="acepto">Acepto las condiciones</label>
             <input type="checkbox" name="acepto" id="acepto">

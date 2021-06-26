@@ -1,0 +1,9 @@
+body{background-color: #E5E5E5;font-family: poppins, sans-serif;}
+.logu{background-color: #C4C4C4;
+width: 36vw; height: 75vh;margin-left: 32vw;margin-right: 32vw;display:flex;flex-wrap: wrap;}
+input{background-color: #C4C4C4;}
+.logu div{ display:block;
+width: 32vw;text-align: center;}
+h1{margin-left: 32vw;margin-bottom: 1vw;}
+form{display: flex;flex-wrap: wrap;}
+button{background-color: #c2755e;color:white; text-align: right;}
