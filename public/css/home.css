@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    max-width: 100vw;
     
 }
 
@@ -23,15 +24,26 @@ body {
 }
 
 #sub-banner{
+    
+    padding: 1.5rem 0;
     display: flex;
     flex-wrap: nowrap;
     background-color: #C4C4C4;
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
+    text-align: center;
+    color: #C2755E; 
     
  
 }
+#sub-banner i{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: #C2755E; 
+}
+
 
 #sub-banner article{
     margin: 15px;
@@ -43,6 +55,20 @@ body {
 }
 
 #texto-res p{
+    margin: 2rem 0;
     font-size: 2rem;
     text-align: center;
+}
+
+#section-vinos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    margin: 3.5vw;
+}
+
+#section-vinos img{
+    width: 11.5rem;
+    height: 11.5rem;
 }

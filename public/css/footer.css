@@ -3,6 +3,8 @@ footer {
     height: 15vh;
     background-color: #4A4A4A;
     color: white;
-    position: absolute;
+    position: relative;
     bottom: 0;
+    margin-top: 0px;
+    padding-top: 0px;
 }
