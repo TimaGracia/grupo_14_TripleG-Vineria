@@ -4,8 +4,15 @@
     
 }
 
+html {
+    width: 100vw;
+    overflow-x: hidden;
+
+}
+
 body {
     font-family: 'Poppins', sans-serif;
+
 }
 
 #banner {
@@ -18,40 +25,43 @@ body {
     height: 100%;
     display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto;
+    object-fit: cover;
 
     
 }
 
 #sub-banner{
     
-    padding: 1.5rem 0;
+    
     display: flex;
     flex-wrap: nowrap;
     background-color: #C4C4C4;
     width: 100%;
+    height: 100%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
     color: #C2755E; 
+    padding-bottom: 2rem;
     
- 
 }
 #sub-banner i{
+
     margin: 0.5rem;
     padding: 0.5rem;
     font-size: 2rem;
     color: #C2755E; 
+    
 }
 
 
 #sub-banner article{
-    margin: 15px;
-    padding: 0 10px;
+    margin: 1rem 0.5rem 0rem 1rem;
+    padding: 0 0.7rem 0 0.7rem;
     border-right: solid 1px black;
     border-left: solid 1px black;
-    
-
+    height: 80%;
 }
 
 #texto-res p{
@@ -61,14 +71,46 @@ body {
 }
 
 #section-vinos {
+    width: 70%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content:space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:center;
     margin: 3.5vw;
+    padding-right: 10vw;
+    
+}
+
+section#section-vinos{
+    margin:0 20vw 0 20vw;
+    text-align: center;
+    justify-content: center;
+    width: 70vw;
 }
 
 #section-vinos img{
-    width: 11.5rem;
-    height: 11.5rem;
+    padding: 1rem;
+    /*width: 11.5rem;
+    height: 11.5rem;*/
+    width: 15rem;
+    height: 15rem;
+}
+
+@media (min-width:738px){
+
+    #section-vinos {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content:space-between;
+        max-width: 100%;
+    }
+
+
+
+}
+
+@media (min-width:769px){
+    #burger-menu{
+        display: none;
+    }
 }
