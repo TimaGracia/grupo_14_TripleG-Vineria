@@ -2,11 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jdf5hnp.css">
 </head>
 <body>
+    <h1 class="completa">Completa tus datos</h1>
+    <div class="formu">
+        <form action="/registro" method="POST">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+        <div action="apellido">
+            <label for="">Apellido</label>
+            <input type="text" name="apellido" id="apellido">
+        </div>
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" name="fecha" id="fecha">
+        </div>
+        <div>
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contraseña" id="contraseña">
+        </div>
+        <div>
+            <label for="acepto">Acepto las condiciones</label>
+            <input type="checkbox" name="acepto" id="acepto">
+        </div>
+        <div>
+            <button type="submit">Crear Cuenta</button>
+        </div>
+        </form>
+    </div>
     
 </body>
 </html>

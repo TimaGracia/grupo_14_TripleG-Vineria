@@ -4,7 +4,7 @@ const path=require("path");
 
 app.listen(2500,()=>console.log("Server Start","http://localhost:2500"));
 
-app.use(express.static(path.join(__dirname,"./public")));
+app.use(express.static(path.join(__dirname,"/public")));
 
 const home = require("./src/routes/home");
 app.use(home);
