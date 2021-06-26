@@ -1,9 +1,21 @@
-body{background-color: #E5E5E5;font-family: poppins, sans-serif;}
+body{background-color: #E5E5E5;font-family: 'Poppins', sans-serif;}
 .formu{background-color: #C4C4C4;
-width: 50vw; height: 75vh;margin-left: 25vw;margin-right: 25vw;display:flex;flex-wrap: wrap;}
+width: 50vw; height: 60vh;margin-left: 25vw;margin-right: 25vw;display:flex;flex-wrap: wrap;margin-top: 5vh;}
 input{background-color: #C4C4C4;}
 .formu div{ display:block;
-width: 25vw;text-align: left;}
-h1{margin-left: 25vw;margin-bottom: 1vw;}
+width: 25vw;text-align: left;
+font-family: 'Poppins', sans-serif;}
+.completa{margin-left: 25vw;margin-top: 5vh;font-size: xx-large;font-family: 'Poppins', sans-serif;}
 form{display: flex;flex-wrap: wrap;}
 button{background-color: #c2755e;color:white; text-align: right;}
+
+@media (max-width:900px){
+    .formu{width: 80vw;margin:auto;}
+    .completa{margin-left: 10vw;}
+    .formu div{width: 100%;}
+}
+@media (max-width:500px){
+    .formu{width: 90vw;margin:auto;}
+    .completa{margin-left: 5vw;}
+    .formu div{width: 100%;}
+}

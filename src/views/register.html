@@ -3,11 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link rel="stylesheet" href="/css/register.css">
-    <link rel="stylesheet" href="https://use.typekit.net/jdf5hnp.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+
+        <figure>
+            <img src="/img/logo.png">
+        </figure>
+
+        <a href="#" id="burger-menu">
+            <i class="fas fa-bars burger"></i>
+        </a>
+
+        <nav id="nav-menu" class="show-mobile">
+            <ul>
+                <li>
+                    <a href="/">Inicio</a>
+                </li>
+                <li>
+                    <a href="/">Vinos</a>
+                </li>
+                <li>
+                    <a href="/">Varietales</a>
+                </li>
+                <li>
+                    <a href="/">Bodegas</a>
+                </li>
+                <li>
+                    <a href="/">Servicio a empresas</a>
+                </li>
+                <li>
+                    <a href="/">Nosotros</a>
+                </li>
+                <li>
+                    <a href="/">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <nav id="nav-login">
+            <ul>
+                <li>
+                    <a href="/register">
+
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/login">
+
+                        <i class="far fa-user"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href='/'>
+
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
     <h1 class="completa">Completa tus datos</h1>
     <div class="formu">
         <form action="/registro" method="POST">
