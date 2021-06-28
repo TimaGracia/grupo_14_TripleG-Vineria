@@ -27,6 +27,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     object-fit: cover;
+    
 
     
 }
@@ -44,6 +45,8 @@ body {
     text-align: center;
     color: #C2755E; 
     padding-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
     
 }
 #sub-banner i{
@@ -93,11 +96,13 @@ section#section-vinos{
 }
 
 #section-vinos img{
-    padding: 1rem;
+    padding: 0rem;
+    margin: 1rem;
     /*width: 11.5rem;
     height: 11.5rem;*/
     width: 15rem;
     height: 15rem;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 50px 0px 100px -20px, rgba(0, 0, 0, 0.3) 30px 0px 60px -30px;
 }
 
 @media (min-width:738px){
