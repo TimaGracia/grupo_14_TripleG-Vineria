@@ -7,4 +7,57 @@ footer {
     bottom: 0;
     margin-top: 0px;
     padding-top: 0px;
+    font-size: 1rem;
+    display: block;
+
+}
+#footer-glob{
+    background-color: #4A4A4A;
+}
+
+#footer-tab{
+    display: flex;
+    justify-content: center;
+    background-color: #4A4A4A;
+    border-color: #4A4A4A;
+
+}
+
+#footer-tab ul{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-tab li{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    
+}
+
+#copyright{
+    border-color: #4A4A4A;
+    background-color: #4A4A4A;
+    
+    display: flex;
+    padding-right:20vw;
+    margin: 0px;
+    align-items: flex-start;
+    justify-content: flex-end;
+ 
+}
+
+
+
+
+
+@media (min-width:769px){
+
+    #footer-tab ul{
+        display: flex;
+        flex-direction: row;
+    }
+    
 }

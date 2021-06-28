@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body{background-color: #E5E5E5;font-family: 'Poppins', sans-serif;}
 .logu{background-color: #C4C4C4;
 width: 36vw; height: 60vh;margin-left: 32vw;margin-top:5vh;margin-right: 32vw;display:flex;flex-wrap: wrap;font-family: 'Poppins', sans-serif;}
@@ -19,3 +20,45 @@ button{background-color: #c2755e;color:white; text-align: right;}
     .log{margin-left: 10vw;}
     .logu div{width: 100%;}
 }
+=======
+body {
+    background-color: #E5E5E5;
+    font-family: poppins, sans-serif;
+}
+
+.logu {
+    background-color: #C4C4C4;
+    width: 36vw;
+    height: 75vh;
+    margin-left: 32vw;
+    margin-right: 32vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input {
+    background-color: #C4C4C4;
+}
+
+.logu div {
+    display: block;
+    width: 32vw;
+    text-align: center;
+}
+
+h1 {
+    margin-left: 32vw;
+    margin-bottom: 1vw;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: #c2755e;
+    color: white;
+    text-align: right;
+}
+>>>>>>> Stashed changes
