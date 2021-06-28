@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 body{background-color: #E5E5E5;font-family: 'Poppins', sans-serif;}
 .logu{background-color: #C4C4C4;
 width: 36vw; height: 60vh;margin-left: 32vw;margin-top:5vh;margin-right: 32vw;display:flex;flex-wrap: wrap;font-family: 'Poppins', sans-serif;}
@@ -20,7 +20,7 @@ button{background-color: #c2755e;color:white; text-align: right;}
     .log{margin-left: 10vw;}
     .logu div{width: 100%;}
 }
-=======
+
 body {
     background-color: #E5E5E5;
     font-family: poppins, sans-serif;
@@ -35,7 +35,7 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
-
+/*
 input {
     background-color: #C4C4C4;
 }
@@ -61,4 +61,4 @@ button {
     color: white;
     text-align: right;
 }
->>>>>>> Stashed changes
+
