@@ -1,0 +1,8 @@
+body{background-color: #e5e5e5;}
+.cuadrop{width: 90vw;height:35vh;margin-top: 5vh;margin-left: 5vw;display: flex;}
+.producto{background-color: white;width: 20vw;height: 29vh;margin-bottom: 8vh;margin-left: 5vw;}
+.otros{width: 70vw;height: 29vh;margin-bottom: 8vh;margin-left: 5vw;display: block;}
+.a{background-color: white;width: 60vw;height: 6vh;margin: auto;}
+.b{background-color: white;width: 10vw;height: 6vh;margin: auto;}
+.d{background-color: white;width: 10vw;height: 6vh;margin: auto;}
+
