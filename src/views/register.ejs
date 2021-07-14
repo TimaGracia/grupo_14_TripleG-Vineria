@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("./partials/head")%>
+
+<body>
+    <%- include("./partials/header")%>
+    <main>
+    <h1 class="completa">Completa tus datos</h1>
+    <div class="formu">
+        <form action="/registro" method="POST">
+        <div>
+            <div><label for="nombre">Nombre</label></div>
+            <div><input type="text" name="nombre" id="nombre"></div>
+        </div>
+        <div action="apellido">
+            <div><label for="">Apellido</label></div>
+            <div><input type="text" name="apellido" id="apellido"></div>
+        </div>
+        <div>
+            <div><label for="email">E-mail</label></div>
+            <div><input type="email" name="email" id="email"></div>
+        </div>
+        <div>
+            <div><label for="fecha">Fecha de nacimiento</label></div>
+            <div><input type="date" name="fecha" id="fecha"></div>
+        </div>
+        <div>
+            <div><label for="contraseña">Contraseña</label></div>
+            <div><input type="password" name="contraseña" id="contraseña"></div>
+        </div>
+        <div></div>
+        <div>
+            <label for="acepto">Acepto las condiciones</label>
+            <input type="checkbox" name="acepto" id="acepto">
+        </div>
+        <div>
+            <button type="submit">Crear Cuenta</button>
+        </div>
+        </form>
+    </div>
+    </main>
+    <%- include("./partials/footer")%>
+
+</body>
+</html>
