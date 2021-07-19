@@ -6,7 +6,11 @@ let productController = {
     },
     productDetail: function(req, res){
         res.render("productDetail", {style:"productDetail", title: "Detalle del Producto"})
-    }
+    },
+    productCreate: function(req, res){
+        res.render("productCreate", {style:"productCreate", title: "Crear y editar Productos"}, {select: "select"})
+    },
+    
 
 }
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head")%>
+<body>
+    <%- include("./partials/header")%>
+    <main>
+        <h1 class="titulo">Completa tus datos</h1>
+        
+            <form action="/crear" method="POST" class="crear">
+            <div>
+                <div><label for="nombre">Nombre del Producto</label></div>
+                <div><input type="text" name="nombre" id="nombre"></div>
+            </div>
+            <div action="descripcion">
+                <div><label for="">Descripcion</label></div>
+                <div><textarea name="descripcion" id="descripcion" cols="25" rows="5">El producto...</textarea></div>
+            </div>
+            <div class="especial">
+                <div><label for="foto">Imagen</label></div>
+                <div><input type="file" name="foto" id="foto"></div>
+            </div>
+            <div></div>
+            <div>
+                <div><label for="tipo">Categoria</label></div>
+                <div>
+                    <select name="tipo">
+                        <option value="tipo">Malbec</option>
+                        <option value="tipo">Rose</option>
+                        <option value="tipo">Espumante</option>
+
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div><label for="precio">Precio</label></div>
+                <div><input type="number" name="precio" id="precio"></div>
+            </div>
+            <div>
+                <button type="submit">Crear Producto</button>
+            </div>
+            </form>
+    </main>
+    <%- include("./partials/footer")%>
+
+</body>
+</html>

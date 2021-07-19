@@ -4,42 +4,21 @@
 <body>
     <%- include("./partials/header")%>
     <main>
-        <div class="cuadro">
-            <div class="a">
-                <h1>Carrito</h1>
+        <section class="cuadro">
+            <div class="carrito">
+                <h1><p>Carrito</p></h1>
             </div>
             <hr>
-            <div class="b">
-                <div class="cuadrado"><img src="/img/vino1.jpg" alt=""></div>
-                <div class="medio">
-                    <div class="grande">Nombre del producto</div>
-                    <div class="linea">
-                        <div class="c1">0</div>
-                        <div class="c2">Cantidad</div>
-                    </div>
-                </div>
-                <div class="costado">$</div>
+            
+            <%- include("./partials/producto")%>
+            
+            <div class="penultimo">
+                <div class="total1"><p>Total con envio</p></div>
+                <div class="total2"><p>$</p></div>
             </div>
             <hr>
-            <div class="c">
-                <div class="cuadrado"><img src="/img/vino1.jpg" alt=""></div>
-                <div class="medio">
-                    <div class="grande">Nombre del producto</div>
-                    <div class="linea">
-                        <div class="c1">0</div>
-                        <div class="c2">Cantidad</div>
-                    </div>
-               </div>
-                <div class="costado">$</div>                
-            </div>
-            <hr>
-            <div class="d">
-                <div class="total1">Total con envio</div>
-                <div class="total2">$</div>
-            </div>
-            <hr>
-            <div class="e">Continuar Compra</div>
-        </div>
+            <div class="ultimo"><p>Continuar Compra</p></div>
+        </section>
     </main>
 
     <%- include("./partials/footer")%>

@@ -13,4 +13,8 @@ router.get("/productCart", productController.productCart);
 
 router.get("/productDetail", productController.productDetail);
 
+router.get("/productCreate", productController.productCreate);
+
+
+
 module.exports = router;
