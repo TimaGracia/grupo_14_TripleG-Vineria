@@ -6,15 +6,19 @@
     <main>
     <h1 class="titulo">Listado de Productos</h1>
     
-        <ul>
+        <ul class="w">
             <% productos.forEach(product => { %>
-            <li> ID: <%= product.id%>  </li>
-            <li>Nombre: <%= product.name%></li>
-            <li>Descripcion: <%= product.description%></li>
-            <li>Imagen: <%= product.image%></li>
-            <li> Categoria: <%= product.category%></li>
-            <li> Color: <%= product.color%></li>
-            <li> Precio: <%= product.price%></li>
+                <div>
+            <!--<li> ID: <%= product.id%>  </li>-->
+            <!--<li> Categoria: <%= product.category%></li>-->
+            <!--<li>Imagen: <%= product.image%></li>-->
+            <li class="foto"><img src="/img/vino1.jpg" alt=""></li>
+            <i class="fas fa-truck"></i>
+            <li><%= product.name%></li>
+            <li class="des">Descripcion: <%= product.description%></li>
+            <li class="bod"> Bodega: <%= product.color%></li>
+            <li class="pre"> Precio: <%= product.price%></li>
+                    </div>
             <br>
             <% }) %>
         </ul>

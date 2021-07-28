@@ -119,6 +119,9 @@ hr{width: 90vw;}
     height: 15vw;
     z-index: 2;
 }
+.botones{
+    display: flex;
+}
 
 
 

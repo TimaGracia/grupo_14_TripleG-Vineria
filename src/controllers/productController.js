@@ -12,7 +12,7 @@ let productController = {
         res.render("productCreate", {style:"productCreate", title: "Crear y editar Productos"})//, {select: "select"}
     },
     list: function(req, res){
-        res.render("products", {productos:productModel.all(), style:"productCreate",title: "Listado de Productos"})
+        res.render("products", {productos:productModel.all(), style:"list",title: "Listado de Productos"})
     }, 
     create: function(req, res){
         //console.log(req.body);
