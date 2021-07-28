@@ -9,19 +9,15 @@
   },
   {
     "id": 2,
-    "name": "nombre2",
+    "name": "nombre222",
     "description": "description2",
-    "image": "image2",
     "category": "category",
     "colors": "",
-    "price": 1000
+    "price": "1000"
   },
   {
     "id": 4,
-    "name": [
-      "4",
-      "444"
-    ],
+    "name": "nombre4",
     "description": "description4",
     "category": "category4",
     "colors": "rojo",
@@ -32,19 +28,16 @@
     "name": "nombre55555",
     "description": "asdadasdasdsad",
     "category": "rosee",
-    "price": "77777,4",
+    "price": "77777",
     "colors": ""
   },
   {
     "id": 7,
-    "name": "ppppppp",
+    "name": "aaaaaaaaaaaa",
     "description": "12123123El producto...",
-    "image": "",
     "category": "rose",
-    "price": [
-      "444",
-      "333333"
-    ]
+    "price": "444,333333",
+    "colors": ""
   },
   {
     "id": 8,
@@ -52,10 +45,7 @@
     "description": "asdasda",
     "image": "",
     "category": "syrah",
-    "price": [
-      "333",
-      ""
-    ]
+    "price": "333"
   },
   {
     "id": 9,
@@ -63,10 +53,7 @@
     "description": "asdasda",
     "image": "",
     "category": "syrah",
-    "price": [
-      "333",
-      ""
-    ]
+    "price": "333"
   },
   {
     "id": 10,
@@ -74,9 +61,30 @@
     "description": "asdaasdsadad...",
     "image": "",
     "category": "rose",
-    "price": [
-      "12",
-      ""
-    ]
+    "price": "12"
+  },
+  {
+    "id": 11,
+    "name": "nombre55555",
+    "description": "asdasdas",
+    "category": "rose",
+    "price": "11111,",
+    "colors": ""
+  },
+  {
+    "id": 12,
+    "name": "",
+    "description": "",
+    "image": "",
+    "category": "malbec",
+    "price": ""
+  },
+  {
+    "id": 13,
+    "name": "ProductoUltimo",
+    "description": "Este es el ultimo producto agregado. ",
+    "image": "",
+    "category": "rose",
+    "price": "11111222333"
   }
 ]

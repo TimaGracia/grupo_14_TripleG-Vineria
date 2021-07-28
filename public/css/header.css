@@ -10,6 +10,7 @@ header {
     font-size: 0.9rem;
     padding: 0.5rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    font-family: 'Poppins', sans-serif;
 }
 header figure {
     
@@ -93,6 +94,10 @@ header img {
 
     .show-mobile{
         display: flex;
+    }
+
+    #burger-menu{
+        display: none;
     }
 
 }

@@ -7,19 +7,16 @@
         <h1 class="titulo">Completa tus datos</h1>
         
             <form action="/products" method="POST" class="crear">
-            <div>
-                <div><label for="name">Nombre del Producto</label></div>
-                <div><input type="text" name="name"></div>
-            </div>
             
-                <div><label for="description">Descripcion</label></div>
-                <div><textarea name="description" id="description" cols="25" rows="5">El producto...</textarea></div>
-            </div>
-            <div class="especial">
-                <div><label for="image">Imagen</label></div>
-                <div><input type="file" name="image" id="image"></div>
-            </div>
-            <div></div>
+                <section>
+                <label for="name">Nombre del Producto</label>
+                <input type="text" name="name">
+        
+                <label for="description">Descripcion</label><br>
+                <textarea name="description" id="description" cols="25" rows="5" placeholder="Inserte la descripción del producto aquí"></textarea>
+            
+                <label for="image">Imagen</label>
+                <div id=image> <input type="file" name="image" id="image"></div>
             
                 <label for="category">Categoria</label>
                 
@@ -36,11 +33,10 @@
                 <div><input type="number" name="price" id="price"></div>
             </div>
 
-            <div><label for="price">Precio</label></div>
-            <div><input type="number" name="price" id="price"></div>
-            <div>
+
+            
                 <button type="submit" value="Save">Crear Producto</button>
-            </div>
+            </section>
             </form>
     </main>
     <%- include("./partials/footer")%>
