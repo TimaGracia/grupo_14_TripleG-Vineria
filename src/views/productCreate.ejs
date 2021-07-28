@@ -6,41 +6,43 @@
     <main>
         <h1 class="titulo">Completa tus datos</h1>
         
-            <form action="/crear" method="POST" class="crear">
+            <form action="/products" method="POST" class="crear">
             <div>
-                <div><label for="nombre">Nombre del Producto</label></div>
-                <div><input type="text" name="nombre" id="nombre"></div>
+                <div><label for="name">Nombre del Producto</label></div>
+                <div><input type="text" name="name"></div>
             </div>
-            <div action="descripcion">
-                <div><label for="">Descripcion</label></div>
-                <div><textarea name="descripcion" id="descripcion" cols="25" rows="5">El producto...</textarea></div>
+            
+                <div><label for="description">Descripcion</label></div>
+                <div><textarea name="description" id="description" cols="25" rows="5">El producto...</textarea></div>
             </div>
             <div class="especial">
-                <div><label for="foto">Imagen</label></div>
-                <div><input type="file" name="foto" id="foto"></div>
+                <div><label for="image">Imagen</label></div>
+                <div><input type="file" name="image" id="image"></div>
             </div>
             <div></div>
-            <div>
-                <div><label for="tipo">Categoria</label></div>
-                <div>
-                    <select name="tipo">
-                        <option value="tipo">Malbec</option>
-                        <option value="tipo">Rose</option>
-                        <option value="tipo">Espumante</option>
+            
+                <label for="category">Categoria</label>
+                
+                    <select name="category">
+                        <option value="malbec">Malbec</option>
+                        <option value="rose">Rose</option>
+                        <option value="syrah">Syrah</option>
 
                     </select>
-                </div>
-            </div>
+                
+            
             <div>
-                <div><label for="precio">Precio</label></div>
-                <div><input type="number" name="precio" id="precio"></div>
+                <div><label for="price">Precio</label></div>
+                <div><input type="number" name="price" id="price"></div>
             </div>
+
+            <div><label for="price">Precio</label></div>
+            <div><input type="number" name="price" id="price"></div>
             <div>
-                <button type="submit">Crear Producto</button>
+                <button type="submit" value="Save">Crear Producto</button>
             </div>
             </form>
     </main>
     <%- include("./partials/footer")%>
-
 </body>
 </html>

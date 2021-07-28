@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "name": "nombre1",
+    "description": "description1",
+    "image": "image1",
+    "category": "category",
+    "colors": "",
+    "price": 10
+  },
+  {
+    "id": 2,
+    "name": "nombre2",
+    "description": "description2",
+    "image": "image2",
+    "category": "category",
+    "colors": "",
+    "price": 1000
+  },
+  {
+    "id": 4,
+    "name": "nombre4",
+    "description": "description4",
+    "image": "image4",
+    "category": "category4",
+    "colors": "rojo",
+    "price": 90123
+  },
+  {
+    "id": 5,
+    "name": "aaaaaa",
+    "description": "jeje",
+    "image": "",
+    "category": "rose",
+    "price": [
+      "77777",
+      "4"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "bbbbb",
+    "description": "dasdasdsEl producto...",
+    "image": "",
+    "category": "rose",
+    "price": [
+      "222224",
+      "44444"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "ppppppp",
+    "description": "12123123El producto...",
+    "image": "",
+    "category": "rose",
+    "price": [
+      "444",
+      "333333"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "pruebaCreacion",
+    "description": "asdasda",
+    "image": "",
+    "category": "syrah",
+    "price": [
+      "333",
+      ""
+    ]
+  },
+  {
+    "id": 9,
+    "name": "pruebaCreacion2",
+    "description": "asdasda",
+    "image": "",
+    "category": "syrah",
+    "price": [
+      "333",
+      ""
+    ]
+  },
+  {
+    "id": 10,
+    "name": "vaDenuevo",
+    "description": "asdaasdsadad...",
+    "image": "",
+    "category": "rose",
+    "price": [
+      "12",
+      ""
+    ]
+  }
+]

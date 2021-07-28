@@ -1,0 +1,18 @@
+[{
+    "id":1,
+    "name": "nombre1", 
+    "apellido": "apellido1", 
+    "email": "asd@asd.com",
+    "password":"",
+    "category":"user",
+    "image":"image1"
+}, {
+    "id":1,
+    "name": "nombre1", 
+    "apellido": "apellido1", 
+    "email": "asd@asd.com",
+    "password":"",
+    "category":"user",
+    "image":"image1"
+}
+]

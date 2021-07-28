@@ -7,20 +7,38 @@
         <div class="cuadrop">
             <div class="producto"><img src="/img/vino3.jpg" alt="" srcset=""></div>
             <div class="otros">
-                <div class="nombre"><p>Nombre del Producto</p></div>
+                <div class="nombre"><p><%= product.name %></p></div>
+                <div class="nombre"><p><%= product.description %></p></div>
+                <div class="nombre"><p><%= product.category %></p></div>
                 <div class="c">
-                    <div class="c1"><p>$</p></div>
-                    <div class="c2"><p>Envío</p></div>
+                    <div class="c1"><p>$<%= product.price %></p></div>
+                    <div class="c2"><p><%= product.colors %></p></div>
                 </div>
+
+                
+                
                 <input type="button" class="añadir" value="Añadir al Carrito">
+
+                <input type="button" class="añadir" value="Editar Producto">
+
+
+                <form action="/products/<%= product.id %>?_method=DELETE" method="post">
+                   <% console.log(product.id) %>
+                   <button type="submit" class="añadir ">Eliminar Producto</button>
+                   <!--<input type="button" class="añadir" value="Eliminar Producto">/-->
+                </form>
+                
+
+
                 <div class="d">
                     <input type="button" class="d1" value="-">
                     <div class="d1">1</div>
                     <input type="button" class="d1" value="+">
                 </div>
             </div>
+            
         </div>
-        <hr>
+        <<hr>
         <div class="palabritas">
             <input type="button" class="solapas" value="Descripción">
             <input type="button" class="solapas" value="Valoraciones">

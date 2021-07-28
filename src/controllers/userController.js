@@ -7,6 +7,7 @@ let userController = {
     login: function(req, res){
         res.render("login", {style:"login", title: "Login"})
     }
+    
 
 }
 
