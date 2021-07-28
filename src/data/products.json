@@ -1,12 +1,11 @@
 [
   {
     "id": 1,
-    "name": "nombre1",
+    "name": "nombre1111111111",
     "description": "description1",
-    "image": "image1",
     "category": "category",
     "colors": "",
-    "price": 10
+    "price": "10"
   },
   {
     "id": 2,
@@ -19,34 +18,22 @@
   },
   {
     "id": 4,
-    "name": "nombre4",
+    "name": [
+      "4",
+      "444"
+    ],
     "description": "description4",
-    "image": "image4",
     "category": "category4",
     "colors": "rojo",
-    "price": 90123
+    "price": "90123"
   },
   {
     "id": 5,
-    "name": "aaaaaa",
-    "description": "jeje",
-    "image": "",
-    "category": "rose",
-    "price": [
-      "77777",
-      "4"
-    ]
-  },
-  {
-    "id": 6,
-    "name": "bbbbb",
-    "description": "dasdasdsEl producto...",
-    "image": "",
-    "category": "rose",
-    "price": [
-      "222224",
-      "44444"
-    ]
+    "name": "nombre55555",
+    "description": "asdadasdasdsad",
+    "category": "rosee",
+    "price": "77777,4",
+    "colors": ""
   },
   {
     "id": 7,

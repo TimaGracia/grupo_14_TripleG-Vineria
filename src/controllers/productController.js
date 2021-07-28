@@ -24,11 +24,22 @@ let productController = {
         //console.log(req.params.id)
         res.render("productDetail", {product:productModel.getById(req.params.id), style:"productDetail", title: "Detalle del Producto"})
     },
+    getByIdEdit: function(req, res){
+        //console.log(req.params.id)
+        res.render("productEdit", {product:productModel.getById(req.params.id), style:"productDetail", title: "Editar el Producto"})
+    },
     delete: function (req, res){
     
         let deleted = productModel.delete(req.params.id);
-        console.log("ESTE ES EL ID DESDE EL CONTROLLER"+req.params.id)
+        
         return deleted ? res.redirect("/") : res.status(500).send("Error en el servidor");
+    },
+    update: function (req, res){
+        
+        let idUpdate = req.params.id;
+        //console.log(req.body);
+        let updated = productModel.update(req.body, idUpdate);
+        return updated ? res.redirect("/products/"+idUpdate) : res.status(500).send("Error en el servidor");
     }
 
 }

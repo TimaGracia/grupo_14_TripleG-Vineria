@@ -6,7 +6,6 @@ const productController = require("../controllers/productController")
 
 //router.get("/productDetail",(req,res)=>res.sendFile(path.join(__dirname,"../views/productDetail.html")));
 
-
 //router.get("/productCart",(req,res)=>res.sendFile(path.join(__dirname,"../views/productCart.html")));
 
 router.get("/productCart", productController.productCart);
@@ -23,7 +22,11 @@ router.post("/products", productController.create);
 
 router.get("/products/:id", productController.getById);
 
-router.get("/products/:id/edit", productController.getById);
+//router.get("/products/:id/edit", productController.getById);
+
+router.get("/products/:id/edit", productController.getByIdEdit);
+
+router.put("/products/:id", productController.update);
 
 router.delete("/products/:id", productController.delete);
 

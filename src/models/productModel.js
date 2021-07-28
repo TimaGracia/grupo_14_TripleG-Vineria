@@ -5,7 +5,7 @@ module.exports = {
     directory: path.resolve(__dirname, '../data', "products.json"),
     all: function(){
         const file = fs.readFileSync(this.directory);
-        console.log(JSON.parse(file));
+        
         return JSON.parse(file);
     }, 
     getById: function(id){
@@ -26,12 +26,29 @@ module.exports = {
         fs.writeFileSync(this.directory, JSON.stringify(all, null, 2));
         return newElement;
     },
-    update: function(){},
+    update: function(data,id){
+        let all = this.all();
+        
+       all = all.map(element => {
+ 
+            if(element.id == id){
+                element.name = data.name,
+                element.description = data.description,
+                element.image = data.image,
+                element.category = data.category,
+                element.colors = data.colors,
+                element.price = data.price;
+
+                return element;
+            }
+            return element
+        });
+        fs.writeFileSync(this.directory, JSON.stringify(all, null, 2));
+        return true;
+    },
     delete: function(id){
         let all = this.all();
         let deleted = this.getById(id);
-
-        console.log("ESTE ES EL ID en model:"+id);
 
         all = all.filter(element => element.id != deleted.id)
         fs.writeFileSync(this.directory, JSON.stringify(all, null, 2));

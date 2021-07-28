@@ -7,24 +7,25 @@
         <div class="cuadrop">
             <div class="producto"><img src="/img/vino3.jpg" alt="" srcset=""></div>
             <div class="otros">
-                <div class="nombre"><p><%= product.name %></p></div>
-                <div class="nombre"><p><%= product.description %></p></div>
-                <div class="nombre"><p><%= product.category %></p></div>
-                <div class="c">
-                    <div class="c1"><p>$<%= product.price %></p></div>
-                    <div class="c2"><p><%= product.colors %></p></div>
-                </div>
+               
 
                 
-                
-                <input type="button" class="añadir" value="Añadir al Carrito">
-
-               <a href="/products/<%= product.id %>/edit"> <input type="button" class="añadir" value="Editar Producto"></a>
 
 
-                <form action="/products/<%= product.id %>?_method=DELETE" method="post">
-                   <% console.log(product.id) %>
-                   <button type="submit" class="añadir ">Eliminar Producto</button>
+                <form action="/products/<%= product.id %>?_method=PUT" method="post">
+                   
+                    <div class="nombre">
+                        <p>El ID del producto es: <%= product.id %></p>
+                        <input type="hidden" name="id" value="<%= product.id %>">  </input>
+                        <input type="text" name="name" value="<%= product.name %>">  </input>
+                        <input type="text" name="description" value="<%= product.description %>">  </input>
+                        <input type="text" name="category" value="<%= product.category %>">  </input>
+                        <input type="text" name="price" value="<%= product.price %>">  </input>
+                        <input type="text" name="colors" value="<%= product.colors %>" placeholder="color">  </input><br>
+    
+                    </div>
+
+                   <button type="submit" class="añadir ">Confirmar edición</button>
                    <!--<input type="button" class="añadir" value="Eliminar Producto">/-->
                 </form>
                 
