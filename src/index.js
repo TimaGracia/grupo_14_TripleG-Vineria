@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
-const path=require("path");
+const path = require("path");
 const methodOverride = require('method-override');
 
-app.listen(2501,()=>console.log("Server Start","http://localhost:2501"));
+app.listen(2502,()=>console.log("Server Start","http://localhost:2501"));
 
 app.use(express.static(path.join(__dirname,"../public")));
 
@@ -31,3 +31,8 @@ app.use(users);
 //Product
 const products = require("./routes/products")
 app.use(products);
+
+
+app.use((req, res, next) => {
+    res.status(400).render("not-found");
+})

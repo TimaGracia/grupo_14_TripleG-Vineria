@@ -11,14 +11,20 @@ module.exports = {
     getById: function(id){
         return this.all().find(element => element.id == id)
     },
-    create: function(data){
+    create: function(data, file){
         let all = this.all();
         //console.log(all);
+        //console.log(file);
+        let img;
+        if (file){
+            img = "/uploads/products/"+file.filename;
+        } else img = "/uploads/products/default.jpg";
+
         let newElement = {
             id: all.length > 0 ? all[all.length - 1].id +1 : 1,
             name: data.name,
             description: data.description,
-            image: data.image,
+            image: img,
             category: data.category,
             price: data.price
         }

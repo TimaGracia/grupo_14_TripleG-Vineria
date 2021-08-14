@@ -1,90 +1,42 @@
 [
   {
     "id": 1,
-    "name": "nombre1111111111",
-    "description": "description1",
-    "category": "category",
-    "colors": "",
-    "price": "10"
+    "name": "multerTest4222",
+    "description": "asdasdas",
+    "image": "/uploads/products/image-vino-1628898475641.png",
+    "category": "malbec",
+    "price": "4"
   },
   {
     "id": 2,
-    "name": "nombre222",
-    "description": "description2",
-    "category": "category",
-    "colors": "",
-    "price": "1000"
+    "name": "finalMulter",
+    "description": "asdasdas",
+    "image": "/uploads/products/image-vino-1628898740081.png",
+    "category": "malbec",
+    "price": "4"
+  },
+  {
+    "id": 3,
+    "name": "asdsadas",
+    "description": "asdasdas333",
+    "image": "/uploads/products/image-vino-1628898860849.jpg",
+    "category": "malbec",
+    "price": "4"
   },
   {
     "id": 4,
-    "name": "nombre4",
-    "description": "description4",
-    "category": "category4",
-    "colors": "rojo",
-    "price": "90123"
+    "name": "nombre1111111111",
+    "description": "descripcion 123",
+    "image": "/uploads/products/default.jpg",
+    "category": "syrah",
+    "price": "888"
   },
   {
     "id": 5,
-    "name": "nombre55555",
-    "description": "asdadasdasdsad",
-    "category": "rosee",
-    "price": "77777",
-    "colors": ""
-  },
-  {
-    "id": 7,
-    "name": "aaaaaaaaaaaa",
-    "description": "12123123El producto...",
-    "category": "rose",
-    "price": "444,333333",
-    "colors": ""
-  },
-  {
-    "id": 8,
-    "name": "pruebaCreacion",
-    "description": "asdasda",
-    "image": "",
+    "name": "nombre12",
+    "description": "descripcion 123",
+    "image": "/uploads/products/default.jpg",
     "category": "syrah",
-    "price": "333"
-  },
-  {
-    "id": 9,
-    "name": "pruebaCreacion2",
-    "description": "asdasda",
-    "image": "",
-    "category": "syrah",
-    "price": "333"
-  },
-  {
-    "id": 10,
-    "name": "vaDenuevo",
-    "description": "asdaasdsadad...",
-    "image": "",
-    "category": "rose",
-    "price": "12"
-  },
-  {
-    "id": 11,
-    "name": "nombre55555",
-    "description": "asdasdas",
-    "category": "rose",
-    "price": "11111,",
-    "colors": ""
-  },
-  {
-    "id": 12,
-    "name": "",
-    "description": "",
-    "image": "",
-    "category": "malbec",
-    "price": ""
-  },
-  {
-    "id": 13,
-    "name": "ProductoUltimo",
-    "description": "Este es el ultimo producto agregado. ",
-    "image": "",
-    "category": "rose",
-    "price": "11111222333"
+    "price": "888"
   }
 ]

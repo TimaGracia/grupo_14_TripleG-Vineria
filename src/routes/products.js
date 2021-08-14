@@ -1,28 +1,36 @@
 const express = require("express");
+const multer = require("multer");
 const router = express.Router();
 const path = require("path");
 const productController = require("../controllers/productController")
 
+//multer config
 
-//router.get("/productDetail",(req,res)=>res.sendFile(path.join(__dirname,"../views/productDetail.html")));
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.resolve(__dirname,"../../public/uploads/products"))
+        
+    }, 
+    filename: (req, file, cb) => {
+        
+        const newFilename = file.fieldname + "-" + Date.now()+ path.extname(file.originalname);
+        cb(null, newFilename)
 
-//router.get("/productCart",(req,res)=>res.sendFile(path.join(__dirname,"../views/productCart.html")));
+    }
+}); 
+
+const upload = multer({storage : storage});//: storage
+
 
 router.get("/productCart", productController.productCart);
-
-//router.get("/productDetail", productController.productDetail);
 
 router.get("/products/create", productController.productCreate);
 
 router.get("/products", productController.list);
 
-
-//router.post("/create", productController.create);
-router.post("/products", productController.create);
+router.post("/products", upload.single("image-vino"), productController.create);
 
 router.get("/products/:id", productController.getById);
-
-//router.get("/products/:id/edit", productController.getById);
 
 router.get("/products/:id/edit", productController.getByIdEdit);
 
@@ -30,26 +38,5 @@ router.put("/products/:id", productController.update);
 
 router.delete("/products/:id", productController.delete);
 
-/*
-1. /products (GET) -> hecho
-Listado de productos
 
-2. /products/create (GET) -> hecho
-Formulario de creación de productos
-
-3. /products/:id (GET) -> hecho
-Detalle de un producto particular
-
-4. /products (POST) -> Hecho
-Acción de creación (a donde se envía el formulario)
-
-5. /products/:id/edit (GET) --> hecho
-Formulario de edición de productos
-
-6. /products/:id (PUT)
-Acción de edición (a donde se envía el formulario):
-
-7. /products/:id (DELETE) -> Hecho
-Acción de borrado
-*/
 module.exports = router;

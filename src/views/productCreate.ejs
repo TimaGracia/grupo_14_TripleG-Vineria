@@ -6,7 +6,7 @@
     <main>
         <h1 class="titulo">Completa tus datos</h1>
         
-            <form action="/products" method="POST" class="crear">
+            <form action="/products" method="POST" class="crear" enctype="multipart/form-data"> <!--multipart/form" -->
             
                 <section>
                 <label for="name">Nombre del Producto</label>
@@ -16,7 +16,7 @@
                 <textarea name="description" id="description" cols="25" rows="5" placeholder="Inserte la descripción del producto aquí"></textarea>
             
                 <label for="image">Imagen</label>
-                <div id=image> <input type="file" name="image" id="image"></div>
+                <div id=image> <input type="file" name="image-vino" id="image-vino"><!--id="image" --></div>
             
                 <label for="category">Categoria</label>
                 
