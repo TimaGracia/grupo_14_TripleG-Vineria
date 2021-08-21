@@ -1,6 +1,6 @@
 header {
     max-width: 100vw;
-    height: 12vh;
+    height: 15vh;
     background-color: #f1efee;
     display: flex;
     flex-direction: row;
@@ -8,15 +8,20 @@ header {
     justify-content:space-around;
     align-items: flex-end;
     font-size: 0.9rem;
-    padding: 0.5rem;
+    padding: 25px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     font-family: 'Poppins', sans-serif;
+    
+}
+header figure img{
+    width: 100%;
+    height: 100%;
 }
 header figure {
     
-    width: 10rem;
-    height: 10rem;
-    padding: 10px;
+    width: 14vh;
+    height: 14vh;
+    padding: 0px;
     align-items:center;
     align-self:center;
 }
@@ -64,7 +69,7 @@ header img {
 }
 #nav-login li{
     align-items: flex-start;
-    margin: 0.2rem;
+    margin: solid black 1px;
 }
 
 

@@ -39,7 +39,7 @@
             </div>
             
         </div>
-        <<hr>
+        <hr>
         <div class="palabritas">
             <input type="button" class="solapas" value="Descripción">
             <input type="button" class="solapas" value="Valoraciones">
@@ -49,7 +49,21 @@
 
         <div class="final">
             <div class="relacionados">Productos Relacionados</div>
-            <%- include("./partials/relacionados")%>
+            <div class="alineados">
+                <% if(productos.length < 3 ){ %>
+                    <% for( i=0 ; i< 1 ; i++ ){ %>
+                        <a href="/products/<%=productos[i].id%>"><div class="f"><img src="<%=productos[i].image%>" alt="" srcset=""></div></a>
+                    <% } %>
+                <% } if(2 < productos.length < 7 ){ %>
+                    <% for( i=0 ; i< 3 ; i++ ){ %>
+                        <a href="/products/<%=productos[i].id%>"><div class="f"><img src="<%=productos[i].image%>" alt="" srcset=""></div></a>
+                    <% } %>
+                <% }else{ %>
+                    <% for( i=0 ; i< 5 ; i++ ){ %>
+                        <a href="/products/<%=productos[i].id%>"><div class="f"><img src="<%=productos[i].image%>" alt="" srcset=""></div></a>
+                    <% } %>
+                <% } %>
+            </div>
         </div>
     </main>
     <%- include("./partials/footer")%>

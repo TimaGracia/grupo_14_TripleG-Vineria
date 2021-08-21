@@ -18,7 +18,7 @@ body {
 #banner {
 
     width: 100vw;
-    height: 20vh;
+    height: 40vh;
 }
 #banner img {
     width: 100%;
@@ -51,6 +51,7 @@ body {
 }
 #sub-banner i{
 
+    height: 2vh;
     margin: 0.5rem;
     padding: 0.5rem;
     font-size: 2rem;
@@ -62,9 +63,7 @@ body {
 #sub-banner article{
     margin: 1rem 0.5rem 0rem 1rem;
     padding: 0 0.7rem 0 0.7rem;
-    border-right: solid 1px black;
-    border-left: solid 1px black;
-    height: 80%;
+    height: 50%;
 }
 
 #texto-res p{

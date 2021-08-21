@@ -5,7 +5,7 @@ const methodOverride = require('method-override');
 const logMiddleware = require("./middlewares/logMiddleware");
 const session = require('express-session');
 
-app.listen(2502,()=>console.log("Server Start","http://localhost:2501"));
+app.listen(2502,()=>console.log("Server Start","http://localhost:2502"));
 
 app.use(express.static(path.join(__dirname,"../public")));
 

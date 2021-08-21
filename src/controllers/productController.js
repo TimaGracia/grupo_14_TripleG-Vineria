@@ -6,7 +6,7 @@ let productController = {
         res.render("productCart", {style:"productCart", title: "Carrito de Productos"})
     },
     productDetail: function(req, res){
-        res.render("productDetail", {style:"productDetail", title: "Detalle del Producto"})
+        res.render("productDetail", {style:"productDetail", title: "Detalle del Producto",productos:productModel.all()})
     },
     productCreate: function(req, res){
         res.render("productCreate", {style:"productCreate", title: "Crear y editar Productos"})//, {select: "select"}
@@ -22,7 +22,7 @@ let productController = {
     },
     getById: function(req, res){
         //console.log(req.params.id)
-        res.render("productDetail", {product:productModel.getById(req.params.id), style:"productDetail", title: "Detalle del Producto"})
+        res.render("productDetail", {product:productModel.getById(req.params.id),productos:productModel.all(), style:"productDetail", title: "Detalle del Producto"})
     },
     getByIdEdit: function(req, res){
         //console.log(req.params.id)

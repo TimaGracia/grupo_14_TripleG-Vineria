@@ -6,7 +6,7 @@
     <%- include("./partials/header")%>
     <main>
         <section id="banner">
-            <img src="/img/viñedos.jpg">
+            <img src="/img/viñedos.jpg">
         </section>
 
         <section id="sub-banner">
@@ -28,21 +28,13 @@
 
         </section>
         <section id="section-vinos">
-            <article>
-                <img src="/img/vino1.jpg">
-                <p>Vino 1</p>
-                <p>$4.000</p>
-            </article>
-            <article>
-                <img src="/img/vino2.jpeg">
-                <p>Vino 2</p>
-                <p>$11.700</p>
-            </article>
-            <article>
-                <img src="/img/vino3.jpg">
-                <p>Vino 3</p>
-                <p>$3.200</p>
-            </article>
+            <% for(i=0;i < 3;i++){ %>
+                <article>
+                    <img src="<%= productos[i].image%>">
+                    <p><%= productos[i].name%></p>
+                    <p>$ <%= productos[i].price%></p>
+                </article>
+                <% } %>
         </section>
 
     </main>
