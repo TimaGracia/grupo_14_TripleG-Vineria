@@ -1,0 +1,97 @@
+body { 
+    background-color: #e5e5e5;}
+main { 
+    display: block;}
+.cuadrop { 
+    width: 90vw;
+    height:35vh;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    display: flex;}
+.producto { 
+    background-color: white;
+    width: 20vw;
+    height: 29vh;
+    margin-bottom: 8vh;
+    margin-left: 5vw;}
+.producto img { 
+    width: 20vw;
+    height: 29vh;}
+.otros { 
+    width: 70vw;
+    height: 29vh;
+    margin-bottom: 8vh;
+    margin-left: 5vw;
+    display: block;}
+
+
+form{
+    background-color: white;
+    display: block;
+    margin: auto;
+}
+form input{
+    display: block;
+    margin: auto;
+}
+.añadir {
+    background-color: #c2755e;
+    color: white;
+    text-align: center;
+    width: 10vw;
+    padding: 1rem;
+    margin: auto auto auto 80%;
+    
+}
+
+
+hr{width: 90vw;}
+.palabritas { 
+    width: 30vw;
+    height: 10vh;
+    display: flex;
+    margin-left: 10vw;}
+.solapas { 
+    width: 15vw;
+    height:4vh;
+    text-align: left;
+    background-color: #e5e5e5;
+    border: #e5e5e5;}
+.des {
+    display: none;
+}
+
+.solapas:hover {
+    background-color: white;
+    }
+
+
+.final { 
+    width: 50vw;
+    height: 30vh;
+    margin-top:10vh;
+    margin-left: 15vh;
+    display: block;}
+.relacionados { 
+    width: 20vw;
+    height: 5vh;
+    color:black;}
+.alineados { 
+    display: flex;}
+.f { 
+    background-color: white;
+    width:10vw;
+    height: 10vh;
+    margin-right: 3vw;}
+.f img { 
+    width: 10vw;
+    height: 10vh;
+    z-index:1;}
+.f img:hover{
+    width: 15vw;
+    height: 15vw;
+    z-index: 2;
+}
+.botones{
+    display: flex;
+}

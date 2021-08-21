@@ -26,7 +26,7 @@ let productController = {
     },
     getByIdEdit: function(req, res){
         //console.log(req.params.id)
-        res.render("productEdit", {product:productModel.getById(req.params.id), style:"productDetail", title: "Editar el Producto"})
+        res.render("productEdit", {product:productModel.getById(req.params.id), style:"productEdit",productos:productModel.all(), title: "Editar el Producto"})
     },
     delete: function (req, res){
     

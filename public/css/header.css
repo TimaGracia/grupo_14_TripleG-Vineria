@@ -72,6 +72,37 @@ header img {
     margin: solid black 1px;
 }
 
+#nav-login ul li ul{
+    display: none;
+}
+  #menu:hover>ul{
+      display: block;
+  }
+  #menu ul li>a{
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    width:100% ;
+    font-size: 50%;
+  }
+  #menu ul li>a:hover{
+    color: #000;
+    background-color: #eaeaea;
+  }
+  #menu ul>li{
+    float: left;
+    text-align:center
+  }
+  #menu ul>li>ul{
+    display: none;
+  }
+  #menu ul>li:hover>ul {
+    display:block;
+  }
+  
+
 
 
 @media (min-width:769px){
@@ -106,3 +137,5 @@ header img {
     }
 
 }
+
+

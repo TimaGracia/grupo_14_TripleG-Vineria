@@ -46,5 +46,69 @@
     "password": "$2a$10$cJQLmDLltDC2OPukPLUyXezKw3Y1Q/L6hpOeWakbOJ3QkdWOx9GMy",
     "admin": false,
     "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 7,
+    "name": "matias",
+    "email": "timagracia9@gmail.com",
+    "password": "$2a$10$sAf./Jft/LdQNIO4j.an9.jxUP8TIZlUj.MetnyMhy8KKo3yT0umi",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 8,
+    "name": "ddcdscdsdc",
+    "email": "timagracia@gmail.com",
+    "password": "$2a$10$fRtm92G.gc2rr6s/DtcITeaPBvR75dUwFcUbaJnr9ImAxavAb6PzO",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 9,
+    "name": "vfrfr",
+    "email": "timag@gmail.com",
+    "password": "$2a$10$5HmIRI91Qf3emegLTuIGCugeCISwUp4Ott9LsTQNNkesAn6GJO92O",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 10,
+    "name": "vfrfr",
+    "email": "timg@gmail.com",
+    "password": "$2a$10$IWmxDCq7IIeDoL7k9lIVi.FaR5S2unvK4JARPHHUprZB9MsNQUXqG",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 11,
+    "name": "vfvr",
+    "email": "cia9@gmail.com",
+    "password": "$2a$10$ytJ0Q/6UJQdT.jcs60LYC.JifdK8AHAhmoLkKJW2/ztyy1YTkUScS",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 12,
+    "name": "vefveve",
+    "email": "timagr@vt.com",
+    "password": "$2a$10$VVP5546kh/AyBBW1ikqX3ukmFtQHaw37U8a1XXfcbxh9gP4RD.CaO",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 13,
+    "name": "d3eded",
+    "email": "vrf@ff.com",
+    "password": "$2a$10$GuIWXf8RzQ/kL0q/ub7fSOLOriymfrob/bRgAEC8fmmubq0m7XCDy",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 14,
+    "name": "titi",
+    "email": "tima@gmail.com",
+    "password": "$2a$10$2j8KbmmgFyfZTLs4Rrm5tOB71fxmn3bS3hEIu/gv1Mz0rnL8guYBu",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
   }
 ]

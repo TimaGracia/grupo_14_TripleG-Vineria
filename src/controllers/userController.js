@@ -39,7 +39,7 @@ let userController = {
         delete userLogged.password;
         req.session.userLogged = userLogged;
  
-        res.send("Success!")
+        res.redirect("/");
         
         } else {
            // res.send(errors.mapped());
@@ -70,7 +70,7 @@ let userController = {
         if (errors.isEmpty()){
             let saved = userModel.create(req.body,req.file);
             //res.send(saved);
-            return saved ? res.redirect("users/user/"+saved.id) : res.status(500).send("Error en el servidor");
+            return saved ? res.redirect("/") : res.status(500).send("Error en el servidor");
         } else {
             //console.log(req.body)
             res.render("register", {style:"register", title: "Register", errors:errors.mapped(), old:req.body});//errors:errors.array()

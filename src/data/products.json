@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "name": "multerTest4222",
-    "description": "asdasdas",
-    "image": "/uploads/products/image-vino-1628898475641.png",
-    "category": "malbec",
-    "price": "4"
+    "name": "111",
+    "description": "111",
+    "category": "111",
+    "price": "1",
+    "colors": "1"
   },
   {
     "id": 2,
@@ -40,11 +40,19 @@
     "price": "888"
   },
   {
-    "id": 6,
-    "name": "2313213",
-    "description": "sdadadadadasd",
-    "image": "/uploads/products/default.jpg",
+    "id": 7,
+    "name": "nuevo",
+    "description": "evfef",
     "category": "rose",
-    "price": ""
+    "price": "2",
+    "colors": ""
+  },
+  {
+    "id": 8,
+    "name": "Timafgfgf",
+    "description": "gfgfgf",
+    "category": "rose",
+    "price": "145",
+    "colors": ""
   }
 ]

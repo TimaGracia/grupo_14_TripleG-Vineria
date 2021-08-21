@@ -15,7 +15,7 @@ input {
     font-family: 'Poppins', sans-serif;
 }
 
-button {
+.crearboton {
     background-color: #c2755e;
     color: white;
     text-align: center;
