@@ -16,7 +16,7 @@ let productController = {
     }, 
     create: function(req, res){
 
-        let saved = productModel.create(req.body,req.file);//req.file && req.file.length > 0 ? req.file : {url: "/uploads/products/default.jpg"}
+        let saved = productModel.create(req.body,req.file);
         
         return saved ? res.redirect("products/"+saved.id) : res.status(500).send("Error en el servidor");
     },

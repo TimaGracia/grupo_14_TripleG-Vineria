@@ -2,10 +2,16 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require('method-override');
+const logMiddleware = require("./middlewares/logMiddleware");
+const session = require('express-session');
 
 app.listen(2502,()=>console.log("Server Start","http://localhost:2501"));
 
 app.use(express.static(path.join(__dirname,"../public")));
+
+app.use(logMiddleware);
+
+app.use(session({secret:"vineria"}));
 
 //uso JSON
 app.use(express.urlencoded({extended: false}));

@@ -1,18 +1,26 @@
-[{
-    "id":1,
-    "name": "nombre1", 
-    "apellido": "apellido1", 
+[
+  {
+    "id": 1,
+    "name": "aaaa",
+    "email": "aaa@asd.com",
+    "password": "aa",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 2,
+    "name": "aaaa",
+    "email": "a@a.com",
+    "password": "111",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 3,
+    "name": "asd",
     "email": "asd@asd.com",
-    "password":"",
-    "category":"user",
-    "image":"image1"
-}, {
-    "id":1,
-    "name": "nombre1", 
-    "apellido": "apellido1", 
-    "email": "asd@asd.com",
-    "password":"",
-    "category":"user",
-    "image":"image1"
-}
+    "password": "$2a$10$8/Mg.T8F/8lPyRfarXvPiONbXyxIxkSS4DjBH1OJ3iOpnqR1MnNHq",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  }
 ]

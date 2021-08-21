@@ -6,14 +6,21 @@
     <main>
     <h1 class="titulo">Inicio de Sesión</h1>
     
-        <form action="" class="formulario">
+    <% if (locals.errors) { %>
+        <% for(oneError in errors) { %>
+            <p> <%= errors[oneError].msg %> </p>
+        <% } %>
+    <% }%>
+
+
+        <form action="/login" method="POST" class="formulario">
             <div>
                 <div><label for="">E-mail</label></div>
-                <div><input type="email"></div>
+                <div><input type="email" name="email"></div>
             </div>
             <div>
                 <div><label for="">Contraseña</label></div>
-                <div><input type="password"></div>
+                <div><input type="password" name="password"></div>
             </div>
             <div id="datos">
                 <label for="" id="datos">Recordar datos de Inicio</label>

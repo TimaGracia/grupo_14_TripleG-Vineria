@@ -38,5 +38,13 @@
     "image": "/uploads/products/default.jpg",
     "category": "syrah",
     "price": "888"
+  },
+  {
+    "id": 6,
+    "name": "2313213",
+    "description": "sdadadadadasd",
+    "image": "/uploads/products/default.jpg",
+    "category": "rose",
+    "price": ""
   }
 ]
