@@ -12,6 +12,7 @@ let userController = {
         res.render("register", {style:"register", title: "Register"})
     },
     login: function(req, res){
+        
         res.render("login", {style:"login", title: "Login"})
     }, 
     processLogin: function(req, res){
@@ -19,24 +20,12 @@ let userController = {
        
         if (errors.isEmpty()){
             let users = userModel.all();
-            //console.log(users);
             for (let i = 0; i < users.length; i++){
-                //console.log("Este es el mail del array: "+users[i].email)
-                //console.log("Este es el mail del req body: "+req.body.email)
                 if (users[i].email == req.body.email){
-                    //console.log("ENTROOOOOOO");
+                    
                     if (bcrypt.compareSync(req.body.password, users[i].password)){
-                    //if (users[i].password == req.body.password) {//cambiar por bcrypt.
-                        //bcrypt
-                        /*
-                        if (bcrypt.compareSync(req.body.password, users[i].password)){
-                        */
-
-                        //console.log("Esta es la password del array: "+users[i].password)
-                        //console.log("Esta es la password del req body: "+req.body.password)
                         var userLogged = users[i];
                         break;
-
                     }
                 }
             }
@@ -47,7 +36,9 @@ let userController = {
 
         }
         //console.log(userLogged);
+        delete userLogged.password;
         req.session.userLogged = userLogged;
+ 
         res.send("Success!")
         
         } else {
@@ -64,6 +55,17 @@ let userController = {
         let errors = validationResult(req);
 
         //res.send(errors.mapped());
+        let userInDB = userModel.findByField("email", req.body.email);
+        //res.send(userInDB);
+
+        if (userInDB) {
+            
+            return res.render("register", {style:"register", title: "Register", errors:{
+                email: {
+                    msg: "El usuario ya existe"
+                }
+            }, old:req.body});
+        }
         
         if (errors.isEmpty()){
             let saved = userModel.create(req.body,req.file);
@@ -75,7 +77,18 @@ let userController = {
             //En vez de array podemos usar errors.mapped()
         }
 
+        
+
+    }, 
+
+    profile: function(req, res){
+        return res.send(req.session.userLogged);
+    }, 
+    logout: function(req, res){
+        req.session.destroy();
+        return res.redirect("/");
     }
+
 
 }
 

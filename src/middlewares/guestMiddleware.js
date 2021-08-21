@@ -1,8 +1,10 @@
 function guestMiddleware(req, res, next) {
-    if (req.session.userLogged ==undefined) {
+    console.log(req.session);
+    if (req.session.userLogged == undefined) {
         next();
     } else {
-        res.send("Esta página es visible unicamente para usuarios logueados");
+        //res.send("Usted está logueado");
+        res.redirect("/");
     }
 
 }

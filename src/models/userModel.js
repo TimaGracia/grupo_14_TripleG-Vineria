@@ -12,6 +12,11 @@ module.exports = {
     getById: function(id){
         return this.all().find(element => element.id == id)
     },
+    findByField: function (field, text) {
+		let allUsers = this.all();
+		let userFound = allUsers.find(oneUser => oneUser[field] === text);
+		return userFound;
+	},
     create: function(data, file){
         let all = this.all();
         let img;

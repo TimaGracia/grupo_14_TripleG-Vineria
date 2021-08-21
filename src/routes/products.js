@@ -2,7 +2,9 @@ const express = require("express");
 const multer = require("multer");
 const router = express.Router();
 const path = require("path");
-const productController = require("../controllers/productController")
+const productController = require("../controllers/productController");
+const authMiddleware= require("../middlewares/authMiddleware");
+
 
 //multer config
 
@@ -22,9 +24,9 @@ const storage = multer.diskStorage({
 const upload = multer({storage : storage});//: storage
 
 
-router.get("/productCart", productController.productCart);
+router.get("/productCart",authMiddleware, productController.productCart);
 
-router.get("/products/create", productController.productCreate);
+router.get("/products/create", authMiddleware, productController.productCreate);
 
 router.get("/products", productController.list);
 
@@ -32,7 +34,7 @@ router.post("/products", upload.single("image-vino"), productController.create);
 
 router.get("/products/:id", productController.getById);
 
-router.get("/products/:id/edit", productController.getByIdEdit);
+router.get("/products/:id/edit",authMiddleware, productController.getByIdEdit);
 
 router.put("/products/:id", productController.update);
 

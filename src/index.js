@@ -11,7 +11,11 @@ app.use(express.static(path.join(__dirname,"../public")));
 
 app.use(logMiddleware);
 
-app.use(session({secret:"vineria"}));
+app.use(session({
+    secret:"vineria", 
+    resave: false, 
+    saveUninitialized: false,
+}));
 
 //uso JSON
 app.use(express.urlencoded({extended: false}));

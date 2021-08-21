@@ -22,5 +22,29 @@
     "password": "$2a$10$8/Mg.T8F/8lPyRfarXvPiONbXyxIxkSS4DjBH1OJ3iOpnqR1MnNHq",
     "admin": false,
     "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 4,
+    "name": "asdad",
+    "email": "asd@asd.com",
+    "password": "$2a$10$vSXvaJZRV7rXcGYZrZUdeeCzko8gFSU.P61vxXYUShg7r0ogaqfq.",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 5,
+    "name": "dasda",
+    "email": "aaaa@aaa.com",
+    "password": "$2a$10$e9zDpJtVNxt6xZTi3tASdOjuZVgAF.PbZBlL9rFQizgL06sR8YV2q",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 6,
+    "name": "asd",
+    "email": "aaa@aaa.com",
+    "password": "$2a$10$cJQLmDLltDC2OPukPLUyXezKw3Y1Q/L6hpOeWakbOJ3QkdWOx9GMy",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
   }
 ]

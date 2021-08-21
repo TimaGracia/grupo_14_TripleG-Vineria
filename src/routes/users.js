@@ -24,12 +24,14 @@ const validateLogin = [
 
 router.post("/register",validateRegister, userController.store);
 
-router.get("/register", userController.register);
+router.get("/register", guestMiddleware, userController.register);
 
 router.get("/users/user/:id", userController.getById);
-//router.get("/login",(req,res)=>res.sendFile(path.join(__dirname,"../views/login.html")));
-router.get("/login", userController.login);
-//validateLogin,
+
+router.get("/login",guestMiddleware, userController.login);
+
+router.get("/logout",authMiddleware, userController.logout);
+
 router.post("/login", validateLogin, userController.processLogin);
 
 module.exports = router;
