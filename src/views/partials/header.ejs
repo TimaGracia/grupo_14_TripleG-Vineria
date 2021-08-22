@@ -43,9 +43,13 @@
                     <i class="far fa-user"></i>
                 </a>
                 <ul>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Register</a></li>
-                    <li><a href="/logout">Logout</a></li>
+                    <% if (locals.isLogged == true) {%>
+                    
+                        <li><a href="/logout">Logout user <%= locals.userLogged.email %> </a></li>
+                        <% } else {%>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
+                       <%  }%>
                 </ul>
             </li>
             <li>

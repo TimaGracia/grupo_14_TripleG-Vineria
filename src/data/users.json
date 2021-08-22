@@ -16,18 +16,10 @@
     "avatar": "/uploads/users/default.png"
   },
   {
-    "id": 3,
-    "name": "asd",
-    "email": "asd@asd.com",
-    "password": "$2a$10$8/Mg.T8F/8lPyRfarXvPiONbXyxIxkSS4DjBH1OJ3iOpnqR1MnNHq",
-    "admin": false,
-    "avatar": "/uploads/users/default.png"
-  },
-  {
     "id": 4,
-    "name": "asdad",
-    "email": "asd@asd.com",
-    "password": "$2a$10$vSXvaJZRV7rXcGYZrZUdeeCzko8gFSU.P61vxXYUShg7r0ogaqfq.",
+    "name": "asd",
+    "email": "bsd@asd.com",
+    "password": "$2a$10$8/Mg.T8F/8lPyRfarXvPiONbXyxIxkSS4DjBH1OJ3iOpnqR1MnNHq",
     "admin": false,
     "avatar": "/uploads/users/default.png"
   },
@@ -108,6 +100,14 @@
     "name": "titi",
     "email": "tima@gmail.com",
     "password": "$2a$10$2j8KbmmgFyfZTLs4Rrm5tOB71fxmn3bS3hEIu/gv1Mz0rnL8guYBu",
+    "admin": false,
+    "avatar": "/uploads/users/default.png"
+  },
+  {
+    "id": 15,
+    "name": "asd",
+    "email": "asd@asd.com",
+    "password": "$2a$10$Y6d7kRrgk/Htk2NuGnMfGOfn./zQqoKwPOixsOz9nxcu.0YE/VsWu",
     "admin": false,
     "avatar": "/uploads/users/default.png"
   }

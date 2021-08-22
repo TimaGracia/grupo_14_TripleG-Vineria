@@ -22,23 +22,29 @@ let userController = {
             let users = userModel.all();
             for (let i = 0; i < users.length; i++){
                 if (users[i].email == req.body.email){
+                   
                     
                     if (bcrypt.compareSync(req.body.password, users[i].password)){
+                        
                         var userLogged = users[i];
+                        delete userLogged.password;
+                        req.session.userLogged = userLogged;
+
+                        if(req.body.remember_user){
+                            res.cookie("userEmail", req.body.email, {maxAge: (1000*60) * 20});
+                        }
+
                         break;
                     }
                 }
             }
+        console.log("User Logged:" +userLogged);
         if (userLogged == undefined){
             return res.render("login", {style:"login", title: "Login",errors: [
                 {msg: "Credenciales invalidas"}
             ]})
 
-        }
-        //console.log(userLogged);
-        delete userLogged.password;
-        req.session.userLogged = userLogged;
- 
+        } 
         res.redirect("/");
         
         } else {
@@ -54,9 +60,9 @@ let userController = {
     store: function(req, res){
         let errors = validationResult(req);
 
-        //res.send(errors.mapped());
+        
         let userInDB = userModel.findByField("email", req.body.email);
-        //res.send(userInDB);
+        
 
         if (userInDB) {
             
@@ -72,9 +78,9 @@ let userController = {
             //res.send(saved);
             return saved ? res.redirect("/") : res.status(500).send("Error en el servidor");
         } else {
-            //console.log(req.body)
+            
             res.render("register", {style:"register", title: "Register", errors:errors.mapped(), old:req.body});//errors:errors.array()
-            //En vez de array podemos usar errors.mapped()
+            
         }
 
         
@@ -85,6 +91,7 @@ let userController = {
         return res.send(req.session.userLogged);
     }, 
     logout: function(req, res){
+        res.clearCookie("userEmail");
         req.session.destroy();
         return res.redirect("/");
     }

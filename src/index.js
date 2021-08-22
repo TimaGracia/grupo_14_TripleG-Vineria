@@ -4,6 +4,8 @@ const path = require("path");
 const methodOverride = require('method-override');
 const logMiddleware = require("./middlewares/logMiddleware");
 const session = require('express-session');
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+const cookies = require('cookie-parser');
 
 app.listen(2502,()=>console.log("Server Start","http://localhost:2502"));
 
@@ -11,11 +13,17 @@ app.use(express.static(path.join(__dirname,"../public")));
 
 app.use(logMiddleware);
 
+
+
 app.use(session({
     secret:"vineria", 
     resave: false, 
     saveUninitialized: false,
 }));
+
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
 
 //uso JSON
 app.use(express.urlencoded({extended: false}));
