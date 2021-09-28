@@ -14,17 +14,21 @@
         
                 <label for="description">Descripcion</label><br>
                 <textarea name="description" id="description" cols="25" rows="5" placeholder="Inserte la descripción del producto aquí"></textarea>
-            
+                    
+                <label for="stock">Stock inicial del Producto</label>
+                <input type="number" name="stock">
+
                 <label for="image">Imagen</label>
                 <div id=image> <input type="file" name="image-vino" id="image-vino"><!--id="image" --></div>
             
                 <label for="category">Categoria</label>
                 
                     <select name="category">
-                        <option value="malbec">Malbec</option>
-                        <option value="rose">Rose</option>
-                        <option value="syrah">Syrah</option>
-
+                       <% for( let i = 0; i < categories.length; i++ ) { %>
+                        <option value="<%=categories[i].idCategory%>">
+                            <%=categories[i].type%>
+                        </option>
+                       <% } %>
                     </select>
                 
             

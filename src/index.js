@@ -7,7 +7,7 @@ const session = require('express-session');
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const cookies = require('cookie-parser');
 
-app.listen(2502,()=>console.log("Server Start","http://localhost:2502"));
+app.listen(2503,()=>console.log("Server Start","http://localhost:2503"));
 
 app.use(express.static(path.join(__dirname,"../public")));
 
