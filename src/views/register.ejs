@@ -11,7 +11,11 @@
             <form action="/register" method="POST" class="formulario">
             <div>
                 <div><label for="nombre">Nombre y Apellido</label></div>
-                <div><input type="text" name="nombreCompleto" id="nombreCompleto" value="<%= locals.old && old.nombreCompleto ? old.nombreCompleto : ""  %>" 
+                <div><input type="text" name="nombreCompleto" class="nombreCompleto" id="nombreCompleto" value="<%= locals.old && old.nombreCompleto ? old.nombreCompleto : ""  %>" 
+                    
+                
+                   
+                   
                     <% locals.errors && locals.errors.nombreCompleto ? "is-invalid" : null %>></div>
                 <% if (locals.errors && locals.errors.nombreCompleto) { %>
                     <%= errors.nombreCompleto.msg %>
@@ -48,6 +52,6 @@
         
     </main>
     <%- include("./partials/footer")%>
-
+    
 </body>
 </html>

@@ -2,6 +2,7 @@ const path = require("path");
 const productModel = require("../models/productModel")
 const db = require("../database/models")
 
+
 let productController = {
     productCart: function(req, res){
         res.render("productCart", {style:"productCart", title: "Carrito de Productos"})

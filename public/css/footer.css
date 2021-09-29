@@ -50,7 +50,13 @@ footer {
     justify-content: flex-end;
  
 }
-
+#footer-tab a{
+    text-decoration: none;
+    padding: 1vh 2vw 0 2vw;
+}
+#footer-tab a:hover{
+    color: #C4C0C0;
+}
 
 
 
