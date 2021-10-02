@@ -1,8 +1,11 @@
 const path = require("path");
-const userModel = require("../models/userModel");
+//const userModel = require("../models/userModel");
+const db = require("../database/models")
+const userUtil = require("./userUtil")
 const {validationResult} = require("express-validator");
 const { resolveNaptr } = require("dns");
 const bcrypt = require('bcryptjs');
+
 
 let userController = {
    /* all: function(req, res){
@@ -15,11 +18,12 @@ let userController = {
         
         res.render("login", {style:"login", title: "Login"})
     }, 
-    processLogin: function(req, res){
+    processLogin: async function(req, res){
         let errors = validationResult(req);
        
         if (errors.isEmpty()){
-            let users = userModel.all();
+            let users = await userUtil.all();//userModel.all();
+            //console.log(users);
             for (let i = 0; i < users.length; i++){
                 if (users[i].email == req.body.email){
                    
@@ -53,15 +57,47 @@ let userController = {
         }
 
     },
-    getById: function(req, res){
+    getById: async function(req, res){
+        let user = await db.User.findByPk(req.params.id);
         
-        res.render("users/user", {user:userModel.getById(req.params.id), style:"productDetail", title: "Detalle del Usuario"})
+        res.render("users/user", {user:user, style:"productDetail", title: "Detalle del Usuario"})//userModel.getById(req.params.id)
     },
-    store: function(req, res){
+   /* all: async function(){
+
+        let all = await db.User.findAll();
+        return all;
+
+    },
+    create: async function(data, file){
+        let all = this.all();
+        let img;
+
+        if (file){
+            img = "/uploads/users/"+file.filename;
+        } else img = "/uploads/users/default.png";
+
+        try {
+            let newElement = await db.User.create({
+                name: data.nombreCompleto,
+                email: data.email,
+                password: bcrypt.hashSync(data.contrasenia, 10),
+                admin: false,
+                avatar: img
+            });
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+ 
+    },*/
+    store: async function(req, res){
         let errors = validationResult(req);
 
         
-        let userInDB = userModel.findByField("email", req.body.email);
+        let userInDB = await db.User.findOne(
+            { where: 
+                { email: req.body.email } });//userModel.findByField("email", req.body.email);
         
 
         if (userInDB) {
@@ -74,7 +110,7 @@ let userController = {
         }
         
         if (errors.isEmpty()){
-            let saved = userModel.create(req.body,req.file);
+            let saved = userUtil.create(req.body,req.file); //userModel.create(req.body,req.file);
             //res.send(saved);
             return saved ? res.redirect("/") : res.status(500).send("Error en el servidor");
         } else {
