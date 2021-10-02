@@ -118,5 +118,13 @@
     "password": "$2a$10$aYZGBeI74eNLds3qRmyDweDZAZAooxJ7bDy9iQFPiGGOasKFF388.",
     "admin": false,
     "avatar": "/uploads/users/default.png"
+  }, 
+  {
+    "id": 16,
+    "name": "admin",
+    "email": "admin@admin.com",
+    "password": "$2a$10$Y6d7kRrgk/Htk2NuGnMfGOfn./zQqoKwPOixsOz9nxcu.0YE/VsWu",
+    "admin": true,
+    "avatar": "/uploads/users/default.png"
   }
 ]

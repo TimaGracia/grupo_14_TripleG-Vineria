@@ -7,7 +7,11 @@ const session = require('express-session');
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const cookies = require('cookie-parser');
 
-app.listen(2503,()=>console.log("Server Start","http://localhost:2503"));
+app.set("port", process.env.PORT || 2505);
+app.listen(app.get("port"), () => console.log("Server start http://localhost:"+app.get("port")));
+
+//app.listen(2504,()=>console.log("Server start http://localhost:"+app.get("port")));
+//app.listen(app.get("port"), () => console.log("Server start http://localhost:"+app.get("port")));
 
 app.use(express.static(path.join(__dirname,"../public")));
 

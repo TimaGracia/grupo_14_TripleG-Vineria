@@ -16,16 +16,24 @@
     
         <ul class="w">
             <% productos.forEach(product => { %>
-                <div>
-            <!--<li> ID: <%= product.id%>  </li>-->
+                <div onclick="location.href='/products/<%= product.idProduct%>';" style="cursor: pointer;">
+            
             <!--<li> Categoria: <%= product.category%></li>-->
             <!--<li>Imagen: <%= product.image%></li>-->
             <li class="foto"><img src="<%=product.image %>" alt=""></li>
             <i class="fas fa-truck"></i>
             <li><%= product.name%></li>
+            
             <li class="des">Descripcion: <%= product.description%></li>
             <li class="bod"> Bodega: <%= product.color%></li>
             <li class="pre"> Precio: <%= product.price%></li>
+
+            <form action="/" method="POST">
+            
+                <button type="submit">Añadir al carrito</button>
+            
+            </form>
+
                     </div>
             <br>
             <% }) %>

@@ -7,16 +7,12 @@
         <div class="cuadrop">
             <div class="producto"><img src="<%=product.image %>" alt="" srcset=""></div>
             <div class="otros">
-               
 
-                
-
-
-                <form action="/products/<%= product.id %>?_method=PUT" method="post">
+                <form action="/products/<%= product.idProduct %>?_method=PUT" method="post">
                    
                     <div class="nombre">
-                        <p>El ID del producto es: <%= product.id %></p>
-                        <input type="hidden" name="id" value="<%= product.id %>">  </input>
+                        <p>El ID del producto es: <%= product.idProduct %></p>
+                        <input type="hidden" name="id" value="<%= product.idProduct %>">  </input>
                         <input type="text" name="name" value="<%= product.name %>">  </input>
                         <input type="text" name="description" value="<%= product.description %>">  </input>
                         <input type="text" name="category" value="<%= product.category %>">  </input>
@@ -47,24 +43,6 @@
         
         
 
-        <div class="final">
-            <div class="relacionados">Productos Relacionados</div>
-            <div class="alineados">
-                <% if(productos.length < 3 ){ %>
-                    <% for( i=0 ; i< 1 ; i++ ){ %>
-                        <a href="/products/<%=productos[i].id%>"><div class="f"><img src="<%=productos[i].image%>" alt="" srcset=""></div></a>
-                    <% } %>
-                <% } if(2 < productos.length < 7 ){ %>
-                    <% for( i=0 ; i< 3 ; i++ ){ %>
-                        <a href="/products/<%=productos[i].id%>"><div class="f"><img src="<%=productos[i].image%>" alt="" srcset=""></div></a>
-                    <% } %>
-                <% }else{ %>
-                    <% for( i=0 ; i< 5 ; i++ ){ %>
-                        <a href="/products/<%=productos[i].id%>"><div class="f"><img src="<%=productos[i].image%>" alt="" srcset=""></div></a>
-                    <% } %>
-                <% } %>
-            </div>
-        </div>
     </main>
     <%- include("./partials/footer")%>
 

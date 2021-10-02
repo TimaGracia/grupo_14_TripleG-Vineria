@@ -26,11 +26,11 @@ const upload = multer({storage : storage});//: storage
 
 router.get("/productCart",authMiddleware, productController.productCart);
 
-router.get("/products/create", authMiddleware, productController.productCreate);
+router.get("/products/create", authMiddleware, productController.productCreate);//sql
 
-router.get("/products", productController.list);
+router.get("/products", productController.list);//sql
 
-router.post("/products", upload.single("image-vino"), productController.create);
+router.post("/products", upload.single("image-vino"), productController.create);//sql
 
 router.get("/products/:id", productController.getById);
 

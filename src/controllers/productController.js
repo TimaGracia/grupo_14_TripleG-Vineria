@@ -1,6 +1,7 @@
 const path = require("path");
 const productModel = require("../models/productModel")
 const db = require("../database/models")
+const productUtil = require("./productUtil")
 
 
 let productController = {
@@ -22,6 +23,7 @@ let productController = {
         }
         
     },
+
     list: async function(req, res){
 
         try {
@@ -61,25 +63,53 @@ let productController = {
         
        // return saved ? res.redirect("products/"+saved.id) : res.status(500).send("Error en el servidor");
     },
-    getById: function(req, res){
+    getById: async function(req, res){
         //console.log(req.params.id)
-        res.render("productDetail", {product:productModel.getById(req.params.id),productos:productModel.all(), style:"productDetail", title: "Detalle del Producto"})
+        let productos = await productUtil.all();
+        console.log("Esto son los productos"+productos);
+        
+        try {
+            let productId = await db.Product.findByPk(req.params.id);
+            res.render("productDetail", {product: productId,productos: productUtil.all(), style:"productDetail", title: "Detalle del Producto"})
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+
+
+        //res.render("productDetail", {product:productModel.getById(req.params.id),productos:productModel.all(), style:"productDetail", title: "Detalle del Producto"})
     },
-    getByIdEdit: function(req, res){
+    getByIdEdit: async function(req, res){
         //console.log(req.params.id)
-        res.render("productEdit", {product:productModel.getById(req.params.id), style:"productEdit",productos:productModel.all(), title: "Editar el Producto"})
+        let productId = await db.Product.findByPk(req.params.id);
+        res.render("productEdit", {product:productId, style:"productEdit",productos:productUtil.all(), title: "Editar el Producto"})
     },
-    delete: function (req, res){
+    delete: async function (req, res){
     
-        let deleted = productModel.delete(req.params.id);
+        let deleted = await db.Product.destroy({
+            where: {
+                idProduct: req.params.id}
+        });// productModel.delete(req.params.id);
         
-        return deleted ? res.redirect("/") : res.status(500).send("Error en el servidor");
+        return deleted ? res.redirect("/products") : res.status(500).send("Error en el servidor");
     },
-    update: function (req, res){
+    update: async function (req, res){
         
+        let updated  = await db.Product.update({
+            idBusiness: 1,
+            name: req.body.name,
+            description: req.body.description,
+            stock:req.body.stock,
+            idCategory:1,
+            price:req.body.price,
+        },{
+            where: {idProduct: req.params.id}
+        })
+
         let idUpdate = req.params.id;
         //console.log(req.body);
-        let updated = productModel.update(req.body, idUpdate);
+        //let updated = productModel.update(req.body, idUpdate);
         return updated ? res.redirect("/products/"+idUpdate) : res.status(500).send("Error en el servidor");
     }
 

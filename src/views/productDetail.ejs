@@ -7,6 +7,7 @@
         <div class="cuadrop">
             <div class="producto"><img src="<%=product.image %>" alt="" srcset=""></div>
             <div class="otros">
+                <div class="nombre"><p><%= product.idProduct %></p></div>
                 <div class="nombre"><p><%= product.name %></p></div>
                 <div class="nombre"><p><%= product.description %></p></div>
                 <div class="nombre"><p><%= product.category %></p></div>
@@ -17,25 +18,19 @@
 
                 
                 
-                <!--<input type="button" class="añadir" value="Añadir al Carrito">-->
+
                 <div class="botones">
-               <a href="/products/<%= product.id %>/edit"> <input type="button" class="añadir" value="Editar Producto"></a>
+               <a href="/products/<%= product.idProduct %>/edit"> 
+                <input type="button" class="añadir" value="Editar Producto"></a>
 
 
-                <form action="/products/<%= product.id %>?_method=DELETE" method="post">
-                   <% console.log(product.id) %>
+                <form action="/products/<%= product.idProduct %>?_method=DELETE" method="post">
+                   <% console.log(product.idProduct) %>
                    <button type="submit" class="añadir ">Eliminar Producto</button>
-                   <!--<input type="button" class="añadir" value="Eliminar Producto">/-->
+                   
                 </form>
             </div>
                 
-
-
-                <!--<div class="d">
-                    <input type="button" class="d1" value="-">
-                    <div class="d1">1</div>
-                    <input type="button" class="d1" value="+">
-                </div>-->
             </div>
             
         </div>
@@ -44,27 +39,7 @@
             <input type="button" class="solapas" value="Descripción">
             <input type="button" class="solapas" value="Valoraciones">
         </div>
-        
-        
 
-        <div class="final">
-            <div class="relacionados">Productos Relacionados</div>
-            <div class="alineados">
-                <% if(productos.length < 3 ){ %>
-                    <% for( i=0 ; i< 1 ; i++ ){ %>
-                        <a href="/products/<%=productos[i].id%>"><div class="f"><img src="<%=productos[i].image%>" alt="" srcset=""></div></a>
-                    <% } %>
-                <% } if(2 < productos.length < 7 ){ %>
-                    <% for( i=0 ; i< 3 ; i++ ){ %>
-                        <a href="/products/<%=productos[i].id%>"><div class="f"><img src="<%=productos[i].image%>" alt="" srcset=""></div></a>
-                    <% } %>
-                <% }else{ %>
-                    <% for( i=0 ; i< 5 ; i++ ){ %>
-                        <a href="/products/<%=productos[i].id%>"><div class="f"><img src="<%=productos[i].image%>" alt="" srcset=""></div></a>
-                    <% } %>
-                <% } %>
-            </div>
-        </div>
     </main>
     <%- include("./partials/footer")%>
 
