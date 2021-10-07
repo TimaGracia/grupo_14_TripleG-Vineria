@@ -2,6 +2,8 @@ const path = require("path");
 const productModel = require("../models/productModel")
 const db = require("../database/models")
 const productUtil = require("./productUtil")
+const {validationResult} = require("express-validator");
+const { resolveNaptr } = require("dns");
 
 
 let productController = {
@@ -40,25 +42,38 @@ let productController = {
         
     }, 
     create: function(req, res){
+        console.log(req.body)
+        let errors = validationResult(req);
+        console.log(errors);
+
+        if (errors.isEmpty()){
+            let file = req.file;
+            let img;
+            if (file){
+                img = "/uploads/products/"+file.filename;
+            } else img = "/uploads/products/default.jpg";
+    
+            db.Product.create({
+                idBusiness: 1,
+                name: req.body.name,
+                description: req.body.description,
+                stock:req.body.stock,
+                image:img,
+                idCategory:1,
+                price:req.body.price,
+            })
+    
+            return res.redirect("/products")
+        } else {
+            console.log(req.body)
+            res.render("productCreate", {style:"productCreate", title: "Crear y editar Productos", errors:errors.mapped(), old:req.body});//errors:errors.array()
+            
+        }
+
+
 
         //let saved = productModel.create(req.body,req.file);
-        let file = req.file;
-        let img;
-        if (file){
-            img = "/uploads/products/"+file.filename;
-        } else img = "/uploads/products/default.jpg";
 
-        db.Product.create({
-            idBusiness: 1,
-            name: req.body.name,
-            description: req.body.description,
-            stock:req.body.stock,
-            image:img,
-            idCategory:1,
-            price:req.body.price,
-        })
-
-        return res.redirect("/products")
         //redirect("products")
         
        // return saved ? res.redirect("products/"+saved.id) : res.status(500).send("Error en el servidor");

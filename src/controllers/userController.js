@@ -20,6 +20,7 @@ let userController = {
     }, 
     processLogin: async function(req, res){
         let errors = validationResult(req);
+        
        
         if (errors.isEmpty()){
             let users = await userUtil.all();//userModel.all();
@@ -93,6 +94,7 @@ let userController = {
     },*/
     store: async function(req, res){
         let errors = validationResult(req);
+        console.log(errors);
 
         
         let userInDB = await db.User.findOne(

@@ -11,10 +11,16 @@
             
                 <section>
                 <label for="name">Nombre del Producto</label>
-                <input type="text" name="name">
+                <input type="text" name="name" value="<%= locals.old && old.name ? old.name : ""  %>">
+                <% if (locals.errors && locals.errors.name) { %>
+                    <%= errors.name.msg %>
+                <% } %>
         
                 <label for="description">Descripcion</label><br>
-                <textarea name="description" id="description" cols="25" rows="5" placeholder="Inserte la descripción del producto aquí"></textarea>
+                <textarea name="description" id="description" cols="25" rows="5" placeholder="Inserte la descripción del producto aquí" value="<%= locals.old && old.description ? old.description : ""  %>"></textarea>
+                <% if (locals.errors && locals.errors.description) { %>
+                    <%= errors.description.msg %>
+                <% } %>
                     
                 <label for="stock">Stock inicial del Producto</label>
                 <input type="number" name="stock">
@@ -23,14 +29,17 @@
                 <div id=image> <input type="file" name="image-vino" id="image-vino"><!--id="image" --></div>
             
                 <label for="category">Categoria</label>
-                
+                <% if (locals.category) { %>
                     <select name="category">
-                       <% for( let i = 0; i < categories.length; i++ ) { %>
-                        <option value="<%=categories[i].idCategory%>">
-                            <%=categories[i].type%>
-                        </option>
-                       <% } %>
-                    </select>
+                        <% for( let i = 0; i < categories.length; i++ ) { %>
+                         <option value="<%=categories[i].idCategory%>">
+                             <%=categories[i].type%>
+                         </option>
+                        <% } %>
+                     </select>
+                     
+                <% } %>
+ 
                 
             
             <div>
