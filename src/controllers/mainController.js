@@ -9,6 +9,9 @@ let mainController = {
         //res.render(path.resolve(__dirname, "../views/home"));
         //sendFile(path.resolve(__dirname, "../views", "home"))
         //res.render("productos");
+    }, 
+    nosotros: function (req, res){
+        res.render("nosotros", {style:"nosotros", title: "Nosotros"})
     }
 
 }

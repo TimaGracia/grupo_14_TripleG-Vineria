@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    max-width: 100vw;
+    
+}
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1efee;
+
+}
+
+
+p {
+    margin: 2rem 0;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 4rem 0 4rem;
+}
+
+
+
+@media (min-width:738px){
+
+    #section-vinos {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content:space-between;
+        max-width: 100%;
+    }
+
+
+
+}
+
+@media (min-width:769px){
+    #burger-menu{
+        display: none;
+    }
+}
