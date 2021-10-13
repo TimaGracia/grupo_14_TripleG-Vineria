@@ -35,7 +35,7 @@ body {
 
 #sub-banner{
     
-    
+    /*
     display: flex;
     flex-wrap: nowrap;
     background-color: #f1efee;
@@ -46,7 +46,21 @@ body {
     text-align: center;
     color: #C2755E; 
     padding-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;*/
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #f1efee;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    color: #C2755E; 
+    padding-bottom: 2rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+
     
     
 }
@@ -67,9 +81,7 @@ body {
     padding: 0.2rem;
     font-size: 4rem;
     color: #C2755E;
-    
-    
-    
+      
 }
 
 
@@ -77,6 +89,17 @@ body {
     margin: 1rem 0.5rem 0rem 1rem;
     padding: 0 0.7rem 0 0.7rem;
     height: 50%;
+}
+
+#sub-banner article{
+    margin: 1rem 0.5rem 0rem 1rem;
+    padding: 0 0.7rem 0 0.7rem;
+    border-right: solid 1px black;
+    border-left: solid 1px black;
+    height: 80%;
+}
+#sub-banner p{
+    margin: 1rem 0.5rem 0rem 1rem;
 }
 
 #texto-res p{
@@ -121,6 +144,69 @@ section#section-vinos{
     height: 15rem;
     
 }
+
+/* Texto */
+
+/* center the blockquote in the page */
+.blockquote-wrapper {
+    /*background-color: #52ACFF;
+  background-image: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
+  background: rgb(187,120,120);
+  background: linear-gradient(90deg, rgba(187,120,120,1) 0%, rgba(139,80,80,1) 54%, rgba(102,58,58,1) 100%);*/
+  background: rgb(187,120,120);
+background: linear-gradient(135deg, rgba(187,120,120,1) 24%, rgba(105,67,67,1) 69%);
+    display: flex;
+    height: 40vh;
+    padding: 0 20px;
+ }
+ 
+ /* Blockquote main style */
+ .blockquote {
+     position: relative;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 800;
+     color: #ffffff;
+     padding: 30px 0;
+     width: 100%;
+     max-width: 500px;
+     z-index: 1;
+     margin: 80px auto;
+     align-self: center;
+     border-top: solid 1px;
+     border-bottom: solid 1px;
+ }
+ 
+ /* Blockquote header */
+ .blockquote h1 {
+     position: relative;
+     color: #FFFFFF;
+     font-size: 40px;
+     font-weight: 800;
+     line-height: 1;
+     margin: 0;
+ }
+ 
+ /* increase header size after 600px */
+ @media all and (min-width: 600px) {
+     .blockquote h1 {
+         font-size: 60px;
+    }
+ 
+ }
+ 
+ /* Blockquote subheader */
+ .blockquote h4 {
+     position: relative;
+     color: #292a2b;
+     font-size: 1.4rem;
+     font-weight: normal;
+     line-height: 1;
+     margin: 0;
+     padding-top: 20px;
+     z-index: 1;
+ }
+
+
 
 @media (min-width:738px){
 

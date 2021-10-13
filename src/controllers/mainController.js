@@ -12,6 +12,9 @@ let mainController = {
     }, 
     nosotros: function (req, res){
         res.render("nosotros", {style:"nosotros", title: "Nosotros"})
+    },
+    contacto: function (req, res){
+        res.render("contacto", {style:"nosotros", title: "Nosotros"})
     }
 
 }

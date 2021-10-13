@@ -5,16 +5,22 @@
 <body>
     <%- include("./partials/header")%>
     <main>
-        <section id="banner">
-            <img src="/img/viñedos.jpg">
-        </section>
 
-        <section id="sub-banner">
+        <div class="blockquote-wrapper">
+            <div class="blockquote">
+              <h1>
+                Comprá los mejores vinos de Argentina
+               </h1>
+              <h4></h4>
+            </div>
+          </div>
+            
+          <section id="sub-banner">
             <article>
                 <i class="fas fa-truck"></i>
                 <p>Envios</p>
             </article>
-            <article>
+            <article >
                 <i class="fas fa-money-bill-alt"></i>
                 <p>Pagos</p>
             </article>
@@ -23,12 +29,23 @@
                 <p>Ofertas!</p>
             </article>
         </section>
+
+
+          <section id="banner">
+            <img src="/img/paisaje-vino.jpg">
+        </section>
+
+
+
+
+
+
         <section id="texto-res">
-            <p>Vinos premium</p>
+            <p>Productos destacados</p>
 
         </section>
         <section id="section-vinos">
-            <% for(i=0;i < 3;i++){ %>
+            <% for(i=0;i < 4;i++){ %>
                 <article>
                     <img src="<%= productos[i].image%>">
                     <p><%= productos[i].name%></p>
