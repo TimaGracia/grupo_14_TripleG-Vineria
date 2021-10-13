@@ -59,6 +59,11 @@ header img {
     
     
 }
+#nav-menu {
+    display:flex;
+    margin-left: 4rem;
+
+}
 
 #nav-menu ul{
     display: flex;
@@ -133,7 +138,7 @@ header img {
         flex-wrap: nowrap;
         justify-content:space-around;
         align-items: flex-end;
-        font-size: 0.9rem;
+        font-size: 1rem;
         padding: 0.5rem;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }

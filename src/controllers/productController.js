@@ -126,7 +126,22 @@ let productController = {
         //console.log(req.body);
         //let updated = productModel.update(req.body, idUpdate);
         return updated ? res.redirect("/products/"+idUpdate) : res.status(500).send("Error en el servidor");
-    }
+    }, 
+    listBusiness: async function(req, res){
+
+        try {
+            let business = await db.Business.findAll({
+                //include: [{association: "categories"}, {association: "business"}]
+            });
+            //productos:productModel.all()
+            res.render("bodegas", {business:business, style:"bodegas",title: "Listado de Empresas"})
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+        
+    }, 
 
 }
 
