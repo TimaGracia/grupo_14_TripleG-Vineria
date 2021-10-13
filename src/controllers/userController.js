@@ -63,35 +63,26 @@ let userController = {
         
         res.render("users/user", {user:user, style:"productDetail", title: "Detalle del Usuario"})//userModel.getById(req.params.id)
     },
-   /* all: async function(){
+    isAdmin: async function(userSent){
 
-        let all = await db.User.findAll();
-        return all;
-
-    },
-    create: async function(data, file){
-        let all = this.all();
-        let img;
-
-        if (file){
-            img = "/uploads/users/"+file.filename;
-        } else img = "/uploads/users/default.png";
-
+        if (userSent){
         try {
-            let newElement = await db.User.create({
-                name: data.nombreCompleto,
-                email: data.email,
-                password: bcrypt.hashSync(data.contrasenia, 10),
-                admin: false,
-                avatar: img
-            });
+            
+                let user = await db.User.findByPk(userSent.idUser);
+                console.log("Desde controller"+user.admin)
+        
+                return user.admin ? true : false
+            
+
             
         } catch (error) {
             console.log(error);
-            
         }
- 
-    },*/
+    } else {return false};
+
+
+
+    },
     store: async function(req, res){
         let errors = validationResult(req);
         console.log(errors);

@@ -5,6 +5,7 @@ const path = require("path");
 const {body} = require("express-validator");
 const productController = require("../controllers/productController");
 const authMiddleware= require("../middlewares/authMiddleware");
+const isAdminMiddleware= require("../middlewares/isAdminMiddleware");
 
 
 const validateProduct = [
@@ -35,7 +36,7 @@ router.get("/productCart",authMiddleware, productController.productCart);
 
 router.get("/products/create", authMiddleware, productController.productCreate);//sql
 
-router.get("/products", productController.list);//sql
+router.get("/products", isAdminMiddleware, productController.list);//sql
 
 router.get("/bodegas", productController.listBusiness);//sql
 
