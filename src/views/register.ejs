@@ -6,9 +6,10 @@
 <body>
     <%- include("./partials/header")%>
     <main>
+        
         <h1 class="titulo">Completa tus datos</h1>
 
-            <form action="/register" method="POST" class="formulario">
+            <form action="/register" method="POST" class="formulario" id="formulario">
             <div>
                 <div><label for="nombre">Nombre y Apellido</label></div>
                 <div><input type="text" name="nombreCompleto" class="nombreCompleto" id="nombreCompleto" value="<%= locals.old && old.nombreCompleto ? old.nombreCompleto : ""  %>" 
@@ -20,6 +21,7 @@
                 <% if (locals.errors && locals.errors.nombreCompleto) { %>
                     <%= errors.nombreCompleto.msg %>
                 <% } %>
+                
             </div>
  
             <div>
@@ -49,7 +51,7 @@
                 <button type="submit">Crear Cuenta</button>
             </div>
             </form>
-        
+            
     </main>
     <%- include("./partials/footer")%>
     
