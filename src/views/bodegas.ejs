@@ -11,7 +11,7 @@
     <% business.forEach(busi => { %>
 
         <section id="business">
-            <article id="image"> <img src="/img/senetiner.jpg"></article>
+            <article id="image"> <img src="<%= busi.image %>"></article>
             <div id="container2">
                 <article id="title"> <%= busi.name %>  </article>
                 <article id="description"> <%= busi.description %>  </article>

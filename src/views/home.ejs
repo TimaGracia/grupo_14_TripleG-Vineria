@@ -14,7 +14,8 @@
               <h4></h4>
             </div>
           </div>
-            
+        
+          
           <section id="sub-banner">
             <article>
                 <i class="fas fa-truck"></i>
@@ -29,10 +30,14 @@
                 <p>Ofertas!</p>
             </article>
         </section>
+   
 
 
           <section id="banner">
-            <img src="/img/paisaje-vino.jpg">
+           
+                <img id="img-banner" src="/img/paisaje-vino.jpg">
+                <div class="texto-encima">"Neque quisquam est qui dolorem ipsum quia dolor sit..."</div>
+ 
         </section>
 
 
@@ -41,17 +46,22 @@
 
 
         <section id="texto-res">
+            <br><br><br>
             <p>Productos destacados</p>
 
         </section>
         <section id="section-vinos">
+
             <% for(i=0;i < 4;i++){ %>
+                
                 <article>
                     <img src="<%= productos[i].image%>">
                     <p><%= productos[i].name%></p>
                     <p>$ <%= productos[i].price%></p>
                 </article>
                 <% } %>
+
+
         </section>
 
     </main>

@@ -1,14 +1,13 @@
 const path = require("path");
-const productModel = require("../models/productModel")
+//const productModel = require("../models/productModel")
+const productUtil = require("../controllers/productUtil")
 
 let mainController = {
-    index: function (req, res){
-        //res.send("Bienvenidos al sitio");
-        res.render("home", {style:"home", title: "Home",productos:productModel.all()})
-        
-        //res.render(path.resolve(__dirname, "../views/home"));
-        //sendFile(path.resolve(__dirname, "../views", "home"))
-        //res.render("productos");
+    index: async function (req, res){
+        productos = await productUtil.all();
+    
+        res.render("home", {style:"home", title: "Home",products:productos})
+
     }, 
     nosotros: function (req, res){
         res.render("nosotros", {style:"nosotros", title: "Nosotros"})

@@ -1,0 +1,46 @@
+body {
+    background-color: #E5E5E5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.formulario {
+    background-color: #C4C4C4;
+    width: 36vw;
+    height: 75vh;
+    margin-left: 32vw;
+    margin-right: 32vw;
+    padding-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.formulario div { 
+    display:block;
+    width: 32vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;}
+input { 
+    background-color: #C4C4C4;
+width: 15vw;}
+
+label {
+    width: 20vw;
+}
+h1 { 
+    margin-left: 32vw;
+    margin-bottom: 1vw;}
+form { 
+    display: flex;
+    flex-wrap: wrap;}
+    
+button { 
+    background-color: #c2755e;
+    color:white; 
+    text-align: right;}
+.titulo { 
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5vh;
+    margin-left: 32vw;
+    font-size: xx-large;}
+
+

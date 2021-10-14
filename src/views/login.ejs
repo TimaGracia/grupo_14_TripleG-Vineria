@@ -4,7 +4,7 @@
 <body>
     <%- include("./partials/header")%>
     <main>
-    <h1 class="titulo">Inicio de Sesión</h1>
+   
     
     <% if (locals.errors) { %>
         <% for(oneError in errors) { %>
@@ -13,28 +13,36 @@
     <% }%>
 
 
-        <form action="/login" method="POST" class="formulario">
-            <div>
-                <div><label for="">E-mail</label></div>
-                <div><input type="email" name="email"></div>
+    
+    <div class="form">
+        <div class="title">Inicio de Sesión</div>
+
+        <form action="/login" method="POST">
+
+            <div class="input-container ic1">
+                <input id="email" class="input" type="email" name="email" placeholder="Email" />
+                
             </div>
-            <div>
-                <div><label for="">Contraseña</label></div>
-                <div><input type="password" name="password"></div>
+
+            <div class="input-container ic1">
+                <input id="password" class="input" type="password" name="password" placeholder="Password" />
             </div>
+
             <div id="datos">
-                <label for="" id="datos">Recordar usuario</label>
+                <label for="">Recordar usuario</label>
                 <input type="checkbox" name="remember_user">
-            </div>
+            </div><br>
             <div>
                 <a href="">¿Olvidaste tu contraseña?</a>
             </div>
-            <div>
-                <button type="submit">Ingresar</button>
-            </div>
-
-        </form>
+            
+            <button type="submit" class="submit">Ingresar</button>
+    </form>
+      </div>
     
+
+
+
     </main>
     <%- include("./partials/footer")%>
 

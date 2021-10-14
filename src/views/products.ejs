@@ -11,7 +11,7 @@
          
         <% } %>
 
-    <h1 class="titulo">Listado de Productos</h1>
+    <h1 class="titulo">Listado de Productos</h1><br><br>
 
     <div class="buscador">
         <!-- Aca poner codigo del buscador -->
@@ -25,23 +25,26 @@
             <!--<li> Categoria: <%= product.category%></li>-->
             <!--<li>Imagen: <%= product.image%></li>-->
             <li class="foto"><img src="<%=product.image %>" alt=""></li>
-            <i class="fas fa-truck"></i>
-            <li><%= product.name%></li>
             
+            <section id="productos"> 
+            <li><%= product.name%></li>
             <li class="des">Descripcion: <%= product.description%></li>
-            <li class="bod"> Bodega: <%= product.color%></li>
-            <li class="pre"> Precio: <%= product.price%></li>
+            <li class="bod"> Bodega: <%= product.business.name%></li>
+            <li class="bod"> Tipo: <%= product.categories.type%></li>
+            <li class="pre"> Precio: $<%= product.price%></li>
 
             <form action="/" method="POST">
-            
+                <br>
                 <button type="submit">Añadir al carrito</button>
             
             </form>
+        </section>
 
                     </div>
             <br>
             <% }) %>
         </ul>
+        
     
     </main>
     <%- include("./partials/footer")%>

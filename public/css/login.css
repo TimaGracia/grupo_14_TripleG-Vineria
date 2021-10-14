@@ -1,83 +1,75 @@
-
-/*@media (max-width:900px){
-    .formulario{width: 70vw;margin:auto;margin-top: 4vh;}
-    .titulo{margin-left: 15vw;}
-    .formulario div{width: 100%;}
-}
-@media (min-width:500px){
-    .formulario{width: 80vw;margin:auto;margin-top: 2vh;}
-    .titulo{margin-left: 10vw;}
-    .formulario div{width: 100%;}
-}*/
-
 body {
     background-color: #E5E5E5;
     font-family: 'Poppins', sans-serif;
-}
+  }
+  
+  .form {
+    background-color: #a6a6a6;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 500px;
+    padding: 20px;
+    width: 400px;
+    text-align:center;
+    
+    margin: auto;
 
-.formulario {
-    background-color: #C4C4C4;
-    width: 36vw;
-    height: 75vh;
-    margin-left: 32vw;
-    margin-right: 32vw;
-    padding-top: 5px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.formulario div { 
-    display:block;
-    width: 32vw;
+  }
+  
+  .title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  
+
+  
+  .input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ic1 {
+    margin-top: 40px;
+  }
+ 
+  
+  .input {
+    background-color:#E5E5E7;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: black;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+  
+  
+  .submit {
+    background-color:#757575;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;}
-input { 
-    background-color: #C4C4C4;
-width: 15vw;}
+    width: 100%;
+  }
+  
+  .submit:active {
+    background-color: #694343;
+  }
 
-label {
-    width: 20vw;
-}
-h1 { 
-    margin-left: 32vw;
-    margin-bottom: 1vw;}
-form { 
-    display: flex;
-    flex-wrap: wrap;}
-button { 
-    background-color: #c2755e;
-    color:white; 
-    text-align: right;}
-.titulo { 
-    font-family: 'Poppins', sans-serif;
-    margin-top: 5vh;
-    margin-left: 32vw;
-    font-size: xx-large;}
-
-/*
-input {
-    background-color: #C4C4C4;
-}
-
-.logu div {
-    display: block;
-    width: 32vw;
-    text-align: center;
-}
-
-h1 {
-    margin-left: 32vw;
-    margin-bottom: 1vw;
-}
-
-form {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-button {
-    background-color: #c2755e;
-    color: white;
-    text-align: right;
-}
-
+  #datos {
+      margin-top:1rem;
+  }
+  
