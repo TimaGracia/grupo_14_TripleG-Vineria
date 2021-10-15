@@ -6,50 +6,52 @@
 <body>
     <%- include("./partials/header")%>
     <main>
-        <h1 class="titulo">Completa tus datos</h1>
-
-            <form action="/register" method="POST" class="formulario">
-            <div>
-                <div><label for="nombre">Nombre y Apellido</label></div>
-                <div><input type="text" name="nombreCompleto" class="nombreCompleto" id="nombreCompleto" value="<%= locals.old && old.nombreCompleto ? old.nombreCompleto : ""  %>" 
-                    
-                
-                   
-                   
-                    <% locals.errors && locals.errors.nombreCompleto ? "is-invalid" : null %>></div>
-                <% if (locals.errors && locals.errors.nombreCompleto) { %>
-                    <%= errors.nombreCompleto.msg %>
-                <% } %>
-            </div>
- 
-            <div>
-                <div><label for="email">E-mail</label></div>
-                <div><input type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : ""  %>"></div>
-                <% if (locals.errors && locals.errors.email) { %>
-                    <%= errors.email.msg %>
-                <% } %>
-            </div>
-            <div>
-                <div><label for="fecha">Fecha de nacimiento</label></div>
-                <div><input type="date" name="fecha" id="fecha"></div>
-            </div>
-            <div>
-                <div><label for="contrasenia">Contraseña</label></div>
-                <div><input type="password" name="contrasenia" id="contrasenia"></div>
-                <% if (locals.errors && locals.errors.contrasenia) { %>
-                    <%= errors.contrasenia.msg %>
-                <% } %>
-            </div>
-            <div></div>
-            <div>
-                <label for="acepto">Acepto las condiciones</label>
-                <input type="checkbox" name="acepto" id="acepto">
-            </div>
-            <div>
-                <button type="submit">Crear Cuenta</button>
-            </div>
-            </form>
         
+            <div class="form">
+                <div class="title">Completá tus datos</div>
+        
+                <form action="/register" method="POST">
+
+                    <div class="input-container ic1">
+                        <div><input id="nombreCompleto" class="input" type="text" name="nombreCompleto" placeholder="Nombre y Apellido" value="<%= locals.old && old.nombreCompleto ? old.nombreCompleto : ""  %>"/>
+                        
+                            <% locals.errors && locals.errors.nombreCompleto ? "is-invalid" : null %></div>
+                            <% if (locals.errors && locals.errors.nombreCompleto) { %>
+                                <%= errors.nombreCompleto.msg %>
+                            <% } %>
+                        </div>
+        
+                    <div class="input-container ic1">
+                        <div><input id="email" class="input" type="email" name="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : ""  %>"/></div>
+                        <% if (locals.errors && locals.errors.email) { %>
+                            <%= errors.email.msg %>
+                        <% } %>
+                    </div>
+        
+                    <div class="input-container ic1">
+                        <input id="password" class="input" type="password" name="contrasenia" placeholder="Password" />
+                        <% if (locals.errors && locals.errors.contrasenia) { %>
+                            <%= errors.contrasenia.msg %>
+                        <% } %>
+                    </div>
+
+                    <div class="input-container ic1">
+                        
+                        <div><input type="text" name="fecha" class="input" placeholder="Fecha de Nacimiento" onclick="ocultarError();" onfocus="(this.type='date')" onblur="(this.type='text')"></div>
+                    
+                    </div>
+        
+                    <div id="datos">
+                        <label for="acepto">Acepto las condiciones</label>
+                        <input type="checkbox" name="acepto" id="acepto">
+                    </div><br>
+
+                    
+                    <button type="submit" class="submit">Crear cuenta</button>
+            </form>
+              </div>
+
+
     </main>
     <%- include("./partials/footer")%>
     

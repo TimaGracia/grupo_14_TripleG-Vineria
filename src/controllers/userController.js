@@ -85,7 +85,7 @@ let userController = {
     },
     store: async function(req, res){
         let errors = validationResult(req);
-        console.log(errors);
+        console.log("los errores son"+errors);
 
         
         let userInDB = await db.User.findOne(
