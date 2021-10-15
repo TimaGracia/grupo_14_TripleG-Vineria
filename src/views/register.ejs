@@ -14,7 +14,8 @@
 
                     <div class="input-container ic1">
                         <div><input id="nombreCompleto" class="input" type="text" name="nombreCompleto" placeholder="Nombre y Apellido" value="<%= locals.old && old.nombreCompleto ? old.nombreCompleto : ""  %>"/>
-                        
+                        <p id="a" style="display: none;">Este campo es obligatorio</p>
+                        <p id="a1" style="display: none;">El nombre debe contener mínimo 3 caracteres</p>
                             <% locals.errors && locals.errors.nombreCompleto ? "is-invalid" : null %></div>
                             <% if (locals.errors && locals.errors.nombreCompleto) { %>
                                 <%= errors.nombreCompleto.msg %>
@@ -23,6 +24,8 @@
         
                     <div class="input-container ic1">
                         <div><input id="email" class="input" type="email" name="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : ""  %>"/></div>
+                        <p id="b" style="display: none;">Este campo debe contener un email válido</p>
+                        
                         <% if (locals.errors && locals.errors.email) { %>
                             <%= errors.email.msg %>
                         <% } %>
@@ -30,6 +33,8 @@
         
                     <div class="input-container ic1">
                         <input id="password" class="input" type="password" name="contrasenia" placeholder="Password" />
+                        <p id="c" style="display: none;">Este campo es obligatorio</p>
+                        <p id="c1" style="display: none;">La contraseña debe tener mínimo 8 caracteres</p>
                         <% if (locals.errors && locals.errors.contrasenia) { %>
                             <%= errors.contrasenia.msg %>
                         <% } %>

@@ -121,6 +121,7 @@ hr{width: 90vw;}
 }
 .botones{
     display: flex;
+    margin-bottom: 25%;
 }
 
 

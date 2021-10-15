@@ -12,12 +12,15 @@
                 <section>
                 <label for="name">Nombre del Producto</label>
                 <input type="text" name="name" value="<%= locals.old && old.name ? old.name : ""  %>">
+                <p id="a" style="display: none;">Este campo es obligatorio</p>
+                <p id="a1" style="display: none;">El nombre debe contener mínimo 5 caracteres</p>
                 <% if (locals.errors && locals.errors.name) { %>
                     <%= errors.name.msg %>
                 <% } %>
         
                 <label for="description">Descripcion</label><br>
                 <textarea name="description" id="description" cols="25" rows="5" placeholder="Inserte la descripción del producto aquí" value="<%= locals.old && old.description ? old.description : ""  %>"></textarea>
+                <p id="b" style="display: none;">Este campo debe contener 20 caracteres como mínimo</p>
                 <% if (locals.errors && locals.errors.description) { %>
                     <%= errors.description.msg %>
                 <% } %>
