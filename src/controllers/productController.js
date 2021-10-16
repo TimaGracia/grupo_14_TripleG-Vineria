@@ -7,6 +7,17 @@ const { resolveNaptr } = require("dns");
 
 
 let productController = {
+    all: async function(req, res){
+
+        let products = await productUtil.apiAll();
+        res.send(JSON.stringify(products));
+
+    },
+    apiGetById: async function(req, res){
+        let product = await db.Product.findByPk(req.params.id);
+        res.send(JSON.stringify(product));
+
+    },
     productCart: function(req, res){
         res.render("productCart", {style:"productCart", title: "Carrito de Productos"})
     },
