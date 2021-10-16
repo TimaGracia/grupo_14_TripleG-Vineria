@@ -54,6 +54,10 @@ app.use(users);
 const products = require("./routes/products")
 app.use(products);
 
+//API
+const api = require("./routes/api")
+app.use(api);
+
 
 app.use((req, res, next) => {
     res.status(400).render("not-found");

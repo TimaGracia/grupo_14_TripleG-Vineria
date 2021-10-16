@@ -8,6 +8,17 @@ module.exports = {
         return all;
 
     },
+    apiAll: async function(){
+
+        let all = await db.User.findAll({
+            raw : true, 
+            attributes: {exclude: ['password', "admin"]}
+        
+        });
+        return all;
+
+    },
+
     create: async function(data, file){
         let all = this.all();
         let img;

@@ -42,7 +42,7 @@ let productController = {
         
     }, 
     create: function(req, res){
-        console.log(req.body)
+        //console.log(req.body)
         let errors = validationResult(req);
         console.log(errors);
 
@@ -69,14 +69,30 @@ let productController = {
             res.render("productCreate", {style:"productCreate", title: "Crear y editar Productos", errors:errors.mapped(), old:req.body});//errors:errors.array()
             
         }
-
-
-
-        //let saved = productModel.create(req.body,req.file);
-
+        //let saved = productModel.create(req.body,req.file)
         //redirect("products")
-        
        // return saved ? res.redirect("products/"+saved.id) : res.status(500).send("Error en el servidor");
+    },
+    addToCart: async function (req, res) {
+
+
+        try {
+            //console.log(req)
+            console.log("El usuario logueado es: "+req.session)
+
+            let registry = await db.ProductCart.create({
+                idUser: req.body.user, 
+                idProduct: req.body.product, 
+                cant: 5
+            })
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+
+
+
     },
     getById: async function(req, res){
         //console.log(req.params.id)

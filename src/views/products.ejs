@@ -1,53 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("./partials/head")%>
-<body>
-    <%- include("./partials/header")%>
-    <main>
 
-        <% if (locals.isAdmin == true) { %>
-            <a href="/products/create" class="boton">Crear Nuevo Producto</a>
-            <a href="/products/create" class="boton1"><i class="fas fa-plus"></i></a>
-         
-        <% } %>
+    <body>
+        <%- include("./partials/header")%>
+            <main>
 
-    <h1 class="titulo">Listado de Productos</h1><br><br>
+                <% if (locals.isAdmin==true) { %>
+                    <a href="/products/create" class="boton">Crear Nuevo Producto</a>
+                    <a href="/products/create" class="boton1"><i class="fas fa-plus"></i></a>
 
-    <div class="buscador">
-        <!-- Aca poner codigo del buscador -->
-    </div>
-   
-    
-        <ul class="w">
-            <% productos.forEach(product => { %>
-                <div onclick="location.href='/products/<%= product.idProduct%>';" style="cursor: pointer;">
-            
-            <!--<li> Categoria: <%= product.category%></li>-->
-            <!--<li>Imagen: <%= product.image%></li>-->
-            <li class="foto"><img src="<%=product.image %>" alt=""></li>
-            
-            <section id="productos"> 
-            <li><%= product.name%></li>
-            <li class="des">Descripcion: <%= product.description%></li>
-            <li class="bod"> Bodega: <%= product.business.name%></li>
-            <li class="bod"> Tipo: <%= product.categories.type%></li>
-            <li class="pre"> Precio: $<%= product.price%></li>
+                    <% } %>
 
-            <form action="/" method="POST">
-                <br>
-                <button type="submit">Añadir al carrito</button>
-            
-            </form>
-        </section>
+                        <h1 class="titulo">Listado de Productos</h1><br><br>
 
-                    </div>
-            <br>
-            <% }) %>
-        </ul>
-        
-    
-    </main>
-    <%- include("./partials/footer")%>
+                        <div class="buscador">
+                            <!-- Aca poner codigo del buscador -->
+                        </div>
 
-</body>
+
+                        <ul class="w">
+                            <% productos.forEach(product=> { %>
+                                <div onclick="location.href='/products/<%= product.idProduct%>';"
+                                    style="cursor: pointer;">
+
+                                    <!--<li> Categoria: <%= product.category%></li>-->
+                                    <!--<li>Imagen: <%= product.image%></li>-->
+                                    <li class="foto"><img src="<%=product.image %>" alt=""></li>
+
+                                    <section id="productos">
+                                        <li>
+                                            <%= product.name%>
+                                        </li>
+                                        <li class="des">Descripcion: <%= product.description%>
+                                        </li>
+                                        <li class="bod"> Bodega: <%= product.business.name%>
+                                        </li>
+                                        <li class="bod"> Tipo: <%= product.categories.type%>
+                                        </li>
+                                        <li class="pre"> Precio: $<%= product.price%>
+                                        </li>
+
+                                        <form action="/addToCart" method="POST">
+                                            <br>
+
+                                            <% if (locals.isLogged==true) {%>
+
+                                                <input type="hidden" name="user"
+                                                    value="<%= locals.userLogged.idUser %>">
+                                                <% } else {%>
+                                                    <input type="hidden" name="user" value="1">
+                                                    <% }%>
+
+
+
+                                                        <input type="hidden" name="product"
+                                                            value="<%= product.idProduct%>">
+                                                        <button type="submit">Añadir al carrito</button>
+
+                                        </form>
+                                    </section>
+
+                                </div>
+                                <br>
+                                <% }) %>
+                        </ul>
+
+
+            </main>
+            <%- include("./partials/footer")%>
+
+    </body>
+
 </html>

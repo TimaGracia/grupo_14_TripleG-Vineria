@@ -1,28 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head")%>
-<body>
-    <%- include("./partials/header")%>
-    <main>
-        <section class="cuadro">
-            <div class="carrito">
-                <h1><p>Carrito</p></h1>
-            </div>
-            <hr>
-            
-            <%- include("./partials/producto")%>
-            
-            <div class="penultimo">
-                <div class="total1"><p>Total con envio</p></div>
-                <div class="total2"><p>$</p></div>
-            </div>
-            <hr>
-            <div class="ultimo"><p>Continuar Compra</p></div>
-        </section>
-    </main>
+<%- include("./partials/head")%>
 
-    <%- include("./partials/footer")%>
+    <body>
+        <%- include("./partials/header")%>
+            <main>
 
-    
-</body>
+
+                <form action="">
+                    <ul class="w">
+                        
+                        <% for( let i=0; i < productos.length; i++ ) { %>
+
+                            <li>
+                                <%= productos[i].name%>
+                            </li>
+
+                            <li class="bod">
+                                <input type="number" min="1" max="5" id="cantidad<%=i%>"> Cantidad: <%=
+                                    productos[i].categories.type%>
+                            </li>
+
+                            <input type="number" id="precio<%=i%>" value="<%= productos[i].price%>" />
+
+                            <li class="pre"> Precio: $<%= productos[i].price%>
+                            </li>
+                            <li class="pre"> Subtotal: $ <input type="number" id="pretotal<%=i%>">
+                            </li>
+                            <script>
+                                window.addEventListener('load', function () {
+                                    const inputCantidad = document.querySelector("#cantidad<%=i%>");
+                                    const inputPrecio = document.querySelector("#precio<%=i%>");
+                                    const preTotal = document.querySelector("#pretotal<%=i%>");
+                                    
+                                    inputCantidad.addEventListener('change', function (evento) {
+                                        const subtotal = (inputCantidad.value) * (inputPrecio.value);
+                                        const result = subtotal;
+                                        preTotal.value = subtotal;
+                                        const inputTotal = document.querySelector("#total");
+                                        inputTotal.value = parseInt(inputTotal.value) + parseInt(subtotal);
+                                    });
+
+                                });
+                            </script>
+                            <% } %>
+
+                    </ul>
+
+                    Precio total: <input type="number" id="total" value=0> 
+                    <button type="submit">Confirmar compra</button>
+                </form>
+
+
+
+
+
+
+
+
+
+
+
+
+                <section class="cuadro">
+                    <div class="carrito">
+                        <h1>
+                            <p>Carrito</p>
+                        </h1>
+                    </div>
+                    <hr>
+
+                    <%- include("./partials/producto")%>
+
+                        <div class="penultimo">
+                            <div class="total1">
+                                <p>Total con envio</p>
+                            </div>
+                            <div class="total2">
+                                <p>$</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="ultimo">
+                            <p>Continuar Compra</p>
+                        </div>
+                </section>
+            </main>
+
+            <%- include("./partials/footer")%>
+
+
+    </body>
+
 </html>

@@ -40,7 +40,9 @@ router.get("/products", isAdminMiddleware, productController.list);//sql
 
 router.get("/bodegas", productController.listBusiness);//sql
 
-router.post("/products",upload.single("image-vino"), validateProduct, productController.create);//sql// 
+router.post("/products",upload.single("image-vino"), validateProduct, productController.create);
+
+router.post("/addToCart", productController.addToCart)
 
 router.get("/products/:id", productController.getById);
 

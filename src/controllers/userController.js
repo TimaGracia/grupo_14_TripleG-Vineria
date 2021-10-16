@@ -58,6 +58,17 @@ let userController = {
         }
 
     },
+    all: async function(req, res){
+
+        let users = await userUtil.apiAll();
+        res.send(JSON.stringify(users));
+
+    },
+    apiGetById: async function(req, res){
+        let user = await db.User.findByPk(req.params.id);
+        res.send(JSON.stringify(user));
+
+    },
     getById: async function(req, res){
         let user = await db.User.findByPk(req.params.id);
         
