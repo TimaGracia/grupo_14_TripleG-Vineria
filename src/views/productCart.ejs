@@ -5,34 +5,57 @@
     <body>
         <%- include("./partials/header")%>
             <main>
+                <% if (productos.length <1 ) { %>
+
+                    <p id="no-products"> No hay productos en tu carrito :(</p>
+                 
+                <% } %>
 
 
                 <form action="">
-                    <ul class="w">
-                        
+
+                    <section id="product-list">
+
                         <% for( let i=0; i < productos.length; i++ ) { %>
 
-                            <li>
-                                <%= productos[i].name%>
-                            </li>
 
-                            <li class="bod">
-                                <input type="number" min="1" max="5" id="cantidad<%=i%>"> Cantidad: <%=
-                                    productos[i].categories.type%>
-                            </li>
+                            <hr>
+                            <div id="product-div">
+                                <img id="img-product" src="<%= productos[i].products.image%>">
+                                <div id="product-detail">
+                                    <ul>
+                                        <li id="title">
+                                            <%= productos[i].products.name%>
+                                        </li>
+                                        <li class="title2">
+                                            Cantidad: <input type="number" class="cantidad" min="1"
+                                                max="<%= productos[i].products.stock%>" id="cantidad<%=i%>" value="1">
+                                            <p id="prod-availables">
+                                                <%= productos[i].products.stock%> productos disponibles
+                                            </p>
+                                        </li>
+                                        <li class="title2">Precio por unidad: $<input type="number" class="prices" readonly id="precio<%=i%>" value="<%= productos[i].products.price%>" />
+                                        </li>
+                                        <li id="remove"> <i class="far fa-minus-square"></i>
+                                            <input type="submit" id="button" formaction="/remove/<%=productos[i].products.idProduct%>" formmethod="GET"value="Quitar del carrito"></li>
 
-                            <input type="number" id="precio<%=i%>" value="<%= productos[i].price%>" />
+                                    </ul>
+                                </div>
+                                <div id="div-subtotal">
+                                    
+                                    <p>Subtotal: $ </p>
+                                    <input class="prices" type="number" readonly id="pretotal<%=i%>" value="<%= productos[i].products.price%>">  
+                                </div>
+                            </div>
+                            
 
-                            <li class="pre"> Precio: $<%= productos[i].price%>
-                            </li>
-                            <li class="pre"> Subtotal: $ <input type="number" id="pretotal<%=i%>">
-                            </li>
+
                             <script>
                                 window.addEventListener('load', function () {
                                     const inputCantidad = document.querySelector("#cantidad<%=i%>");
                                     const inputPrecio = document.querySelector("#precio<%=i%>");
                                     const preTotal = document.querySelector("#pretotal<%=i%>");
-                                    
+
                                     inputCantidad.addEventListener('change', function (evento) {
                                         const subtotal = (inputCantidad.value) * (inputPrecio.value);
                                         const result = subtotal;
@@ -45,46 +68,26 @@
                             </script>
                             <% } %>
 
-                    </ul>
+                    </section>
 
-                    Precio total: <input type="number" id="total" value=0> 
-                    <button type="submit">Confirmar compra</button>
                 </form>
 
+                <% if (productos.length >0) { %>
+
+                    <form action="/success" method="POST"> 
+                        <div id="precio-final">
+                            <p> Precio total: $<input type="number" class="prices" id="total" readonly value=0></p>
+                            <button type="submit" id="confirm-button">Confirmar compra</button>
+                         </div>
+                        </form>
+                 
+                <% } %>
 
 
 
+                    
 
 
-
-
-
-
-
-
-                <section class="cuadro">
-                    <div class="carrito">
-                        <h1>
-                            <p>Carrito</p>
-                        </h1>
-                    </div>
-                    <hr>
-
-                    <%- include("./partials/producto")%>
-
-                        <div class="penultimo">
-                            <div class="total1">
-                                <p>Total con envio</p>
-                            </div>
-                            <div class="total2">
-                                <p>$</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="ultimo">
-                            <p>Continuar Compra</p>
-                        </div>
-                </section>
             </main>
 
             <%- include("./partials/footer")%>

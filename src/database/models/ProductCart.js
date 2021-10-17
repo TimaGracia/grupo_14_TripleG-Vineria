@@ -24,14 +24,23 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     ProductCart.associate = function(models){
-        ProductCart.hasMany(models.User, {
+       /* ProductCart.hasMany(models.User, {
             as: "users", 
             foreignKey: "idUser"
         });
         ProductCart.hasMany(models.Product, {
             as: "products", 
             foreignKey: "idProduct"
-        })
+        });*/
+        ProductCart.belongsTo(models.User, {
+            as: "users", 
+            foreignKey: "idUser"
+        });
+
+        ProductCart.belongsTo(models.Product, {
+            as: "products", 
+            foreignKey: "idProduct"
+        });
     }
 
     return ProductCart;

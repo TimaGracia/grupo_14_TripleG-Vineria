@@ -7,9 +7,15 @@ const { resolveNaptr } = require("dns");
 
 
 let productController = {
-    productCart: function(req, res){
-        res.render("productCart", {style:"productCart", title: "Carrito de Productos"})
+    productCart: async function(req, res){
+        //console.log(req.session)
+        //list of products for idUser
+        let products = await productUtil.getProductCart(req.session.userLogged.idUser);
+        //console.log(products)
+ 
+        res.render("productCart", {style:"productCart", title: "Carrito de Productos", productos:products})
     },
+
     productDetail: function(req, res){
         res.render("productDetail", {style:"productDetail", title: "Detalle del Producto",productos:productModel.all()})
     },
@@ -85,6 +91,7 @@ let productController = {
                 idProduct: req.body.product, 
                 cant: 5
             })
+            res.redirect("productCart")
             
         } catch (error) {
             console.log(error);
@@ -124,6 +131,30 @@ let productController = {
         });// productModel.delete(req.params.id);
         
         return deleted ? res.redirect("/products") : res.status(500).send("Error en el servidor");
+    },
+    success: async function (req, res){
+    
+        let deleted = await db.ProductCart.destroy({
+            where: {
+                idUser: req.session.userLogged.idUser}
+        });
+        console.log("Este es el id del usuario "+req.session.userLogged.idUser)
+        console.log(deleted);
+        
+        return deleted ? res.redirect("/productCart") : res.status(500).send("Error en el servidor");
+    },
+    removeProductCart: async function (req, res){
+        console.log("esto es req.body"+req.body);
+    
+        let deleted = await db.ProductCart.destroy({
+            where: {
+                idUser: req.session.userLogged.idUser, 
+                idProduct: req.params.id}
+        });
+        //console.log("Este es el id del usuario "+req.session.userLogged.idUser)
+        console.log(deleted);
+        
+        return deleted ? res.redirect("/productCart") : res.status(500).send("Error en el servidor");
     },
     update: async function (req, res){
         

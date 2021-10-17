@@ -52,5 +52,9 @@ router.put("/products/:id", productController.update);
 
 router.delete("/products/:id", productController.delete);
 
+router.post("/success", productController.success);
+
+router.get("/remove/:id", productController.removeProductCart);
+
 
 module.exports = router;

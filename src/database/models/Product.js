@@ -44,7 +44,8 @@ module.exports = (sequelize, DataTypes) => {
         Product.belongsTo(models.Category, {
             as: "categories", 
             foreignKey: "idCategory"
-        })
+        });
+ 
     }
 
     return Product;
