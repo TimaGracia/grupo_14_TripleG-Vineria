@@ -13,9 +13,18 @@ let productController = {
         let products = await productUtil.getProductCart(req.session.userLogged.idUser);
         //console.log(products)
  
-        res.render("productCart", {style:"productCart", title: "Carrito de Productos", productos:products})
-    },
+        res.render("productCart", {style:"productCart", title: "Carrito de Productos", productos:products})},
+    all: async function(req, res){
 
+        let products = await productUtil.apiAll();
+        res.send(JSON.stringify(products));
+
+    },
+    apiGetById: async function(req, res){
+        let product = await db.Product.findByPk(req.params.id);
+        res.send(JSON.stringify(product));
+
+    },
     productDetail: function(req, res){
         res.render("productDetail", {style:"productDetail", title: "Detalle del Producto",productos:productModel.all()})
     },
