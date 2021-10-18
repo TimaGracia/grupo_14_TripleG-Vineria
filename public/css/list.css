@@ -5,7 +5,7 @@ body {
 .titulo {
     text-align: center;
     font-size: xx-large;
-    margin-top: 5vh;
+    margin-top: 2vh;
     width: 40vw;
     margin-left: 30vw;
 }
@@ -119,6 +119,36 @@ body {
     font-size: 1.2rem;
 }
 
+.filters {
+    width: 100%;
+    font-size: 1rem;
+    display:flex;
+    text-align: center;
+
+}
+.filters form {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#nombre{
+    margin: 1rem;
+    text-align: center;
+    width: 80%;
+}
+.filter-price input{
+    text-align: center;
+    width: 30%;
+    margin-left: 0.3rem;
+
+}
+
+.filter-button input{
+    margin: 1rem;
+    font-size: 1rem;
+
+}
+
 
 
 
@@ -177,15 +207,7 @@ body {
         justify-content: center;
     }
     .boton {
-        /*
-        display: flex;
-        width: 20vw;
-        margin-left: 40vw;
-        text-decoration: none;
-        color: black;
-        background-color: #C2755E;
-        padding: 1vh 2vw 1vh 2vw;
-        margin-top: 2vh;*/
+
         width: 20vw;
         display:block;
         font-size: 1rem;

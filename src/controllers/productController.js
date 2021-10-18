@@ -56,7 +56,22 @@ let productController = {
         }
         
     }, 
-    //
+    listFilter: async function(req, res){
+
+        let name = req.body.nombre;
+
+        try {
+            let productos = await productUtil.allFilter(req.body.minimo, req.body.maximo, name);
+
+            res.render("products", {productos:productos, style:"list",title: "Listado de Productos"})
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+        
+    }, /*
+    
     listFilterPrice: async function(req, res){
         console.log("llegue")
         console.log(req.body)
@@ -88,7 +103,7 @@ let productController = {
             
         }
         
-    }, 
+    }, */
 
  
     create: function(req, res){

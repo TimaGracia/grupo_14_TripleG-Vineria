@@ -33,6 +33,31 @@ module.exports = {
         }
 
     },
+    allFilter: async function(min, max, name){
+
+        try {
+            let products = await db.Product.findAll({
+                where: {
+                    price: {
+                        [Op.between]: [min, max]
+                    }, 
+                    name: {
+                        [Op.like]: "%"+name+"%",
+                    }
+                },
+                include: [{association: "categories"}, {association: "business"}]
+            });
+
+            return products;
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+
+    },
+
+/*
     allFilterPrice: async function(min, max){
 
         try {
@@ -72,7 +97,7 @@ module.exports = {
             
         }
 
-    },
+    },*/
     getProductCart: async function(id){
         try {
             let products = await db.ProductCart.findAll({

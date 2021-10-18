@@ -53,9 +53,10 @@ router.put("/products/:id", productController.update);
 router.delete("/products/:id", productController.delete);
 
 router.post("/success", productController.success);
-
+/*
 router.post("/products/filterPrice", productController.listFilterPrice);
-router.post("/products/filterName", productController.listFilterName);
+router.post("/products/filterName", productController.listFilterName);*/
+router.post("/products/filter", productController.listFilter);
 
 router.get("/remove/:id", productController.removeProductCart);
 
