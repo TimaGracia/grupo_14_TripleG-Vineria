@@ -1,4 +1,5 @@
 const db = require("../database/models")
+const { Op } = require("sequelize");
 
 module.exports = {
     all: async function(){
@@ -21,6 +22,46 @@ module.exports = {
 
         try {
             let products = await db.Product.findAll({
+                include: [{association: "categories"}, {association: "business"}]
+            });
+
+            return products;
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+
+    },
+    allFilterPrice: async function(min, max){
+
+        try {
+            let products = await db.Product.findAll({
+                where: {
+                    price: {
+                        [Op.between]: [min, max]
+                    }
+                },
+                include: [{association: "categories"}, {association: "business"}]
+            });
+
+            return products;
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+
+    },
+    allFilterName: async function(name){
+        
+        try {
+            let products = await db.Product.findAll({
+                where: {
+                    name: {
+                        [Op.like]: "%"+name+"%",
+                    }
+                },
                 include: [{association: "categories"}, {association: "business"}]
             });
 

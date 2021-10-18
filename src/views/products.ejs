@@ -6,6 +6,17 @@
         <%- include("./partials/header")%>
             <main>
 
+                <form action="/products/filterPrice" method="POST">
+                    <input type="number" name="minimo" value="0"> Minimo
+                    <input type="number" name="maximo" value="10000"> Maximo
+                    <input type="submit" value="Filtrar">
+                </form>
+
+                <form action="/products/filterName" method="POST">
+                    <input type="text" name="nombre" value=""> Nombre
+                    <input type="submit" value="Filtrar">
+                </form>
+
                         <h1 class="titulo">Listado de Productos</h1><br><br>
 
                         <div class="buscador">

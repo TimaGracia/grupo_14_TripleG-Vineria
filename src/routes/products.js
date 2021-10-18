@@ -54,6 +54,9 @@ router.delete("/products/:id", productController.delete);
 
 router.post("/success", productController.success);
 
+router.post("/products/filterPrice", productController.listFilterPrice);
+router.post("/products/filterName", productController.listFilterName);
+
 router.get("/remove/:id", productController.removeProductCart);
 
 

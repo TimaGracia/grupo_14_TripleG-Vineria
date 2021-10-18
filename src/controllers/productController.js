@@ -56,6 +56,41 @@ let productController = {
         }
         
     }, 
+    //
+    listFilterPrice: async function(req, res){
+        console.log("llegue")
+        console.log(req.body)
+
+        try {
+            let productos = await productUtil.allFilterPrice(req.body.minimo, req.body.maximo);
+            console.log(productos);
+            //res.redirect("/products", {productos:productos, style:"list",title: "Listado de Productos"})
+            res.render("products", {productos:productos, style:"list",title: "Listado de Productos"})
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+        
+    }, 
+    listFilterName: async function(req, res){
+        console.log("llegue")
+        console.log(req.body)
+
+        try {
+            let productos = await productUtil.allFilterName(req.body.nombre);
+            console.log(productos);
+            //res.redirect("/products", {productos:productos, style:"list",title: "Listado de Productos"})
+            res.render("products", {productos:productos, style:"list",title: "Listado de Productos"})
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+        
+    }, 
+
+ 
     create: function(req, res){
         //console.log(req.body)
         let errors = validationResult(req);
@@ -113,7 +148,7 @@ let productController = {
     getById: async function(req, res){
         //console.log(req.params.id)
         let productos = await productUtil.all();
-        console.log("Esto son los productos"+productos);
+        //console.log("Esto son los productos"+productos);
         
         try {
             let productId = await db.Product.findByPk(req.params.id);
