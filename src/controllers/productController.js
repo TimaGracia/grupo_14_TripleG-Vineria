@@ -123,9 +123,6 @@ let productController = {
             console.log(error);
             
         }
-
-
-        //res.render("productDetail", {product:productModel.getById(req.params.id),productos:productModel.all(), style:"productDetail", title: "Detalle del Producto"})
     },
     getByIdEdit: async function(req, res){
         //console.log(req.params.id)
@@ -137,7 +134,7 @@ let productController = {
         let deleted = await db.Product.destroy({
             where: {
                 idProduct: req.params.id}
-        });// productModel.delete(req.params.id);
+        });
         
         return deleted ? res.redirect("/products") : res.status(500).send("Error en el servidor");
     },
@@ -160,7 +157,7 @@ let productController = {
                 idUser: req.session.userLogged.idUser, 
                 idProduct: req.params.id}
         });
-        //console.log("Este es el id del usuario "+req.session.userLogged.idUser)
+
         console.log(deleted);
         
         return deleted ? res.redirect("/productCart") : res.status(500).send("Error en el servidor");

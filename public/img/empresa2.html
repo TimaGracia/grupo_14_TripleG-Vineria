@@ -1,0 +1,636 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-es" lang="es" dir="ltr">
+<head>
+<script type="text/javascript" async=true>
+(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://quantcast.mgr.consensu.org'
+    .concat('/choice/', 'Yn8bcRhFJQp-X', '/', host, '/choice.js')
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="index, follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="fb:pages" content="159736547407255" />
+<meta property="ia:markup_url" content="https://www.vinetur.com/2019010349029/el-vinedo-mucho-mas-que-un-terreno-y-vides.html">
+<link rel="amphtml" href="https://www.vinetur.com/amp/2019010349029/el-vinedo-mucho-mas-que-un-terreno-y-vides.html" /><link rel="canonical" href="https://www.vinetur.com/2019010349029/el-vinedo-mucho-mas-que-un-terreno-y-vides.html" />
+<base href="https://www.vinetur.com/2019010349029/el-vinedo-mucho-mas-que-un-terreno-y-vides.html" />
+<title>El viñedo, mucho más que un terreno y vides</title>
+<meta name="description" content="Damos un repaso al viñedo, un complejo sistema en el que se combinan las influencias de muchos elementos diferentes" />
+<meta name="theme-color" content="#81AD32" />
+<meta name="author" content="vinetur.com" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="El viñedo, mucho más que un terreno y vides" />
+<meta property="og:image" content="https://www.vinetur.com/imagenes/2018/diciembre/30/viticultor-bodeguero-vinedos_vides.jpg" />
+<meta property="og:image:secure_url" content="https://www.vinetur.com/imagenes/2018/diciembre/30/viticultor-bodeguero-vinedos_vides.jpg" />
+<meta property="og:url" content="https://www.vinetur.com/2019010349029/el-vinedo-mucho-mas-que-un-terreno-y-vides.html" />
+<meta property="og:description" content="Damos un repaso al viñedo, un complejo sistema en el que se combinan las influencias de muchos elementos diferentes" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="El viñedo, mucho más que un terreno y vides" />
+<meta name="twitter:description" content="Damos un repaso al viñedo, un complejo sistema en el que se combinan las influencias de muchos elementos diferentes" />
+<meta name="twitter:image" content="https://www.vinetur.com/imagenes/2018/diciembre/30/viticultor-bodeguero-vinedos_vides.jpg" />
+
+<script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+		"name": "El viñedo, mucho más que un terreno y vides",
+		"description": "Damos un repaso al viñedo, un complejo sistema en el que se combinan las influencias de muchos elementos diferentes",
+        "headline": "Damos un repaso al viñedo, un complejo sistema en el que se...",
+		"datePublished" : "2019-01-03 19:18:00",
+		"dateModified" : "2019-01-03 19:18:00",
+		"image": {
+                "@type": "ImageObject",
+                "url": "/imagenes/2018/diciembre/30/viticultor-bodeguero-vinedos_vides.jpg"
+            },
+		"publisher": {
+                "@type": "NewsMediaOrganization",
+                "name": "Vinetur",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.vinetur.com/imagenes/iconos/logoamp.png",
+                    "width": 600,
+                    "height": 60
+				}
+            },
+		"author": {
+        "@type": "Organization",
+        "name": "Vinetur"
+                },
+		"mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://vinetur.com/"
+                }
+      }
+</script>
+<link rel='manifest' href='/manifest.json'>
+<link rel="icon" type="image/png" href="https://www.vinetur.com/imagenes/iconos/favicon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.vinetur.com/imagenes/iconos/apple-touch-icon-180x180.png">
+<link rel="stylesheet" href="/css/estilo.css" type="text/css" />
+<script type="text/javascript" src="https://platform.twitter.com/widgets.js" async></script>
+<script type="text/javascript" src="/media/system/js/alertify.js" async></script>
+<script type="text/javascript"> function openmenu() { document.getElementById('sub').style.display = 'block';document.getElementById('open').style.display = 'none';document.getElementById('close').style.display = 'block';document.getElementById('user').style.display = 'none';document.getElementById('onuser').style.display = 'block';document.getElementById('offuser').style.display = 'none'; } function closemenu() { document.getElementById('sub').style.display = 'none';document.getElementById('open').style.display = 'block';document.getElementById('close').style.display = 'none';document.getElementById('user').style.display = 'none';document.getElementById('onuser').style.display = 'block';document.getElementById('offuser').style.display = 'none'; } function openuser() { document.getElementById('user').style.display = 'block';document.getElementById('onuser').style.display = 'none';document.getElementById('offuser').style.display = 'block';document.getElementById('sub').style.display = 'none';document.getElementById('open').style.display = 'block';document.getElementById('close').style.display = 'none';document.getElementById('subnivelb').removeAttribute('style');document.getElementById('onsubnivelb').removeAttribute('style');document.getElementById('offsubnivelb').removeAttribute('style'); } function closeuser() { document.getElementById('user').style.display = 'none';document.getElementById('onuser').style.display = 'block';document.getElementById('offuser').style.display = 'none';document.getElementById('sub').style.display = 'none';document.getElementById('open').style.display = 'block';document.getElementById('close').style.display = 'none'; } function opensubnivelb() { document.getElementById('subnivelb').style.display = 'block';document.getElementById('onsubnivelb').style.display = 'none';document.getElementById('offsubnivelb').style.display = 'block'; } function closesubnivelb() { document.getElementById('subnivelb').style.display = 'none';document.getElementById('onsubnivelb').style.display = 'block';document.getElementById('offsubnivelb').style.display = 'none'; } </script>
+<meta property="fb:app_id" content="193445537486894"/>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)){
+      e.async = 1;
+      e.src = u;
+      e.id = i;
+      f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/vinetur/loader.js',
+  'tb_loader_script');
+  if(window.performance && typeof window.performance.mark == 'function')
+    {window.performance.mark('tbl_ic');}
+</script>
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '336661943883344');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=336661943883344&ev=PageView&noscript=1"
+/></noscript>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1031651623374132",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.7&appId=193445537486894";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="wrap" style="display:block;">
+<div class="encabezado">
+<div align="center" class="bannergroup">
+<div class="banner-vinetur slot"><a href="/banner/1149/" target="_blank" style="background: url(/images/banners/rutamanchuela-uvas.gif) no-repeat center center;background-size: 100%;" class="megabanner"></a></div>
+</div>
+</div>
+<ul class="menu" style="margin:0px;">
+  <li class="nlogo" style="width: 130px;padding: 0px 5px;"><a href="/" style="background: url(/imagenes/iconos/vinetur_white.png) no-repeat center 7px / contain !important;width: auto;padding: 0px;" title="Vinetur - La revista digital del vino"><span style="position: absolute;top: 35px;left: 5px;text-transform: uppercase;font-size: 8px;color: #efefef;line-height: 100%;">La revista digital del vino</span></a></li>
+  <li style="width: 51px;border-left: 1px solid #7ba72d;position: initial;">
+    <a href="javascript:void(0)" onClick="openmenu()" class="openmenu" id="open" style="background: url('/imagenes/iconos/men.png') no-repeat 12px center;padding: 0px"></a>
+    <a href="javascript:void(0)" onClick="closemenu()" class="closemenu" id="close" style="background: url('/imagenes/iconos/xmen.png') no-repeat 12px center;padding: 0px"></a>
+    <ul id="sub" style="width:100%;background: #303030;position: absolute;left: 0;top: 100%;margin: 0px;padding: 20px 0px;z-index: 99;text-align: center;">
+      <li style="width: 100%;margin: 0px auto 20px auto; text-align:center;background:none;">
+      <form method="get" action="https://www.vinetur.com/buscar" id="q"><input type="text" name="q" maxlength="256" id="q" class="insch" placeholder="Busca entre +60.000 artículos" style="padding: 10px;width: 60%;max-width:328px;"><input type="submit" value=" &nbsp; " class="botonsch" style="padding: 11px 25px;background: #dbdbdb url('/imagenes/iconos/search.png') no-repeat center center;border-right: 1px solid #a9a9a9;border-bottom: 1px solid #a9a9a9;border-top: 1px solid #a9a9a9;cursor: pointer;"></form></li>
+      <li class="separador amarillo"><span></span></li>
+      <li><a href="/">Portada</a></li>
+      <li><a href="/social" style="background: url(/imagenes/iconos/redes.png) no-repeat 5px center !important;">Redes</a></li>
+      <li class="separador amarillo"><span></span></li>
+      <li><a href="/noticias/">Últimas noticias</a></li>
+      <li><a href="/lomas/">Tendencias</a></li>
+      <li><a href="/reportajes/">Reportajes</a></li>
+      <li><a href="/archivo">Hemeroteca</a></li>
+      <li><a href="/mercados/">Mercados</a></li>
+      <li><a href="/negocios/">Negocios</a></li>
+      <li><a href="/ventas/">Marketing</a></li>
+      <li><a href="/docs/">Documentos</a></li>
+      <li><a href="/vinos/">Noticias de vinos</a></li>
+      <li><a href="/guia/vinos/">Guía de vinos</a></li>
+      <li><a href="/catas/">Catas de vinos</a></li>
+      <li><a href="/destilados/">Destilados</a></li>
+      <li><a href="/gastronomia/">Gastronomía</a></li>
+      <li><a href="/hosteleria/">Hostelería</a></li>
+      <li><a href="/turismo/">Turismo</a></li>
+      <li><a href="/destacados/">Destacados</a></li>
+      <li><a href="/salud/">Salud</a></li>
+      <li><a href="/aprender/">Aprender</a></li>
+      <li><a href="/posts/">Posts</a></li>
+      <li><a href="/eventos/">Eventos</a></li>
+    </ul>    
+  </li>
+  <li class="hidde" style="border-left: 1px solid #7ba72d;width: 100px;"><a href="/noticias/" style="padding: 0px 30px 0px 20px;">Recientes</a></li>
+  <li class="hidde" style="border-left: 1px solid #7ba72d;border-right: 1px solid #7ba72d;width: 100px;"><a href="/lomas/" style="padding: 0px 30px 0px 15px;">Populares</a></li>
+    <li style="float:right;border-left: 1px solid #7ba72d;" class="write">
+  <a href="/registro" class="on" style="background: url('/imagenes/iconos/pen.png') no-repeat 15px center / 26px 26px;padding-right:0px;"><span>Crea tu post!</span></a>
+    </li>
+</ul>
+<div class="wraper  ">
+<div class="contenido main"  style="margin-bottom: 10px;margin-right:0px;float: left;width: 100%;">
+<div class="contenidomarginright">
+<div align="center" class="bannergroupfaldon">
+<div class="banner-vinetur slot"><a href="/banner/1212/" target="_blank" style="background: url(/images/banners/02lasmoradas-faldon.gif) no-repeat center center;background-size: contain;" class="faldon"></a></div>
+</div>
+
+
+<div class="articulo ">
+<div class="titulo">
+<h1>El viñedo, mucho más que un terreno y vides</h1><div class="stats"><p>Richard Sanchoyarto</p><div style="font-size: 1.05em;background-color: #f3f3f3;padding:10px 0px;width:100%;text-align:center;margin:0 auto;display: inline-block;"><span style="text-transform: capitalize;font-size: 18px;margin: 10px;display: block;color: #333;">Compártelo</span><div class="addthis_sharing_toolbox" style="text-align: center;"></div><p>Le&iacute;do &rsaquo; <strong>16924 veces</strong></p></div></div>
+<script type="text/javascript">
+var addthis_config = addthis_config||{};
+    addthis_config.data_track_addressbar = false;
+    addthis_config.data_track_clickback = false;
+</script>
+<h2>Damos un repaso al viñedo, un complejo sistema en el que se combinan las influencias de muchos elementos diferentes</h2></div>
+<div class="anuncios" style="overflow:hidden;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1031651623374132"
+     data-ad-slot="4366062529"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="texto ">
+
+<p style="text-align: center;"><img src="/imagenes/2018/diciembre/30/viticultor-bodeguero-vinedos_vides.jpg" alt="viticultores observando viñedos" /><span style="color: #808080; font-size: 12px;"><em>Al visitar un viñedo nos encontraremos que las plantas presentan una apariencia muy diferente, en función de la estación del año: El ciclo vegetativo</em></span></p>
+<p>A primera vista puede parecer que un viñedo sólo es un terreno plantado de vides pero en realidad es mucho más que eso. El viñedo es un complejo sistema en el que se combinan las influencias de muchos elementos diferentes. Las plantas tienen una gran dependencia del clima en el que se desarrollan y del terreno en el que se asientan. Cada vez que un viticultor toma una decisión sobre la ubicación de un viñedo debe tener en cuenta como estos dos elementos, clima y suelo, van a afectar a las plantas.</p>
+<p>Es importante que tengamos presente que todo lo que nos vamos a encontrar en un viñedo está organizado por la mano del hombre. Tengan la edad, la localización y la disposición que tengan, los viñedos no son producto de la naturaleza sino de la voluntad humana por conseguir uvas para elaborar vino.</p>
+<p>Al visitar un viñedo nos encontraremos que las plantas presentan una apariencia muy diferente, en función de la estación del año. Esto se debe a que la vid se encuentra sometida a un ciclo vegetativo, relacionado con la producción de uvas, regulado por el viticultor. Los diferentes sistemas de plantación de la vid, en vaso o espaldera entre otros, sus distintos tipos de poda así como el número de plantas y su distribución en el viñedo se han elegido cuidadosamente. La explotación industrial, la tradición de cada zona vitícola o la filosofía individual de cada viticultor decidirán estas cuestiones así como la más importante de todas, cual de las diferentes variedades de uva se plantará en el viñedo.</p>
+<p style="text-align: center;"><img src="/imagenes/2018/diciembre/30/chico-viticultor-vinedo.jpg" alt="" /><span style="color: #808080; font-size: 12px;"><em>Los viticultores han aprendido generación tras generación las características y la estructura física del suelo</em></span></p>
+<p>El desarrollo de la vid está principalmente condicionado por el clima. En todo el mundo solo las zonas que reúnen determinadas características climáticas pueden tener viñedos. El factor climático individual más importante para la vid es la temperatura pero en su desarrollo también influyen otros elementos meteorológicos como las precipitaciones, el viento, las heladas o el granizo. Para poder realizar la fotosíntesis y dar frutos la vid necesita insolación y por ello los viñedos se plantan habitualmente de manera que reciban la mayor cantidad de luz del sol durante el mayor tiempo posible. Para conseguir este objetivo es habitual plantar el viñedo, sobre todo en zonas con menor insolación, en pendientes con determinada orientación respecto al sol. Estas pendientes presentan otras ventajas como facilitar el drenaje del exceso de agua o reducir el riesgo de heladas, aunque tienen la importante desventaja de la erosión y además en ocasiones dificultan las labores agrícolas.</p>
+<p>La vid puede sobrevivir plantada en terrenos que no son aptos para ningún otro tipo de cultivo. Aún así los miles de generaciones de viticultores han aprendido que las características y la estructura física del suelo sobre la que está plantada es muy importante. No existe un suelo ideal para todos los viñedos. El mejor suelo en cada caso dependerá, además de sus características propias, del tipo de clima en la zona o de la variedad plantada, para conseguir el equilibrio que el viñedo necesita. Entre las funciones que cumple el suelo destacan que sirve de asentamiento a la planta y que aporta el agua, los nutrientes y los minerales necesarios para su desarrollo.</p>
+<p style="text-align: center;"><img src="/imagenes/2018/diciembre/30/viticultor-vid.jpg" alt="" /><span style="color: #808080; font-size: 12px;"><em>La cubierta vegetal de hierba se utiliza para equilibrar el viñedo</em></span></p>
+<p>El tipo de terreno sobre el que se asienta el viñedo es importante tanto en su superficie visible como en su parte inferior oculta a la vista, conocido como subsuelo. Tanto la superficie como el subsuelo pueden presentar diferentes composiciones que deberán ajustarse a las características del clima y la variedad plantada para un correcto desarrollo del viñedo.</p>
+<p>La superficie del suelo, en función de su textura o color, regula aspectos como el calor que recoge del sol y traslada a la vid o la cantidad de agua que permite pasar al subsuelo, además de albergar la vida animal y vegetal del viñedo. En ocasiones nos encontraremos con viñedos que tienen plantadas otras especies vegetales, como cereales o hierba, en la superficie del suelo que queda libre entre vides. Esta cubierta vegetal se utiliza para equilibrar el viñedo de muy diversas maneras, tanto con su presencia como con la posibilidad de transformarla posteriormente en nutriente del subsuelo.</p>
+<p>El subsuelo almacena materia orgánica, nutrientes, agua y minerales que la vid capta a través de sus raíces. También es el hábitat de animales y de los importantísimos hongos y bacterias. La composición física del subsuelo es muy importante ya que marcará, entre otras, su capacidad para retener agua y permitirá un mayor o menor desarrollo y profundización de las raíces de la planta para el acceso a los nutrientes y minerales disponibles.</p>
+<p>Tanto la superficie como el subsuelo del viñedo se ven alterados constantemente por la mano humana mediante prácticas agrícolas, como el arado, el abonado o el regadío. En ocasiones esta transformación del suelo se realiza incluso antes de plantar el propio viñedo, extrayendo piedras, nivelando el terreno o instalando canales de desagüe y muros de contención.</p>
+<a href="/richardsanchoyarto/" class="richardsanchoyarto" style="background:url(/imagenes/2018/diciembre/21/thricardo_sanchoyarto.jpg) no-repeat 5px center;background-size: 50px;height: 50px;padding:5px 5px 5px 60px;display: block;color:#000;text-decoration:none;line-height: 150%;border: 1px solid #dbdbdb;"><strong>Richard Sanchoyarto</strong><br/>Docente especialista en sumillería y análisis sensorial del vino.</a>
+
+
+
+
+
+</div>
+</div>
+<div id="taboola-below-article-thumbnails" style="margin: 55px 0px;"></div>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'thumbnails-a',
+    container: 'taboola-below-article-thumbnails',
+    placement: 'Below Article Thumbnails',
+    target_type: 'mix'
+  });
+</script> 
+<div style="font-size: 1.05em;background-color: #f3f3f3;padding:10px 0px;width:100%;text-align:center;margin:0 auto;display: inline-block;"><span style="font-size: 18px;margin: 10px;display: block;color: #333;">¿Te gustó el artículo? Compártelo</span><div class="addthis_sharing_toolbox" style="text-align: center;"></div><p style="font-size: 12px;text-transform: uppercase;letter-spacing: 0.02em;
+">Le&iacute;do &rsaquo; <strong>16924 veces</strong></p></div>
+<div class="comentarios"><h4>Comenta</h4><div class="fb-comments" data-href="https://vinetur.com/2019010349029/el-vinedo-mucho-mas-que-un-terreno-y-vides.html" data-width="100%"></div></div>
+<script>
+  (function (d,s,n,id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.className = n;
+    js.src = "https://stream.playbuzz.com/embed/sdk.js?embedId=6a5fa84c-9847-477d-be07-3c585b1a9100";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document,'script','playbuzz-stream','stream-sdk-jssdk_vinetur.com'));
+</script>
+<div id="6a5fa84c-9847-477d-be07-3c585b1a9100" style="margin-top:45px;"></div>
+<div class="anuncios" style="overflow:hidden;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1031651623374132"
+     data-ad-slot="4366062529"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div style="margin:50px 0px;">
+<div align="center" class="bannergrouptextads">
+	<div class="vineturbanner-titulo"><a href="https://www.vinetur.com/textads/" class="titletextads"><span>TextAds</span></a></div>
+<div class="banner-vinetur slot"><div class="textads">
+<a href="/banner/549/" target="_blank">
+<span class="title">¿Te gusta el vino español?</span>
+<span class="url">https://www.decantalo.com/</span>
+<span class="desc">Descubre en Decántalo la mayor selección de vino español. ¡Te esperamos! Envíos gratuitos para pedidos superiores a 200€</span>
+</a>
+</div></div>
+<div class="banner-vinetur "><div class="textads">
+<a href="/banner/1199/" target="_blank">
+<span class="title">Invertir en Vino de Lujo</span>
+<span class="url">https://breakingwine.online/invertir-en-vino-de-lujo-2/</span>
+<span class="desc">Conoce todas las ventajas de invertir en este sector y por qué son carteras ganadoras contra otros instrumentos de inversión [PDF]</span>
+</a>
+</div></div>
+</div></div>
+
+
+</div></div>
+<div id="right_top" class="columna" style="overflow:hidden;width: 300px;float: right;margin-left: -100%;"><div align="center" class="bannergrouprobapaginas">
+<div class="banner-vinetur slot" style="margin-bottom:15px;padding-bottom:15px;border-bottom: 1px solid #dbdbdb;display:inline-block;"><a href="/banner/1134/" target="_blank" style="background: #000 url(/images/banners/domonterrrei21a.gif) no-repeat center center;height:550px;" class="robapaginas_s"></a></div>
+</div><div align="center" class="bannergrouptextads">
+	<div class="vineturbanner-titulo"><a href="https://www.vinetur.com/textads/" class="titletextads"><span>TextAds</span></a></div>
+<div class="banner-vinetur slot"><div class="textads">
+<a href="/banner/549/" target="_blank">
+<span class="title">¿Te gusta el vino español?</span>
+<span class="url">https://www.decantalo.com/</span>
+<span class="desc">Descubre en Decántalo la mayor selección de vino español. ¡Te esperamos! Envíos gratuitos para pedidos superiores a 200€</span>
+</a>
+</div></div>
+<div class="banner-vinetur "><div class="textads">
+<a href="/banner/1014/" target="_blank">
+<span class="title">Servicios de asesoramiento vitivinícola y enológico</span>
+<span class="url">https://vinic.es/</span>
+<span class="desc">Consultoría enológica dirigida a empresas del sector vitivinícola, especialistas en la creación, dirección y gestión de viñedos y bodegas.</span>
+</a>
+</div></div>
+</div><div class="destacan_recientes dsin">
+<h3>Tendencias</h3>
+
+<ul style="margin: 0px 0px -15px 0px;">
+<li style="margin: 20px 0px;"><a href="/2021101366480/los-arreglos-en-el-mundo-del-vino.html" style="background:url('/imagenes/2021/octubre/13/00enologo.jpg') no-repeat left center / 100px 70px;">Los arreglos en el mundo del vino</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101566518/siempre-he-tenido-muy-claro-que-quiero-comunicar-a-traves-de-un-lenguaje-coloquial-y-acercar-a-la-sociedad-al-vino-de-una-forma-sencilla-y-entendible.html" style="background:url('/imagenes/2021/octubre/15/00monica_roson.jpg') no-repeat left center / 100px 70px;">“Siempre he tenido muy claro que quiero comunicar a través de un lenguaje coloquial y acercar a la sociedad el vino de una forma sencilla y entendible”</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101466497/asi-es-el-nuevo-perfil-del-enoturista-espanol.html" style="background:url('/imagenes/2021/octubre/14/00rv1.jpg') no-repeat left center / 100px 70px;">Así es el nuevo perfil del enoturista español</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101366477/radiografia-de-los-vinos-mas-buscados-en-cada-una-de-las-autonomias.html" style="background:url('/imagenes/2021/octubre/13/00comprar_vino.jpg') no-repeat left center / 100px 70px;">Radiografía de los vinos más buscados en cada una de las autonomías</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101366479/cuantos-aromas-puede-percibir-una-nariz-humana.html" style="background:url('/imagenes/blog/4090/smell_wine_aroma_vino.jpg') no-repeat left center / 100px 70px;">¿Cuántos aromas puede percibir una nariz humana?</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101366472/un-ano-de-rigurosa-informacion-sectorial-gracias-al-acuerdo-entre-oive-y-oemv.html" style="background:url('/imagenes/2021/octubre/13/image003.jpg') no-repeat left center / 100px 70px;">Un año de rigurosa información sectorial gracias al acuerdo entre OIVE y OeMv</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101466498/la-bodega-restaurante-senorio-de-aguimes-acogen-1-encuentro-de-mujeres-rurales-y-emprendedoras-del-municipio.html" style="background:url('/imagenes/blog/7181/244436098_363321698909331_4405817585397844414_n.jpg') no-repeat left center / 100px 70px;">La Bodega-Restaurante Señorío de Agüimes acogen 1º Encuentro de Mujeres Rurales y Emprendedoras del municipio</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101566517/genetica-canela-y-vino.html" style="background:url('/imagenes/2021/octubre/15/00cata_olfativa.jpg') no-repeat left center / 100px 70px;">Genética, canela y vino</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101466496/bodegas-roda-campo-viejo-solar-de-samaniego-y-vinicola-real-—-200-monges-premios-best-of-bilbao-rioja-2022.html" style="background:url('/imagenes/2021/octubre/14/bestofwinetourism2022bilbao-riojapremiados.jpg') no-repeat left center / 100px 70px;">Bodegas Roda, Campo Viejo, Solar de Samaniego y Vinícola Real — 200 Monges, Premios Best Of Bilbao-Rioja 2022</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101366473/nuevos-aires-soplan-en-el-trujal-de-la-ribera-del-queiles-al-incorporarse-a-familia-cirsus-bodegas-y-vinedos.html" style="background:url('/imagenes/2021/octubre/13/almazarahaciendaqueiles.jpg') no-repeat left center / 100px 70px;">Nuevos aires soplan en el trujal de la ribera del Queiles al incorporarse a Familia Cirsus-Bodegas y Viñedos</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101466490/el-salon-gourmets-2021-acoge-el-champagne-mas-caro-del-mundo-en-una-botella-de-fibra-de-carbono-valorada-en-20000euro.html" style="background:url('/imagenes/2021/octubre/14/carbonbugatti.jpg') no-repeat left center / 100px 70px;">El Salón Gourmets 2021 acoge el champagne más caro del mundo en una botella de Fibra de Carbono valorada en 20.000€</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101466492/los-vinos-jumilla-toman-carrefour.html" style="background:url('/imagenes/2021/octubre/14/dopjumilla-presentacioncarrefour1.jpg') no-repeat left center / 100px 70px;">Los vinos Jumilla toman Carrefour</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101366470/miguel-torres-presidente-de-familia-torres-recibe-el-premio-a-la-trayectoria-profesional-en-el-mundo-del-vino.html" style="background:url('/imagenes/2021/octubre/13/00premisvinari-miguelatorres-211008.jpg') no-repeat left center / 100px 70px;">Miguel Torres, presidente de Familia Torres, recibe el Premio a la Trayectoria Profesional en el Mundo del Vino</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101566520/argentina-5-vinos-para-mimar-a-mama-en-su-dia.html" style="background:url('/imagenes/2021/octubre/15/criosoctubrerosa7.jpg') no-repeat left center / 100px 70px;">Argentina: 5 vinos para mimar a mamá en su día</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101566521/enate-lanza-una-nueva-edicion-de-su-beca-de-arte-dirigida-a-artistas-profesionales.html" style="background:url('/imagenes/2021/octubre/15/becaenate2021-2022imagen.jpg') no-repeat left center / 100px 70px;">ENATE lanza una nueva edición de su Beca de Arte, dirigida a artistas profesionales</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101466493/nace-kanvas-vino-en-lata-arte-y-comunidad.html" style="background:url('/imagenes/2021/octubre/14/kanvas_gama-vinos2.jpg') no-repeat left center / 100px 70px;">Nace KANVAS: vino en lata, arte y comunidad</a></li>
+</ul>
+</div><div align="center" class="bannergroup">
+<div class="banner-vinetur slot"><a href="/banner/1181/" target="_blank" style="background: url(/images/banners/dpedro.gif) no-repeat center center;height: 300px;" class="robapaginas"></a></div>
+</div><div align="center" class="bannergroupskycrapper">
+	<div class="vineturbanner-titulo"><hr/></div>
+<div class="banner-vinetur slot"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-1031651623374132"
+     data-ad-slot="1296534413"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Contenido relacionado -->
+<ins class="adsbygoogle"
+     style="display:block;text-align:center;"
+     data-ad-client="ca-pub-1031651623374132"
+     data-ad-slot="4317883619"
+     data-ad-format="autorelaxed"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+   <div style="display: inline-block;width: 100%;border: none;margin: 10px 0px;padding: 10px 0px;text-align:center;">
+<!-- Anuncios de enlaces -->
+<ins class="adsbygoogle"
+     style="display:block;"
+     data-ad-client="ca-pub-1031651623374132"
+     data-ad-slot="8188990130"
+     data-ad-format="link"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+</div>
+<div class="footer"><div class="destacan_recientes">
+<h3>Te puede interesar</h3>
+
+<ul style="margin: 0px 0px -15px 0px;">
+<li style="margin: 20px 0px;"><a href="/2016122026622/la-crianza-por-que-en-madera.html" style="background:url('/imagenes/2016/diciembre/20/cata_vino_bodega.jpg') no-repeat left center / 100px 70px;">La crianza ¿por qué en madera?</a></li>
+<li style="margin: 20px 0px;"><a href="/201205157459/la-influencia-de-la-vid-en-el-vino.html" style="background:url('/imagenes/2016/octubre/5/uva_vino.jpg') no-repeat left center / 100px 70px;">La vid, tres características de todo buen vino</a></li>
+<li style="margin: 20px 0px;"><a href="/2015091120909/como-guardar-las-botellas-de-vino-en-casa.html" style="background:url('/imagenes/2016/octubre/19/vino_en_casa.jpg') no-repeat left center / 100px 70px;">5 consejos para guardar las botellas de vino en casa</a></li>
+<li style="margin: 20px 0px;"><a href="/201209179404/el-poder-del-vino-12-buenas-razones-para-tomar-vino.html" style="background:url('/imagenes/2012/septiembre/17/vino_salud.jpg') no-repeat left center / 100px 70px;">El poder del vino: 12 buenas razones para tomar vino</a></li>
+<li style="margin: 20px 0px;"><a href="/2020080761301/que-es-el-maridaje-y-como-maridar-un-buen-vino.html" style="background:url('/imagenes/2020/agosto/7/maridar.jpg') no-repeat left center / 100px 70px;">Qué es el maridaje y cómo maridar un buen vino</a></li>
+<li style="margin: 20px 0px;"><a href="/201103121555/la-cuarta-fase-de-la-cata-de-vinos-sensaciones-tactiles.html" style="background:url('/images/stories/front/front_tacto.jpg') no-repeat left center / 100px 70px;">La 'cuarta fase' de la cata de vinos: Sensaciones táctiles</a></li>
+<li style="margin: 20px 0px;"><a href="/2021041664130/sabes-que-es-un-fino-en-rama.html" style="background:url('/imagenes/2021/abril/16/ffvinofino-rama.jpg') no-repeat left center / 100px 70px;">¿Sabes qué es un fino “en rama”?</a></li>
+<li style="margin: 20px 0px;"><a href="/2021040463957/el-55-de-los-espanoles-afirma-que-la-politica-responsable-de-las-marcas-motiva-sus-compras.html" style="background:url('/imagenes/2019/agosto/1/comprar_vino_blanco2.jpg') no-repeat left center / 100px 70px;">El 55% de los españoles afirma que la política responsable de las marcas motiva sus compras</a></li>
+<li style="margin: 20px 0px;"><a href="/201011201329/como-convertirse-en-superhombre-tomando-vino-el-poder-del-vino.html" style="background:url('/images/stories/noticias/vino_y_salud.jpg') no-repeat left center / 100px 70px;">Cómo convertirse en 'superhombre' tomando vino: El poder del vino</a></li>
+<li style="margin: 20px 0px;"><a href="/2020073161239/bebidas-de-aperitivo-y-digestivo-en-que-se-diferencian.html" style="background:url('/imagenes/2020/julio/31/ffbebidasdeaperitivo.jpg') no-repeat left center / 100px 70px;">Bebidas de aperitivo y digestivo: ¿en qué se diferencian?</a></li>
+<li style="margin: 20px 0px;"><a href="/2019092051038/flavonoles-antocianos-y-taninos-que-son.html" style="background:url('/imagenes/2019/septiembre/20/tipos_fenoles_compuestosfenolicos.jpg') no-repeat left center / 100px 70px;">Flavonoles, antocianos y taninos ¿qué son?</a></li>
+<li style="margin: 20px 0px;"><a href="/2016060924241/el-tamano-importa-segun-un-estudio-de-la-universidad-de-cambridge.html" style="background:url('/imagenes/2016/junio/9/consumo_vino_hosteleria.jpg') no-repeat left center / 100px 70px;">El tamaño importa, según un estudio de la Universidad de Cambridge</a></li>
+<li style="margin: 20px 0px;"><a href="/2020061160695/aprende-a-catar-un-vino-como-un-profesional-sin-salir-de-casa.html" style="background:url('/imagenes/2020/junio/11/ffvino_casa.jpg') no-repeat left center / 100px 70px;">Aprende a catar un vino como un profesional sin salir de casa</a></li>
+<li style="margin: 20px 0px;"><a href="/2017020927094/cuatro-formas-de-oler-el-vino-en-la-copa-y-mejorar-en-el-arte-de-la-cata.html" style="background:url('/imagenes/2017/febrero/9/catar_vino.jpg') no-repeat left center / 100px 70px;">Cuatro formas de oler el vino en la copa y mejorar en el arte de la cata</a></li>
+<li style="margin: 20px 0px;"><a href="/2014090216610/que-significado-tiene-el-color-del-vino-blanco.html" style="background:url('/imagenes/2014/septiembre/2/color_vino_blanco.jpg') no-repeat left center / 100px 70px;">¿Qué significado tiene el color del vino blanco?</a></li>
+</ul>
+</div><div class="destacan">
+<h3><a href="/lomas/">Destacados</a></h3>
+
+<ul style="margin: 0px 0px -15px 0px;">
+<li style="margin: 20px 0px;"><a href="/2021092166172/lanzan-un-vino-espumoso-con-forma-de-pene.html" style="background:url('/imagenes/2021/septiembre/21/00gallery3.jpg') no-repeat left center / 100px 70px;">Lanzan un vino espumoso con forma de pene</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101366480/los-arreglos-en-el-mundo-del-vino.html" style="background:url('/imagenes/2021/octubre/13/00enologo.jpg') no-repeat left center / 100px 70px;">Los arreglos en el mundo del vino</a></li>
+<li style="margin: 20px 0px;"><a href="/2021092166157/marques-de-riscal-se-convierte-en-el-mejor-vinedo-de-europa.html" style="background:url('/imagenes/2021/septiembre/21/marqusderiscalhotel.jpg') no-repeat left center / 100px 70px;">Marqués de Riscal, se convierte en el mejor viñedo de Europa</a></li>
+<li style="margin: 20px 0px;"><a href="/2021100566378/versatilidad-y-diferenciacion-las-barricas-de-granito-han-llegado-para-quedarse.html" style="background:url('/imagenes/2021/octubre/5/00anforum2.jpg') no-repeat left center / 100px 70px;">Versatilidad y diferenciación, las barricas de granito han llegado para quedarse</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101066454/un-vino-de-199euro-de-supermercados-dia-premiado-internacionalmente.html" style="background:url('/imagenes/2021/octubre/9/geraldino-tile.jpg') no-repeat left center / 100px 70px;">Un vino de 1,99€ de Supermercados DIA premiado internacionalmente</a></li>
+<li style="margin: 20px 0px;"><a href="/2021101566518/siempre-he-tenido-muy-claro-que-quiero-comunicar-a-traves-de-un-lenguaje-coloquial-y-acercar-a-la-sociedad-al-vino-de-una-forma-sencilla-y-entendible.html" style="background:url('/imagenes/2021/octubre/15/00monica_roson.jpg') no-repeat left center / 100px 70px;">“Siempre he tenido muy claro que quiero comunicar a través de un lenguaje coloquial y acercar a la sociedad el vino de una forma sencilla y entendible”</a></li>
+<li style="margin: 20px 0px;"><a href="/2021100666394/ranking-de-principales-compradores-mundiales-de-vino.html" style="background:url('/imagenes/2021/octubre/6/00paises.jpg') no-repeat left center / 100px 70px;">Ranking de los principales compradores mundiales de vino</a></li>
+<li style="margin: 20px 0px;"><a href="/2021100466363/pago-de-carraovejas-uno-de-los-100-mejores-vinedos-del-mundo.html" style="background:url('/imagenes/2021/octubre/4/pago001_redd.jpg') no-repeat left center / 100px 70px;">Pago de Carraovejas,  uno de los 100 mejores viñedos del mundo</a></li>
+<li style="margin: 20px 0px;"><a href="/2021100266350/un-vino-que-reinterpreta-la-ribera-del-duero-con-guinos-bordeleses.html" style="background:url('/imagenes/2021/octubre/3/vinaltus.jpg') no-repeat left center / 100px 70px;">Un vino que reinterpreta la Ribera del Duero con guiños bordeleses</a></li>
+<li style="margin: 20px 0px;"><a href="/2021092866280/que-es-el-coupage-y-su-relacion-con-el-vino.html" style="background:url('/imagenes/2021/septiembre/28/00bodeguero_enologo.jpg') no-repeat left center / 100px 70px;">Qué es el coupage y su relación con el vino</a></li>
+<li style="margin: 20px 0px;"><a href="/2021092766245/tilenus-el-vino-del-bierzo.html" style="background:url('/imagenes/blog/4469/gamatilenus2021_.jpg') no-repeat left center / 100px 70px;">Tilenus el vino del Bierzo</a></li>
+<li style="margin: 20px 0px;"><a href="/2021100466366/como-llevar-una-botella-de-vino-en-la-maleta-para-viajar.html" style="background:url('/imagenes/2021/octubre/4/00como_llevar_una_botella_de_vino_en_la_maleta.jpg') no-repeat left center / 100px 70px;">Cómo llevar una botella de vino en la maleta para viajar</a></li>
+</ul>
+</div><script type="text/javascript">
+<!--
+var acymailing = Array();
+acymailing['EMAILCAPTION'] = 'Tu correo electrónico';
+acymailing['VALID_EMAIL'] = 'Por favor, escribe tu email';
+//-->
+</script>
+<div class="suscripcion" id="subs">
+<form id="formAcymailing14521" action="/aprender/" onsubmit="return submitacymailingform('optin','formAcymailing14521');" method="post" name="formAcymailing14521"  >
+<h3>Vinetur en tu email</h3>
+<div class="introcorreo">Suscríbete a Vinetur para estar al día</div>
+<div class="campocorreo">
+<input id="user_email_formAcymailing14521" onfocus="if(this.value == 'Tu correo electrónico') this.value = '';" onblur="if(this.value=='') this.value='Tu correo electrónico';" type="text" class="inputbox required" name="user[email]" value="Tu correo electrónico" />
+</div>
+<div class="botoncorreo">
+<input class="bolebutton" type="submit" value="¡Sí, quiero estar al día!" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing14521'); }catch(err){alert('The form could not be submitted '+err);return false;}" style="margin-top: -5px;line-height: 23px;"/>
+</div>
+<div style="font-size:10px;color:#ccc;margin:0px;">Al hacer click aceptas las <a href="https://www.vinetur.com/empresa/legal" target="_blank" rel="nofollow" style="color:#ccc; text-decoration:underline;">condiciones legales</a> y <a href="https://www.vinetur.com/empresa/privacidad" target="_blank" rel="nofollow" style="color:#ccc; text-decoration:underline;">política de privacidad</a></div>
+<div class="poscorreo">Recibe cada día, a primera hora de la mañana en tu buzón de correo electrónico, toda la actualidad de Vinetur. Puedes darte de baja en cualquier momento</div>
+
+			<input type="hidden" name="ajax" value="0"/>
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.vinetur.com%2Fm%2Fsuscrito"/>
+			<input type="hidden" name="redirectunsub" value=""/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+			<input type="hidden" name="hiddenlists" value="20"/>
+			<input type="hidden" name="acyformname" value="formAcymailing14521" />
+			<input type="hidden" name="Itemid" value="28"/>		</form>
+</div>
+<div align="center" class="bannergrouplogobanner">
+<div class="banner-vinetur slot" style="display:inline-block;"><a href="/banner/1217/" target="_blank" style="background: url(/images/banners/enate_p1_logo1.gif) no-repeat bottom center;background-size: 100%;width: 300px!important;height: 300px!important;display: inline-block!important;padding: 15px 0px!important;margin: 45px 2px 2px 2px!important; text-decoration: none;color: #cccccc;text-transform: uppercase;font-size: 11px;" class="logobanner">Partner</a></div>
+</div></div>
+<div style="display: inline-block;width: 100%;border: none;margin: 35px 0px 10px 0px;padding: 35px 0px 10px 0px;">
+<!-- Anuncios de enlaces -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1031651623374132"
+     data-ad-slot="8188990130"
+     data-ad-format="link"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div class="submenu"><ul><li><a href="/empresa/">Quiénes somos</a></li><li><a href="/empresa/legal">Aviso Legal</a></li><li><a href="/marketing/">Servicios para empresas</a></li><li><a href="/contacto.html">Contacto</a></li></ul></div>
+<div class="copyright_vinetur"><ul><li class="vinetur"><a href="https://www.vinetur.com/empresa/" rel="nofollow" target="_blank" style="background:url('/imagenes/iconos/v_icon_m.png') no-repeat top center" title="Vinetur">&copy; VGSC S.L. 2007 - 2021</a></li><li><a href="https://www.geotrust.com/es/" rel="nofollow" target="_blank" style="background:url('/imagenes/iconos/geotrust.gif') no-repeat center center / 100%" title="Vinetur, sitio SSL"></a></li><li><a href="https://www.united-internet.de/en.html" rel="nofollow" target="_blank" style="background:url('/imagenes/iconos/unitedinternet.gif') no-repeat center center / 100%" title="Servidor Dedicado"></a></li><li><a href="https://www.vinetur.com/empresa/servidor/" rel="nofollow" target="_blank" style="background:url('/imagenes/iconos/greenenergy.gif') no-repeat center center / 100%" title="Respetamos el medio ambiente. Servidor Ecológico"></a></li><li><a href="http://www.camara.es/" rel="nofollow" target="_blank" style="background:url('/imagenes/iconos/camara.gif') no-repeat center center / 100%" title="Colabora Cámara de Comercio"></a></li><li><a href="http://www.oemv.es/" rel="nofollow" target="_blank" style="background:url('/imagenes/iconos/oemv.gif') no-repeat center center / 100%" title="Convenio OEMV"></a></li></ul><p><strong>Fundada en 2007, Vinetur&reg; es una marca registrada de VGSC S.L. con una larga historia en el sector del vino.</strong><br/>VGSC, S.L. con CIF B70255591 es una entidad inscrita en el Registro Mercantil de Santiago de Compostela, Boletín 181, Referencia 356049 en el Tomo 13, Folio 107, Sección 6, Hoja 45028, Inscripción 2</p></div>
+</div>
+<script type="text/javascript">window._taboola = window._taboola || []; _taboola.push({flush: true});</script> 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=emamail"></script>
+<script src="/__/firebase/8.3.2/firebase-app.js"></script>
+<script src="/__/firebase/8.3.2/firebase-analytics.js"></script>
+<script src="/__/firebase/init.js"></script>
+<script type="module">
+import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+const el = document.createElement('pwa-update');
+document.body.appendChild(el);
+</script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-3134325-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+</body>
+<footer>
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+window._qevents = window._qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+window._qevents.push({
+qacct:"p-Yn8bcRhFJQp-X"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-Yn8bcRhFJQp-X.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+</footer>
+</html>

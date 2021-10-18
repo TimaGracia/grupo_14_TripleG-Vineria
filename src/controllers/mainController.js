@@ -13,7 +13,7 @@ let mainController = {
         res.render("nosotros", {style:"nosotros", title: "Nosotros"})
     },
     contacto: function (req, res){
-        res.render("contacto", {style:"nosotros", title: "Nosotros"})
+        res.render("contacto", {style:"contacto", title: "Nosotros"})
     }
 
 }
