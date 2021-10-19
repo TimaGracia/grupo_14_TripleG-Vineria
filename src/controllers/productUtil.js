@@ -18,6 +18,16 @@ module.exports = {
         return all;
 
     },
+    apiAllBusiness: async function(){
+
+        let all = await db.Business.findAll({
+            raw : true, 
+            attributes: {exclude: ['image']}
+        
+        });
+        return all;
+
+    },
     all: async function(){
 
         try {

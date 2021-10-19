@@ -29,14 +29,6 @@
                 <input id="password" class="input" type="password" name="password" placeholder="Password" />
                 <p id="dos" style="display: none;" style="margin-bottom: 5px;">Este campo es obligatorio</p>
             </div>
-
-            <div id="datos" >
-                <label for="">Recordar usuario</label>
-                <input type="checkbox" name="remember_user">
-            </div><br>
-            <div>
-                <a href="">¿Olvidaste tu contraseña?</a>
-            </div>
             <div id="error" style="margin-top: 5px;">
                 <% if (locals.errors) { %>
             <% for(oneError in errors) { %>
@@ -44,6 +36,15 @@
             <% } %>
         <% }%>
             </div>
+
+            <div id="datos" style="margin-top: 20px;" >
+                <label for="">Recordar usuario</label>
+                <input type="checkbox" name="remember_user">
+            </div><br>
+            <div>
+                <a href="">¿Olvidaste tu contraseña?</a>
+            </div>
+            
 
             <button type="submit" class="submit">Ingresar</button>
     </form>
