@@ -6,11 +6,11 @@
     <main>
    
     
-    <% if (locals.errors) { %>
-        <% for(oneError in errors) { %>
-            <p> <%= errors[oneError].msg %> </p>
-        <% } %>
-    <% }%>
+        <!--<% if (locals.errors) { %>
+            <% for(oneError in errors) { %>
+                <p> <%= errors[oneError].msg %> </p>
+            <% } %>
+        <% }%>-->
 
 
     
@@ -21,21 +21,30 @@
 
             <div class="input-container ic1">
                 <input id="email" class="input" type="email" name="email" placeholder="Email" />
+                <p id="uno" style="display: none;">Este campo es obligatorio</p>
                 
             </div>
 
             <div class="input-container ic1">
                 <input id="password" class="input" type="password" name="password" placeholder="Password" />
+                <p id="dos" style="display: none;" style="margin-bottom: 5px;">Este campo es obligatorio</p>
             </div>
 
-            <div id="datos">
+            <div id="datos" >
                 <label for="">Recordar usuario</label>
                 <input type="checkbox" name="remember_user">
             </div><br>
             <div>
                 <a href="">¿Olvidaste tu contraseña?</a>
             </div>
-            
+            <div id="error" style="margin-top: 5px;">
+                <% if (locals.errors) { %>
+            <% for(oneError in errors) { %>
+                <p>Email o Contraseña Invalida</p>
+            <% } %>
+        <% }%>
+            </div>
+
             <button type="submit" class="submit">Ingresar</button>
     </form>
       </div>
