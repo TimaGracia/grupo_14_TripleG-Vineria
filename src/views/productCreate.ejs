@@ -12,9 +12,9 @@
 
             <div class="input-container ic1">
                
-                <input type="text" name="name" class="input" placeholder="Nombre del producto" value="<%= locals.old && old.name ? old.name : ""  %>">
-                <p id="a" style="display: none;">Este campo es obligatorio</p>
-                <p id="a1" style="display: none;">El nombre debe contener mínimo 5 caracteres</p>
+                <input type="text" name="name" id="name" class="input" placeholder="Nombre del producto" value="<%= locals.old && old.name ? old.name : ""  %>">
+                <p id="a" class="errores" style="display: none;">Este campo es obligatorio</p>
+                <p id="a1" class="errores" style="display: none;">5 caracteres como mínimo</p>
                 <% if (locals.errors && locals.errors.name) { %>
                     <%= errors.name.msg %>
                 <% } %>
@@ -24,7 +24,7 @@
             <div class="input-container ic1">
                 
                 <textarea name="description" id="description" cols="25" rows="5" placeholder="Inserte la descripción del producto aquí" class="input textarea" value="<%= locals.old && old.description ? old.description : ""  %>"></textarea>
-                <p id="b" style="display: none;">Este campo debe contener 20 caracteres como mínimo</p>
+                <p id="b" class="errores" style="display: none;">20 caracteres como mínimo</p>
                 <% if (locals.errors && locals.errors.description) { %>
                     <%= errors.description.msg %>
                 <% } %>
@@ -34,7 +34,7 @@
 
  
 
-            <div class="input-container ic1">
+            <div class="input-container ic2">
                 <input type="number" name="stock" placeholder="Stock inicial del Producto" class="input stock">
 
             </div>
