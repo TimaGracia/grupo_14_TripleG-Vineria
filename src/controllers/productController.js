@@ -17,7 +17,7 @@ let productController = {
     all: async function(req, res){
 
         let products = await productUtil.apiAll();
-        res.send(JSON.stringify(products));
+        res.send(JSON.stringify({products,count: products.length,ultimo: products[products.length - 1]}));
 
     },
     apiGetById: async function(req, res){

@@ -59,9 +59,10 @@ let userController = {
 
     },
     all: async function(req, res){
-
+        
         let users = await userUtil.apiAll();
-        res.send(JSON.stringify(users));
+        
+        res.send(JSON.stringify({users,count: users.length}));
 
     },
     apiGetById: async function(req, res){
