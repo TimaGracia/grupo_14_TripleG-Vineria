@@ -4,57 +4,51 @@
 <body>
     <%- include("./partials/header")%>
     <main>
-        <h1 class="titulo">Completa tus datos</h1>
-        
-        
-            <form action="/products" method="POST" class="crear" enctype="multipart/form-data"> <!--multipart/form" -->
-            
-                <section>
-                <label for="name">Nombre del Producto</label>
-                <input type="text" name="name" value="<%= locals.old && old.name ? old.name : ""  %>">
+
+
+
+        <form action="/products" method="POST" class="form" enctype="multipart/form-data">
+            <p class="title">Completá los datos del nuevo producto </p>
+
+            <div class="input-container ic1">
+               
+                <input type="text" name="name" class="input" placeholder="Nombre del producto" value="<%= locals.old && old.name ? old.name : ""  %>">
                 <p id="a" style="display: none;">Este campo es obligatorio</p>
                 <p id="a1" style="display: none;">El nombre debe contener mínimo 5 caracteres</p>
                 <% if (locals.errors && locals.errors.name) { %>
                     <%= errors.name.msg %>
                 <% } %>
-        
-                <label for="description">Descripcion</label><br>
-                <textarea name="description" id="description" cols="25" rows="5" placeholder="Inserte la descripción del producto aquí" value="<%= locals.old && old.description ? old.description : ""  %>"></textarea>
+
+            </div>
+
+            <div class="input-container ic1">
+                
+                <textarea name="description" id="description" cols="25" rows="5" placeholder="Inserte la descripción del producto aquí" class="input textarea" value="<%= locals.old && old.description ? old.description : ""  %>"></textarea>
                 <p id="b" style="display: none;">Este campo debe contener 20 caracteres como mínimo</p>
                 <% if (locals.errors && locals.errors.description) { %>
                     <%= errors.description.msg %>
                 <% } %>
-                    
-                <label for="stock">Stock inicial del Producto</label>
-                <input type="number" name="stock">
 
-                <label for="image">Imagen</label>
-                <div id=image> <input type="file" name="image-vino" id="image-vino"><!--id="image" --></div>
-            
-                <label for="category">Categoria</label>
-                <% if (locals.category) { %>
-                    <select name="category">
-                        <% for( let i = 0; i < categories.length; i++ ) { %>
-                         <option value="<%=categories[i].idCategory%>">
-                             <%=categories[i].type%>
-                         </option>
-                        <% } %>
-                     </select>
-                     
-                <% } %>
+
+            </div>
+
  
-                
-            
-            <div>
-                <div><label for="price">Precio</label></div>
-                <div><input type="number" name="price" id="price"></div>
+
+            <div class="input-container ic1">
+                <input type="number" name="stock" placeholder="Stock inicial del Producto" class="input stock">
+
+            </div>
+            <div id=image> 
+                <label for="image">Imagen</label>
+                <input type="file" name="image-vino" id="image-vino"><!--id="image" -->
             </div>
 
 
-            
-                <button type="submit" value="Save" class="crearboton">Crear Producto</button>
-            </section>
-            </form>
+
+            <input type="submit" value="Crear Producto" class="submit">
+
+        </form>
+        
     </main>
     <%- include("./partials/footer")%>
 </body>

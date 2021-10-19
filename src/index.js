@@ -6,6 +6,7 @@ const logMiddleware = require("./middlewares/logMiddleware");
 const session = require('express-session');
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const cookies = require('cookie-parser');
+const cors = require('cors');
 
 app.set("port", process.env.PORT || 2506);
 app.listen(app.get("port"), () => console.log("Server start http://localhost:"+app.get("port")));
@@ -28,6 +29,9 @@ app.use(session({
 app.use(cookies());
 
 app.use(userLoggedMiddleware);
+
+//CORS
+app.use(cors());
 
 //uso JSON
 app.use(express.urlencoded({extended: false}));

@@ -25,14 +25,9 @@
 
                 <h1 class="titulo">Listado de Productos</h1><br><br>
 
-                <div class="buscador">
-                    <!-- Aca poner codigo del buscador -->
-                </div>
-
-
                 <ul class="w">
                     <% productos.forEach(product=> { %>
-                        <div onclick="location.href='/products/<%= product.idProduct%>';" style="cursor: pointer;">
+                        <div onclick="location.href='/products/<%= product.idProduct%>';" style="cursor: pointer;" class="div-shadow">
 
                             <!--<li> Categoria: <%= product.category%></li>-->
                             <!--<li>Imagen: <%= product.image%></li>-->
@@ -60,9 +55,6 @@
                                         <% } else {%>
                                             <input type="hidden" name="user" value="1">
                                             <% }%>
-
-
-
                                                 <input type="hidden" name="product" value="<%= product.idProduct%>">
                                                 <div id="addToCart">
                                                     <i class="far fa-plus-square"></i>

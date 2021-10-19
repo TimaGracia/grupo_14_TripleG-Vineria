@@ -1,69 +1,89 @@
 body {
     background-color: #E5E5E5;
     font-family: 'Poppins', sans-serif;
+ 
+
 }
 
-input {
-    background-color: #C4C4C4;
-}
+.form {
+    background-color: #a6a6a6;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 20px;
+    width: 35%;
+    padding-right:3rem;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
 
-.titulo {
-    margin-left: 25vw;
-    margin-top: 5vh;
-    margin-bottom: 3vh;
-    font-size: xx-large;
-    font-family: 'Poppins', sans-serif;
-}
-
-.crearboton {
-    background-color: #c2755e;
-    color: white;
-    text-align: center;
-    width: 10vw;
-    padding: 1rem;
-    margin: 5% 35% 0 40%;
-    
-}
-
-textarea {
-    height: 10hv;
-}
-
-form {
-    text-align: center;
+  }
+  
+  .title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  .input-container {
+    height: 50px;
+    position: relative;
     width: 100%;
-}
+  }
+  
+  .ic1 {
+    margin-top: 40px;
+  }
+  .input {
+    background-color:#E5E5E7;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: black;
+    font-size: 18px;
+    height: 3rem;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+    margin: 1rem;
+  }
 
-section {
-    display: flex;
+  .textarea{
+    height: 7rem;
+  }
+  .submit {
+    background-color:#757575;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top:0.5rem;
+    text-align: center;
+    width: 70%;
+  }
+  
+  .submit:hover {
+    background-color: #694343;
+  }
+  .stock{
+      margin-top: 4rem;
+  }
+
+#image{
+    display:flex;
     flex-direction: column;
-    justify-items: center;
-    background-color: #cccccc;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 30%;
+    justify-content:center;
+    margin: 3rem 3rem 1rem 3rem;
+    padding: 2rem;
 }
+#image input{
+    margin-left: auto;
 
-section * {
-    margin-bottom: 0.7vh;
-}
-
-image {
-    width: 50%;
-}
-
-
-
-@media (max-width:900px) {
-    .crear {
-        width: 80vw;
-        margin: auto;
-    }
-    .titulo {
-        margin-left: 10vw;
-        font-size: 5vw;
-    }
-    .crear div {
-        width: 100%;
-    }
+    justify-content:center;
+   
 }

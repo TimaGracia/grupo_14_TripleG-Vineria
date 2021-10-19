@@ -27,7 +27,7 @@ body {
     width: 100%;
     height: 90%;
     display: block;
-    margin: auto;
+    /*margin: auto;*/
 }
 
 .w div {
@@ -36,11 +36,23 @@ body {
     background-color: white;
     display: block;
     padding: 5px;
-    margin: 5vh auto 50vh auto;
+    /*margin: 5vh auto 50vh auto;*/
 }
 
 .w div li {
     margin-top: 1vh;
+   
+}
+
+.div-shadow{
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 1.5rem;
+    
+}
+.div-shadow:hover{
+    
+    box-shadow: 0px 0px 10px rgb(63, 53, 53);
 }
 
 .foto {
@@ -159,7 +171,7 @@ body {
     }
     .w div {
         width: 40%;
-        margin: auto;
+      /*  margin: auto;*/
     }
     .w div img {
         width: 100%;
@@ -193,7 +205,7 @@ body {
     }
     .w div {
         width: 20%;
-        margin: auto;
+       /* margin: auto;*/
     }
     .w div img {
         width: 100%;
@@ -240,6 +252,7 @@ body {
     .boton1 {
         display: none;
     }
+
 
 
 }
