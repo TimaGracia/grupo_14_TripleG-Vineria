@@ -24,13 +24,15 @@ function DetalleBodega() {
   useEffect(()=>{fetchApi()},[]);
   return (
     <div>
-      <h3>Productos por Bodega</h3>
       
+      <h3>Productos por Bodega</h3>
+      <div className="detalle" style={{width:"45%"}}>
       {todos.map((todo,index)=>{const a = new Object();
         a.name=todo.name;
         a.id=todo.idBusiness;
         a.valor=0;pro.map((pro,index)=>{if(pro.idBusiness==a.id){a.valor=a.valor+1}else{}});
-        return <div style={{display:"flex"}}><p>{a.name}</p><p>{a.valor}</p></div>})}
+        return <div style={{display:"flex"}}><div className="nombre"><h4>{a.name}</h4></div><div className="cantidad"><h4>{a.valor}</h4></div></div>})}
+      </div>
       
       
       

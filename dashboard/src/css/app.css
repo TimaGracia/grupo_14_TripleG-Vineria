@@ -1,35 +1,35 @@
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: #c5c7ca;
 }
-.apip{
-    color: white;
-    background-color: yellow;
-    width: 60%;
-    margin-left: 20%;
-}
-.titulo{
-    color: white;
-    background-color:#1883ab;
-    margin: 10px 50px 10px 20px;
-    font-weight: 900;
-}
+
 .apipi{
     list-style: none;
     margin: 10px 50px 10px 10px;
     padding: 10px 10px 10px 10px;
     display: flex;
 }
-.apipi:hover{
-    box-shadow: 0px 0px 10px rgb(53, 53, 63);
-}
+
 .apipi-detalle{
     margin-left: 50px;
     text-decoration: none;
 }
+.apip{
+    color: black;
+    background-color:#68A1EC;
+    width: 60%;
+    margin-left: 0;
+    position: absolute;
+    border-radius: 15px;
+    box-shadow:0px 0px 10px #9e9e9e;
+}
+.apip h3{
+    color: #304A6B;
+}
 section{
     
-        color: white;
-        
+        color: #304A6B;
+        margin-top: 1.5rem;
         width: 60%;
         margin-left: 20%;
         display:flex;
@@ -39,26 +39,33 @@ section{
     height: 10rem;
     width: 30%;
     margin-left: 5%;
-    background-color: #C2755E;
+    background-color: #68A1EC;
+    border-radius: 15px;
+    box-shadow:0px 0px 10px #195DB5;
 }
 .usuarios{
     height: 10rem;
     width:30%;
     margin-left: 5%;
-    background-color: #C2755E;
+    background-color:#68A1EC;
+    border-radius: 15px;
+    box-shadow:0px 0px 10px #195DB5;
 }
 .productos{
     height: 10rem;
     width:30%;
-    
-    background-color: #C2755E;
+    border-radius: 15px;
+    box-shadow:0px 0px 10px #195DB5;
+    background-color: #68A1EC;
 }
 .detallebodega{
     height: 15rem;
-    width:45%;
-    margin-left: 10%;
+    width:70%;
+    margin-left: 5%;
     margin-top: 10px;
-    background-color: #C2755E;
+    border-radius: 15px;
+    box-shadow:0px 0px 10px #195DB5;
+    background-color: #68A1EC;
 }
 .detallebodega div{
     height: 40%;
@@ -68,8 +75,10 @@ section{
 }
 .ultimoproducto{
     height: 15rem;
-    width:45%;
-    background-color: #C2755E;
+    width:30%;
+    border-radius: 15px;
+    box-shadow:0px 0px 10px #195DB5;
+    background-color: #68A1EC;
     margin-top: 10px;
 }
 h2{
@@ -77,4 +86,32 @@ h2{
 }
 h3{
     margin-left: 20px;
+}
+#head{
+    background-color: #0F3669;
+    color: white;
+    height: 4rem;
+    width: 95%;
+    padding: 1.2rem 0 0 5%;
+
+}
+#head h3{
+    margin-top: 0px;
+}
+section h2{
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+.detalle{
+    margin-left: 10px;
+    color:black;
+}
+.cantidad{
+    margin-left: 1rem;
+    
+}
+.nombre{
+    width: 11rem;
 }

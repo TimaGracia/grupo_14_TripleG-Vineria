@@ -13,7 +13,7 @@ function Usuarios() {
   useEffect(()=>{fetchApi()},[]);
   return (
     <div>
-      <h2>Usuarios</h2>
+      <h3>Total de Usuarios</h3>
       <h2>{count}</h2>
       
     </div>

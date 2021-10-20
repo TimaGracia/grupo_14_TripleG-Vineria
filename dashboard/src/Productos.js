@@ -12,7 +12,7 @@ function Productos() {
   useEffect(()=>{fetchApi()},[]);
   return (
     <div>
-      <h2>Productos</h2>
+      <h3>Total de Productos</h3>
       <h2>{count}</h2>
       
     </div>

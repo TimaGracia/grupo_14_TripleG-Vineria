@@ -13,7 +13,7 @@ function Bodegas() {
   useEffect(()=>{fetchApi()},[])
   return (
     <div>
-      <h2>Bodegas</h2>
+      <h3>Total de Bodegas</h3>
       <h2>{count}</h2>
       
       

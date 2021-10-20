@@ -13,10 +13,11 @@ function UltimoProducto() {
   return (
     <div>
       <h3>Ultimo Producto Creado</h3>
+      <div className="detalle">
       <h4>{ultimo.name}</h4>
       <p>{ultimo.description}</p>
       <a href={"http://localhost:2506/products/"+ultimo.idProduct} className="apipi-detalle">Ver Detalle</a>
-      
+      </div>
       
     </div>
   );

@@ -11,8 +11,8 @@ function Apip() {
   }
   useEffect(()=>{fetchApi()},[]);
   return (
-    <div>
-      <p className="titulo">Lista de Productos</p>
+    <div className="apip">
+      <h3 className="titulo">Lista de Productos</h3>
       <ul>
       {!todos ? 'Cargando...':
       todos.map( (todo,index)=>{return <div className="apipi">

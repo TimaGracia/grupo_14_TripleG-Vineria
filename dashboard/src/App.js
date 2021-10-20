@@ -5,11 +5,13 @@ import Bodegas from "./Bodegas";
 import Usuarios from "./Usuarios";
 import UltimoProducto from "./UltimoProducto";
 import DetalleBodega from "./DetalleBodega";
+import Head from "./Head";
 import "./css/app.css";
 
 function App(){
     return(
         <div>
+            <div>{Head()}</div>
             <section>
                 <div className="productos">{Productos()}</div>
                 <div className="usuarios">{Usuarios()}</div>
@@ -19,8 +21,9 @@ function App(){
                 <div className="ultimoproducto">{UltimoProducto()}</div>
                 <div className="detallebodega">{DetalleBodega()}</div>
             </section>
-            <div className="apip">{Apip()}</div>
-            
+            <section>
+                <div>{Apip()}</div>
+            </section>
             
         </div>
     );
