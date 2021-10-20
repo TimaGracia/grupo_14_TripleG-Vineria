@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head")%>
-<body>
-    <%- include("./partials/header")%>
-    <main class="main">
-        
-        <div class="cuadrop">
-            <div class="producto"><img src="<%=product.image %>" alt="" srcset=""></div>
-            <div class="otros">
-                <div class="nombre"><p><%= product.idProduct %></p></div>
-                <div class="nombre"><p><%= product.name %></p></div>
-                <div class="nombre"><p><%= product.description %></p></div>
-                <div class="nombre"><p><%= product.category %></p></div>
-                <div class="c">
-                    <div class="c1"><p>$<%= product.price %></p></div>
-                    <div class="c2"><p><%= product.colors %></p></div>
-                </div>
+<%- include("./partials/head")%>
 
-                
-                
+    <body>
+        <%- include("./partials/header")%>
+            <main class="main">
 
-                <div class="botones">
-               <a href="/products/<%= product.idProduct %>/edit"> 
-                <input type="button" class="añadir" value="Editar Producto"></a>
+                <div class="container">
+
+                    <div class="image">
+                        <img src="<%=product.image %>" alt="" srcset="">
+
+                    </div>
+                    <div class="content">
+                        <div hidden="true">
+                            <p>
+                                <%= product.idProduct %>
+                            </p>
+                        </div>
+                        <div class="title">
+                            <p>
+                                <%= product.name %>
+                            </p>
+                        </div>
 
 
-                <form action="/products/<%= product.idProduct %>?_method=DELETE" method="post">
-                   <% console.log(product.idProduct) %>
-                   <button type="submit" class="añadir ">Eliminar Producto</button>
-                   
-                </form>
-            </div>
-                
-            </div>
-            
-        </div>
-    </main>
-    <%- include("./partials/footer")%>
+                        <div class="intro">
+                            Este vino de tipo <span>
+                                <%=product.categories.type%>
+                            </span>pertenece a la bodega <span>
+                                <%= product.business.name%>
+                            </span>
+                        </div>
 
-    
-</body>
+                        <div class="description">
+                            <p>La descripción proporcionada por el fabricante es <span>
+                                    <%= product.description %>
+                                </span>
+                            </p>
+                        </div>
+
+
+                        <div class="price">
+                            <p> El precio del mismo es de $<span>
+                                    <%= product.price %>
+                                </span>por unidad</p>
+                        </div>
+
+                        <div class="buttons">
+                            <div class="button">
+                                <a href="/products/<%= product.idProduct %>/edit">
+                                    <input type="button" class="añadir" value="Editar"></a>
+                            </div>
+                            <div class="button">
+                                <form action="/products/<%= product.idProduct %>?_method=DELETE" method="post">
+                                    <% console.log(product.idProduct) %>
+                                        <button type="submit" class="añadir">Eliminar</button>
+
+                                </form>
+                            </div>
+                        </div>
+
+
+            </main>
+            <%- include("./partials/footer")%>
+
+    </body>
+
 </html>

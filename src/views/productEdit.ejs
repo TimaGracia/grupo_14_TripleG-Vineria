@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head")%>
-<body>
-    <%- include("./partials/header")%>
-    <main class="main">
-        <div class="cuadrop">
-            <div class="producto"><img src="<%=product.image %>" alt="" srcset=""></div>
-            <div class="otros">
+<%- include("./partials/head")%>
 
+    <body>
+        <%- include("./partials/header")%>
+            <main>
                 <form action="/products/<%= product.idProduct %>?_method=PUT" method="post">
-                   
-                    <div class="nombre">
-                        <p>El ID del producto es: <%= product.idProduct %></p>
-                        <input type="hidden" name="id" value="<%= product.idProduct %>">  </input>
-                        <input type="text" name="name" value="<%= product.name %>">  </input>
-                        <input type="text" name="description" value="<%= product.description %>">  </input>
-                        <input type="text" name="category" value="<%= product.category %>">  </input>
-                        <input type="text" name="price" value="<%= product.price %>">  </input>
-                        <input type="text" name="colors" value="<%= product.colors %>" placeholder="color">  </input><br>
-    
+
+                <div class="container">
+
+
+                    <div class="image">
+                        <img src="<%=product.image %>" alt="" srcset="">
                     </div>
 
-                   <button type="submit" class="añadir ">Confirmar edición</button>
-                   <!--<input type="button" class="añadir" value="Eliminar Producto">/-->
+                    <div class="content">
+                        <div class="description">
+                            <input type="hidden" name="id" value="<%= product.idProduct %>"> </input>
+                            <div class="detail">
+                                <p>Nombre:</p><input type="text" name="name" value="<%= product.name %>"> </input>
+                            </div>
+                            <div class="detail">
+                                <p>Descripción:</p><textarea cols="41" rows="3"name="description"
+                                    > <%= product.description %></textarea>
+                            </div>
+                            <div class="detail">
+                                <p>Bodega:</p><input type="text" name="category" value="<%= product.business.name%>">
+                                </input>
+                            </div>
+                            <div class="detail">
+                                <p>Precio:</p><input type="text" name="price" value="<%= product.price %>"> </input>
+                            </div>
+                            <div class="detail">
+                                <p>Tipo:</p><input type="text" name="colors" value="<%=product.categories.type%>"
+                                    placeholder="Tipo">
+                            </div>
+                            </input><br>
+
+                        </div>
+
+                        <div class="buttons">
+                            <button type="submit" class="añadir">Confirmar edición</button>
+
+                        </div>
+
+                    </div>
+                </div>
                 </form>
-                
+
+            </main>
+            <%- include("./partials/footer")%>
 
 
-                <!--<div class="d">
-                    <input type="button" class="d1" value="-">
-                    <div class="d1">1</div>
-                    <input type="button" class="d1" value="+">
-                </div>-->
-            </div>
-            
-        </div>
-        <hr>
-        <div class="palabritas">
-            <input type="button" class="solapas" value="Descripción">
-            <input type="button" class="solapas" value="Valoraciones">
-        </div>
-        
-        
+    </body>
 
-    </main>
-    <%- include("./partials/footer")%>
-
-    
-</body>
 </html>

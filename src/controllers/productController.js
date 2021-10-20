@@ -171,7 +171,9 @@ let productController = {
         //console.log("Esto son los productos"+productos);
         
         try {
-            let productId = await db.Product.findByPk(req.params.id);
+            let productId = await db.Product.findByPk(req.params.id, {
+                include: [{association: "categories"}, {association: "business"}]
+            });
             res.render("productDetail", {product: productId,productos: productUtil.all(), style:"productDetail", title: "Detalle del Producto"})
             
         } catch (error) {
@@ -181,7 +183,9 @@ let productController = {
     },
     getByIdEdit: async function(req, res){
         //console.log(req.params.id)
-        let productId = await db.Product.findByPk(req.params.id);
+        let productId = await db.Product.findByPk(req.params.id, {
+            include: [{association: "categories"}, {association: "business"}]
+        });
         res.render("productEdit", {product:productId, style:"productEdit",productos:productUtil.all(), title: "Editar el Producto"})
     },
     delete: async function (req, res){

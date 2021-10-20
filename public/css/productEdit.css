@@ -1,97 +1,96 @@
-body { 
-    background-color: #e5e5e5;}
-main { 
-    display: block;}
-.cuadrop { 
-    width: 90vw;
-    height:35vh;
-    margin-top: 5vh;
-    margin-left: 5vw;
-    display: flex;}
-.producto { 
-    background-color: white;
-    width: 20vw;
-    height: 29vh;
-    margin-bottom: 8vh;
-    margin-left: 5vw;}
-.producto img { 
-    width: 20vw;
-    height: 29vh;}
-.otros { 
-    width: 70vw;
-    height: 29vh;
-    margin-bottom: 8vh;
-    margin-left: 5vw;
-    display: block;}
-
-
-form{
-    background-color: white;
-    display: block;
-    margin: auto;
+body {
+    background-color: #e5e5e5;
+    font-family: 'Poppins', sans-serif;
 }
-form input{
+
+main {
     display: block;
-    margin: auto;
+    height: 60vh;
+
 }
-.añadir {
-    background-color: #c2755e;
-    color: white;
-    text-align: center;
-    width: 10vw;
-    padding: 1rem;
-    margin: auto auto auto 80%;
+
+.container {
+    margin-top:4rem;
+    width: 70%;
+    height: 100%;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    padding-top:1rem;
+    width: 50%;
+}
+
+.image img {
+    max-width: 85%;
+    
     
 }
 
+.content {
+    padding:1rem;
+    width: 50%;
+    
 
-hr{width: 90vw;}
-.palabritas { 
-    width: 30vw;
-    height: 10vh;
+
+}
+
+.description {
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.detail {
     display: flex;
-    margin-left: 10vw;}
-.solapas { 
-    width: 15vw;
-    height:4vh;
-    text-align: left;
-    background-color: #e5e5e5;
-    border: #e5e5e5;}
-.des {
-    display: none;
+    margin: 0.6rem;
 }
 
-.solapas:hover {
-    background-color: white;
-    }
+.detail p{
+    
+    width: 8rem;
+}
+
+.detail input{
+    
+    width: 20rem;
+}
+
+.detail textarea{
+    resize: none;
+    height: 3rem;
+}
 
 
-.final { 
-    width: 50vw;
-    height: 30vh;
-    margin-top:10vh;
-    margin-left: 15vh;
-    display: block;}
-.relacionados { 
-    width: 20vw;
-    height: 5vh;
-    color:black;}
-.alineados { 
-    display: flex;}
-.f { 
-    background-color: white;
-    width:10vw;
-    height: 10vh;
-    margin-right: 3vw;}
-.f img { 
-    width: 10vw;
-    height: 10vh;
-    z-index:1;}
-.f img:hover{
-    width: 15vw;
-    height: 15vw;
-    z-index: 2;
+
+.añadir {
+    background-color:#757575;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top:1.5rem;
+    text-align: center;
+    /*width: 70%;*/
+    width: 10rem;
 }
-.botones{
-    display: flex;
-}
+
+.añadir:hover {
+    background-color: #694343;
+  }
+
+  
+.añadir:active {
+    background-color: #694343;
+  }
+
+  .buttons{
+      display:flex;
+      justify-content: center;
+  }
