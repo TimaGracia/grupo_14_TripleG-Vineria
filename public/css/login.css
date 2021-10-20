@@ -2,6 +2,9 @@ body {
     background-color: #E5E5E5;
     font-family: 'Poppins', sans-serif;
   }
+  main{
+    height: 60vh;
+  }
   
   .form {
     background-color: #a6a6a6;

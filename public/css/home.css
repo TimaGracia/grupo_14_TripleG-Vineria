@@ -3,6 +3,9 @@
     max-width: 100vw;
     
 }
+main{
+    width: 100%
+}
 
 html {
     width: 100vw;
@@ -154,7 +157,7 @@ section#section-vinos{
 
 /* Texto */
 
-/* center the blockquote in the page */
+
 .blockquote-wrapper {
     /*background-color: #52ACFF;
   background-image: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
@@ -232,4 +235,14 @@ background: linear-gradient(135deg, rgba(187,120,120,1) 24%, rgba(105,67,67,1) 6
     #burger-menu{
         display: none;
     }
+}
+
+
+@media (max-width: 320px) {
+    main{
+        background-color: red;
+        width:100%;
+        
+    }
+
 }
