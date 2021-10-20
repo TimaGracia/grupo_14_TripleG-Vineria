@@ -14,9 +14,9 @@
             function funcB(){
                 if(document.querySelector(".desple").style.display == "none"){
                 document.querySelector(".desple").style.display="block";
-                m=1;}else{
+                }else{
                     funcA();
-                    m=0;
+                    
                 }
             }
         </script>
@@ -52,19 +52,26 @@
     <nav id="nav-login">
         <ul>
             <li  id="menu">
-                <a href="">
+                <a href="#"  onclick="funU()">
 
                     <i class="far fa-user"></i>
                 </a>
-                <ul>
-                    <% if (locals.isLogged == true) {%>
-                    
-                        <li><a href="/logout">Logout user <%= locals.userLogged.email %> </a></li>
-                        <% } else {%>
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/register">Register</a></li>
-                       <%  }%>
-                </ul>
+                <script>
+            
+                    function funU(){
+                        
+                        if(document.querySelector(".user").style.display == "none"){
+                        document.querySelector(".user").style.display="block";
+                        }else{
+                            document.querySelector(".user").style.display="none";
+                        }
+                    }
+                </script>
+                <script>
+                    function funA(){
+                        document.querySelector(".user").style.display="none"
+                    }
+                </script>
             </li>
             <li>
                 <a href='/productCart'>

@@ -27,5 +27,14 @@
             </a>
         </ul>
     </div>
+    <div class="user" style="display: none;"><ul>
+        <% if (locals.isLogged == true) {%>
+        
+            <li><a href="/logout">Logout user <%= locals.userLogged.email %> </a></li>
+            <% } else {%>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+           <%  }%>
+        </ul></div>
 </body>
 </html>
