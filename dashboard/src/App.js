@@ -10,19 +10,19 @@ import "./components/css/app.css";
 
 function App(){
     return(
-        <div>
-            <div>{Head()}</div>
+        <div className="container">
+            <div className="responsive">{Head()}</div>
             <section>
-                <div className="productos">{Productos()}</div>
-                <div className="usuarios">{Usuarios()}</div>
-                <div className="bodegas">{Bodegas()}</div>
+                <div className="productos responsive">{Productos()}</div>
+                <div className="usuarios responsive">{Usuarios()}</div>
+                <div className="bodegas responsive">{Bodegas()}</div>
             </section>
             <section>
-                <div className="ultimoproducto">{UltimoProducto()}</div>
-                <div className="detallebodega">{DetalleBodega()}</div>
+                <div className="ultimoproducto responsive">{UltimoProducto()}</div>
+                <div className="detallebodega responsive">{DetalleBodega()}</div>
             </section>
             <section>
-                <div>{Apip()}</div>
+                <div className="responsive lista-products">{Apip()}</div>
             </section>
             
         </div>

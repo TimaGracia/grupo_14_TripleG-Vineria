@@ -115,3 +115,39 @@ a{
 .nombre{
     width: 11rem;
 }
+h2{
+    font-size: 2rem;
+}
+
+
+
+@media (max-width: 375px) {
+    .container section{
+        display: flex;
+        
+        flex-direction: column;
+    }
+    .responsive {
+        width: 100%;
+        margin:20px 0 0 0;
+        
+
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .apip ul {
+        padding:0;
+    }
+    .apip li {
+        width: 4rem;
+    }
+    .apipi-nombre {
+        width: 8rem;
+    }
+
+
+
+
+}
+

@@ -40,7 +40,7 @@ function DetalleBodega() {
               a.valor = a.valor + 1
             } else { }
           });
-          return <div style={{ display: "flex" }}>
+          return <div style={{ display: "flex", margin: "1rem", width: "11rem"}}>
             <div className="nombre">
               <h4>{a.name}</h4>
               </div><div className="cantidad">
