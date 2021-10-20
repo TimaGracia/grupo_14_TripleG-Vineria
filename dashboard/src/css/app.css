@@ -1,0 +1,80 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.apip{
+    color: white;
+    background-color:#1883ab;
+    width: 60%;
+    margin-left: 20%;
+}
+.titulo{
+    color: white;
+    background-color:#1883ab;
+    margin: 10px 50px 10px 20px;
+    font-weight: 900;
+}
+.apipi{
+    list-style: none;
+    margin: 10px 50px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+}
+.apipi:hover{
+    box-shadow: 0px 0px 10px rgb(53, 53, 63);
+}
+.apipi-detalle{
+    margin-left: 50px;
+    text-decoration: none;
+}
+section{
+    
+        color: white;
+        
+        width: 60%;
+        margin-left: 20%;
+        display:flex;
+    
+}
+.bodegas{
+    height: 10rem;
+    width: 30%;
+    margin-left: 5%;
+    background-color: #C2755E;
+}
+.usuarios{
+    height: 10rem;
+    width:30%;
+    margin-left: 5%;
+    background-color: #C2755E;
+}
+.productos{
+    height: 10rem;
+    width:30%;
+    
+    background-color: #C2755E;
+}
+.detallebodega{
+    height: 15rem;
+    width:45%;
+    margin-left: 10%;
+    margin-top: 10px;
+    background-color: #C2755E;
+}
+.detallebodega div{
+    height: 40%;
+}
+.detallebodega div p{
+    margin-left: 15px;
+}
+.ultimoproducto{
+    height: 15rem;
+    width:45%;
+    background-color: #C2755E;
+    margin-top: 10px;
+}
+h2{
+    margin-left: 20px;
+}
+h3{
+    margin-left: 20px;
+}
