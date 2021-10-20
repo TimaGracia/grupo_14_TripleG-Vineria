@@ -69,3 +69,22 @@ footer {
     }
     
 }
+
+@media (max-width: 375px) {
+    #footer-tab{
+        display:none;  
+    }
+    #copyright{
+        width: 100%;
+        padding-top:2rem; 
+        display:flex;
+        justify-content:center;
+    }
+    #copyright p{
+        width: 100%;
+        text-align: center;
+        margin-left:4rem;
+    }
+
+
+}
