@@ -163,6 +163,20 @@ body {
 
 
 
+@media(max-width:376px) {
+
+    #addToCart button{
+        display:none;
+    }
+    #addToCart {
+        justify-content:center;
+    }
+    #addToCart i{
+        font-size: 1.3rem;
+    }
+
+
+}
 
 @media(min-width:361px) {
     .w {
