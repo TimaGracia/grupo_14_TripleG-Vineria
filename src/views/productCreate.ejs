@@ -1,56 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("./partials/head")%>
-<body>
-    <%- include("./partials/header")%>
-    <%- include("./partials/desple")%>
-    <main>
+
+    <body>
+        <%- include("./partials/header")%>
+            <%- include("./partials/desple")%>
+                <main>
 
 
 
-        <form action="/products" method="POST" class="form" enctype="multipart/form-data">
-            <p class="title">Completá los datos del nuevo producto </p>
+                    <form action="/products" method="POST" class="form" enctype="multipart/form-data">
+                        <p class="title">Completá los datos del nuevo producto </p>
 
-            <div class="input-container ic1">
-               
-                <input type="text" name="name" id="name" class="input" placeholder="Nombre del producto" value="<%= locals.old && old.name ? old.name : ""  %>">
-                <p id="a" class="errores" style="display: none;">Este campo es obligatorio</p>
-                <p id="a1" class="errores" style="display: none;">5 caracteres como mínimo</p>
-                <% if (locals.errors && locals.errors.name) { %>
-                    <%= errors.name.msg %>
-                <% } %>
+                        <div class="input-container ic1">
 
-            </div>
+                            <input type="text" name="name" id="name" class="input" placeholder="Nombre del producto"
+                                value="<%= locals.old && old.name ? old.name : ""  %>">
+                            <p id="a" class="errores" style="display: none;">Este campo es obligatorio</p>
+                            <p id="a1" class="errores" style="display: none;">5 caracteres como mínimo</p>
+                            <% if (locals.errors && locals.errors.name) { %>
+                                <%= errors.name.msg %>
+                                    <% } %>
 
-            <div class="input-container ic1">
-                
-                <textarea name="description" id="description" cols="25" rows="5" placeholder="Inserte la descripción del producto aquí" class="input textarea" value="<%= locals.old && old.description ? old.description : ""  %>"></textarea>
-                <p id="b" class="errores" style="display: none;">20 caracteres como mínimo</p>
-                <% if (locals.errors && locals.errors.description) { %>
-                    <%= errors.description.msg %>
-                <% } %>
+                        </div>
 
+                        <div class="input-container ic1">
 
-            </div>
-
- 
-
-            <div class="input-container ic2">
-                <input type="number" name="stock" placeholder="Stock inicial del Producto" class="input stock">
-
-            </div>
-            <div id=image> 
-                <label for="image">Imagen</label>
-                <input type="file" name="image-vino" id="image-vino"><!--id="image" -->
-            </div>
+                            <textarea name="description" id="description" cols="25" rows="5"
+                                placeholder="Inserte la descripción del producto aquí" class="input textarea"
+                                value="<%= locals.old && old.description ? old.description : ""  %>"></textarea>
+                            <p id="b" class="errores" style="display: none;">20 caracteres como mínimo</p>
+                            <% if (locals.errors && locals.errors.description) { %>
+                                <%= errors.description.msg %>
+                                    <% } %>
 
 
+                        </div>
 
-            <input type="submit" value="Crear Producto" class="submit">
 
-        </form>
-        
-    </main>
-    <%- include("./partials/footer")%>
-</body>
+                        <div class="input-container ic2">
+                            <input type="number" name="stock" placeholder="Stock inicial del Producto"
+                                class="input stock">
+
+                        </div>
+                        <div class="input-container ic2">
+                            <input type="number" name="price" placeholder="Precio del Producto"
+                                class="input">
+
+                        </div>
+
+
+                        <div id=image>
+                            <label for="image">Imagen</label>
+                            <input type="file" name="image-vino" id="image-vino">
+                            <!--id="image" -->
+                        </div>
+
+
+
+                        <input type="submit" value="Crear Producto" class="submit">
+
+                    </form>
+
+                </main>
+                <%- include("./partials/footer")%>
+    </body>
+
 </html>
