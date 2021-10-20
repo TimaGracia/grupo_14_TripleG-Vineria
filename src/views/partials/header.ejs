@@ -10,13 +10,19 @@
             <i class="fas fa-bars burger"></i>
         </button>
         <script>
+            
             function funcB(){
-                document.querySelector(".burger-menu").style.display="block"
+                if(document.querySelector(".desple").style.display == "none"){
+                document.querySelector(".desple").style.display="block";
+                m=1;}else{
+                    funcA();
+                    m=0;
+                }
             }
         </script>
         <script>
             function funcA(){
-                document.querySelector(".burger-menu").style.display="none"
+                document.querySelector(".desple").style.display="none"
             }
         </script>
         

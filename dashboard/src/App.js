@@ -1,12 +1,12 @@
 import React from "react";
-import Apip from "./ApiProducts";
-import Productos from "./Productos";
-import Bodegas from "./Bodegas";
-import Usuarios from "./Usuarios";
-import UltimoProducto from "./UltimoProducto";
-import DetalleBodega from "./DetalleBodega";
-import Head from "./Head";
-import "./css/app.css";
+import Apip from "./components/ApiProducts";
+import Productos from "./components/Productos";
+import Bodegas from "./components/Bodegas";
+import Usuarios from "./components/Usuarios";
+import UltimoProducto from "./components/UltimoProducto";
+import DetalleBodega from "./components/DetalleBodega";
+import Head from "./components/Head";
+import "./components/css/app.css";
 
 function App(){
     return(

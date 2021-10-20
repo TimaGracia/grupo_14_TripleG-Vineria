@@ -124,19 +124,23 @@ header img {
 #menu ul>li:hover>ul {
     display: block;
 }
-.burger-menu{
+.desple ul{
+    display:flex;
+    flex-direction: column;
+}
+.desple{
     left: 0;
-    width: 100%;
-    height: 5rem;
+    height: 30%;
     background-color: rgb(58, 51, 51);
-    color: white;
-    position: relative;
+    position: absolute;
     z-index: 2;
     display: none;
     opacity: 80%;
+    width: 40%;
     
 }
-.burger-menu ul a{
+
+.desple ul a{
     text-decoration: none !important;
     margin: 10px 20px;
     font-size: large;
